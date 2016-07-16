@@ -197,7 +197,7 @@ echo -ne '\e]12;magenta\a'
 alias cursorfix="echo -ne '\e]12;magenta\a'"
 
 
-alias loadkeys='eval `ssh-agent -s`; ssh-add ~/.ssh/mygithubkey'
+alias loadkeys='eval `ssh-agent -s`; ssh-add /home/mikhail/.ssh/mygithubkey'
 
 
 # Make terminal use 256 colors instead of 8 (it's for tput colors)
@@ -312,3 +312,5 @@ set keymap vi-command
 
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

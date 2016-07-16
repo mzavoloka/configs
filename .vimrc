@@ -476,3 +476,5 @@ au FileType perl setlocal keywordprg=perldoc\ -T\ -f
 au BufNewFile,BufRead *html.ep set filetype=html
 
 set rnu
+
+command W w !sudo tee % > /dev/null
