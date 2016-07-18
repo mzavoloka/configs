@@ -94,7 +94,7 @@ mygrep() {
 }
 
 #alias myfind="sudo find . -iname '$@'"
-alias myfind="perl ~/scripts/myfind.pl"
+alias myfind="perl ~/dev/utilities/myfind/myfind.pl"
 
 
 
