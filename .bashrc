@@ -238,9 +238,6 @@ alias kammapsdl="cd ~/.wine/drive_c/KaM\ Remake/MapsDL/"
 alias distribution_version="cat /etc/*-release"
 alias list_non_system_users="awk -F: '$3 >= 500' /etc/passwd" # it may be not 500 but 1000. Gets users which GUID is greater than this number
 
-alias cardeal_root="ssh -Y root@cardealeronlinereviewmonitor.com"
-alias cardeal="ssh -Y mzavoloka@cardealeronlinereviewmonitor.com"
-
 alias sizeof="du -hs $@"
 
 alias ucfirst="perl -e 'for ( @ARGV ) { rename( $_, ucfirst $_ ) }' $1"
@@ -298,13 +295,6 @@ alias robinhood2='(wine explorer /desktop=RobinHood,1920x1080 ~/.wine/drive_c/Pr
 alias commandos2="(wine explorer /desktop=Commandos2,1920x1080 ~/.wine/drive_c/Program\ Files/Commandos\ II/comm2.exe -opengl -console &)"
 alias commandos22="(wine ~/.wine/drive_c/Program\ Files/Commandos\ II/comm2.exe &)"
 alias resolution_restore='xrandr --output DVI-I-1 --auto'
-
-
-
-
-#[ -s "/home/mikhail/.dnx/dnvm/dnvm.sh" ] && . "/home/mikhail/.dnx/dnvm/dnvm.sh" # Load dnvm
-
-
 
 
 set editing-mode vi
