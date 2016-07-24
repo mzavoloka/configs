@@ -10,6 +10,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'valloric/MatchTagAlways'
+Plugin 'ConradIrwin/vim-bracketed-paste'
+Plugin 'vobornik/vim-mql4'
+Plugin 'rkennedy/vim-delphi'
 
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
@@ -45,47 +49,6 @@ filetype plugin indent on    " required
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Maintainer: 
-"       Amir Salihefendic
-"       http://amix.dk - amix@amix.dk
-"
-" Version: 
-"       5.0 - 29/05/12 15:43:36
-"
-" Blog_post: 
-"       http://amix.dk/blog/post/19691#The-ultimate-Vim-configuration-on-Github
-"
-" Awesome_version:
-"       Get this config, nice color schemes and lots of plugins!
-"
-"       Install the awesome version from:
-"
-"           https://github.com/amix/vimrc
-"
-" Syntax_highlighted:
-"       http://amix.dk/vim/vimrc.html
-"
-" Raw_version: 
-"       http://amix.dk/vim/vimrc.txt
-"
-" Sections:
-"    -> General
-"    -> VIM user interface
-"    -> Colors and Fonts
-"    -> Files and backups
-"    -> Text, tab and indent related
-"    -> Visual mode related
-"    -> Moving around, tabs and buffers
-"    -> Status line
-"    -> Editing mappings
-"    -> vimgrep searching and cope displaying
-"    -> Spell checking
-"    -> Misc
-"    -> Helper functions
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
@@ -108,6 +71,7 @@ if has("syntax")
 endif
 
 filetype on
+
 
 " Enable filetype plugins
 filetype plugin on
@@ -277,6 +241,7 @@ map <leader>bd :Bclose<cr>
 " Close all the buffers
 map <leader>ba :1,1000 bd!<cr>
 
+set tabpagemax=100
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
@@ -473,8 +438,26 @@ function! LoadPerlModule()
 
 " Use Shift + K shortcut while cursor is under perl module name for accessing its documentation
 au FileType perl setlocal keywordprg=perldoc\ -T\ -f
-au BufNewFile,BufRead *html.ep set filetype=html
+au BufNewFile,BufRead *html.ep set filetype=html " Embedded perl .html.ep (used by Mojolicious)
 
 set rnu
 
 command W w !sudo tee % > /dev/null
+
+" RS: repeat substitution command
+com! -range -nargs=* RS call RepeatSubst(<q-args>)
+" RepatSubst:
+fun! RepeatSubst(subexpr)
+  if a:subexpr != ""
+    let g:repeatsubst= a:subexpr
+  endif
+  let curcol= col(".")
+  let sep = strpart(g:repeatsubst,0,1)
+  let pat = substitute(g:repeatsubst,'^.\(.\{-}\)'.sep.'.*$','\1','')
+  s/\%#./\r&/
+  let curcol= curcol + matchend(getline("."),pat)
+  exe "s".g:repeatsubst
+  norm! k
+  j!
+  exe 'norm! '.curcol.'|'
+endfun
