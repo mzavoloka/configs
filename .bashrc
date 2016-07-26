@@ -208,7 +208,7 @@ export TERM=xterm-256color
 alias colors='for i in {1..256}; do tput sgr 0; echo -n "$((i-1)):"; tput setab $i; echo; done; tput sgr 0; echo;'
 alias colors_row='for i in {1..256}; do tput setab $i; echo -n "$((i-1))    "; done; tput sgr 0; echo;'
 
-alias linux_setup='vi ~/Dropbox/linux_setup'
+alias linux_setup='vi ~/dev/configs/linux_setup'
 
 #alias chrome_proxy='google-chrome-unstable --proxy-server=37.187.117.157:3128'
 #alias chrome_proxy='google-chrome-unstable --proxy-server=45.32.43.100:3128'
