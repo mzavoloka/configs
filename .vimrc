@@ -461,3 +461,8 @@ fun! RepeatSubst(subexpr)
   j!
   exe 'norm! '.curcol.'|'
 endfun
+
+" Always copy to clipboard
+set clipboard=unnamedplus
+" On windows it should be:
+" set clipboard=unnamed
