@@ -245,6 +245,7 @@ alias lcfirst="perl -e 'for ( @ARGV ) { rename( $_, lcfirst $_ ) }' $1"
 
 alias formatjson="python -mjson.tool" # and write json filename. It will output formatted json data from the file specified.
 
+alias emacs="emacs -nw" # Open emacs inside terminal (you're calling this alias in terminal, right). Suspend it with C-x C-z
 
 ################################################################################
 ######################### UNIQUE FOR THIS MACHINE ##############################
