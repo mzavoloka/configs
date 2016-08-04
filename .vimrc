@@ -14,6 +14,7 @@ Plugin 'valloric/MatchTagAlways'
 Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'vobornik/vim-mql4'
 Plugin 'rkennedy/vim-delphi'
+Plugin 'easymotion/vim-easymotion'
 
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
