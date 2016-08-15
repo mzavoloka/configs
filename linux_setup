@@ -463,3 +463,14 @@ cd !$
 git clone https://github.com/mzavoloka/gitls
 git clone https://github.com/mzavoloka/myfind
 git clone https://github.com/mzavoloka/git-cal
+
+# And configure git-cal by running:
+cd ~/dev/utilities/git-cal
+# If you have root access:
+perl Makefile.PL
+make
+sudo make install
+# If you have no root access:
+perl Makefile.PL PREFIX=~/.local
+make
+make install
