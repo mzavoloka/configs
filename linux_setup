@@ -453,3 +453,13 @@ sudo apt-get install clipit
 -------------------------------------------------------------------
 # Install gparted
 sudo apt-get install gparted
+
+
+-------------------------------------------------------------------
+# Install my utilities:
+mkdir ~/dev/utilities/
+cd !$
+
+git clone https://github.com/mzavoloka/gitls
+git clone https://github.com/mzavoloka/myfind
+git clone https://github.com/mzavoloka/git-cal
