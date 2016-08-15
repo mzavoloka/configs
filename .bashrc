@@ -307,4 +307,4 @@ set keymap vi-command
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 
-alias vimdiff="vimdiff -o"
+alias vimdiff="vimdiff -O"
