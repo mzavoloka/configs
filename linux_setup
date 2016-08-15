@@ -158,7 +158,6 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # Font to Ubuntu Mono (Regular) of size 11 or 10
 
 -------------------------------------------------------------------
-# As of last installation gxneur was laggy and didn't work well with vim's russian layout Ctrl+^ . So don't install it!
 # Download and install gxneur package.
 sudo apt-get install gxneur
 # Set it up.
@@ -203,7 +202,7 @@ sudo apt-get install xbacklight
 
 # In Debian?
 sudo apt-get install gnome-tweak-tool
-# Run Tweak Tool, select Typing and set Caps Lock key behavior to Caps Lock is disabled
+# Run Tweak Tool, select Typing and set Caps Lock key behavior from "Disabled" to "Caps Lock is disabled"
 
 
 -------------------------------------------------------------------
