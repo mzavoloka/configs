@@ -50,6 +50,10 @@ filetype plugin indent on    " required
 
 " Open fugitive windows at bottom, not at top
 set splitbelow
+" Set vsplit to the right
+set splitright
+
+nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
