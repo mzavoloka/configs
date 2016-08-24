@@ -15,6 +15,7 @@ Plugin 'ConradIrwin/vim-bracketed-paste'
 Plugin 'vobornik/vim-mql4'
 Plugin 'rkennedy/vim-delphi'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'mzavoloka/nginx-vim-syntax'
 
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
