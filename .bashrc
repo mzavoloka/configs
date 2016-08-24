@@ -308,3 +308,5 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 
 alias vimdiff="vimdiff -O"
+alias vi="vim -p"
+alias vim="vim -p"
