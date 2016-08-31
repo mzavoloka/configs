@@ -218,6 +218,8 @@ alias samba_restart='sudo service smbd restart; sudo service nmbd restart'
 
 # Lists git directory with last commit info for each file
 alias gitls='bash ~/dev/utilities/gitls/gitls'
+alias gitgraph='git log --graph --full-history --all --color
+                        --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
 
 alias opengl_version='glxinfo | grep "OpenGL"';
 
