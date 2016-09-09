@@ -474,3 +474,9 @@ sudo make install
 perl Makefile.PL PREFIX=~/.local
 make
 make install
+
+
+-------------------------------------------------------------------
+# Install fl studio
+# Install it through Playonlinux, cause wine 1.6 can't handle fl studio.
+# Don't forget to go to Settings->Install Components and install Microsoft Core Fonts and tahoma
