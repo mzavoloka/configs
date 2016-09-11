@@ -17,6 +17,7 @@ Plugin 'rkennedy/vim-delphi'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'mzavoloka/nginx-vim-syntax'
 Plugin 'travisjeffery/vim-auto-mkdir'
+Plugin 'ntpeters/vim-better-whitespace'
 
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
