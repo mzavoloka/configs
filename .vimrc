@@ -479,3 +479,6 @@ set clipboard=unnamedplus
 " set clipboard=unnamed
 
 map <Leader>s <Plug>(easymotion-s)
+
+" Make vim recognize bash aliases
+set shell=/bin/bash\ -i
