@@ -55,7 +55,7 @@ filetype plugin indent on    " required
 set splitbelow
 " Set vsplit to the right
 set splitright
-" Make fuitive open Gdiff vertically
+" Make fugitive open Gdiff vertically
 set diffopt+=vertical
 
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
