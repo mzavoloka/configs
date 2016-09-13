@@ -23,6 +23,11 @@ mikhail ALL=(ALL:ALL) NOPASSWD:ALL
 
 
 -------------------------------------------------------------------
+# Install tree utility. It's really useful
+sudo apt-get install tree
+
+
+-------------------------------------------------------------------
 # If using Unity desktop environment, you better to change Alt+Tab switching behaviour. Install:
 sudo apt-get install compizconfig-settings-manager
 sudo apt-get install compiz-plugins-extra
