@@ -31,10 +31,10 @@ sudo apt-get install compiz-plugins-extra
 # Manager ▸ Desktop ▸ Ubuntu Unity Plugin ▸ Switcher ▸ Key to start the switcher ▸ Enabled
 # and Key to start the switcher in reverse ▸ Enabled
 # And do this for all viewports too
- 
+
 # Enable the Static Application Switcher by checking CompizConfig Settings Manager ▸ Window
 # Management ▸ Static Application Switcher ▸ Enable Static Application Switcher
- 
+
 # Then set Bindings in Static Application Switcher settings (to open it, press the button of
 # it, not the checkbox) for Next Window and Prev Window.
 
@@ -47,8 +47,8 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-ke
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 sudo apt-get update
 
-# It can either be google-chrome-beta or google-chrome-unstable 
-sudo apt-get install google-chrome-stable 
+# It can either be google-chrome-beta or google-chrome-unstable
+sudo apt-get install google-chrome-stable
 
 
 -------------------------------------------------------------------
@@ -60,7 +60,7 @@ sudo apt-get install smbclient
 
 sudoedit /etc/samba/smb.conf
 
-# Find these lines: 
+# Find these lines:
 
 #    ####### Authentication #######
 #
@@ -349,10 +349,10 @@ gsettings set com.canonical.desktop.interface scrollbar-mode normal
 sudoedit /usr/share/themes/Ambiance/gtk-3.0/gtk-widgets.css
 # And change there background-image property of classes .scrollbar.button.vertical and .scrollbar.slider.horizontal. For example to #330066:
 # .scrollbar.button.vertical {
-#   border-width: 1px; 
+#   border-width: 1px;
 #   border-style: solid;
 #   border-color: shade (@bg_color, 0.86);
-#   background-image: -gtk-gradient (linear, left top, right top, 
+#   background-image: -gtk-gradient (linear, left top, right top,
 #                                    from (shade (#330066, 1.08)),
 #                                    color-stop (0.5, #330066),
 #                                    to (shade (#330066, 0.94)));
