@@ -307,7 +307,7 @@ sudo apt-get install adobe-flashplugin
 
 -------------------------------------------------------------------
 # Install archivators
-sudo apt-get install p7zip-full rar lha unrar unzip unace unp 
+sudo apt-get install p7zip-full rar lha unrar unzip unace unp
 
 
 -------------------------------------------------------------------
