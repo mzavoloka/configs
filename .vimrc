@@ -20,6 +20,8 @@ Plugin 'travisjeffery/vim-auto-mkdir'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'tpope/vim-vinegar'
+Plugin 'scrooloose/nerdtree'
 
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
@@ -484,7 +486,7 @@ set clipboard=unnamedplus
 map <Leader>s <Plug>(easymotion-s)
 
 " Make vim recognize bash aliases
-set shell=/bin/bash\ -i
+"set shell=/bin/bash\ -i
 
 " Make netrw use tree mode by default
 let g:netrw_liststyle = 3
