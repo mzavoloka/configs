@@ -461,6 +461,12 @@ sudo apt-get install gparted
 
 
 -------------------------------------------------------------------
+# scp github ssh key to .ssh folder in order to be able to pull private repos from github
+# In order to make the key to work permanently you may also need to manually specify each key in your ~/.ssh/config like this:
+# IdentityFile ~/.ssh/mygithubkey
+
+
+-------------------------------------------------------------------
 # Install my utilities:
 mkdir ~/dev/utilities/
 cd !$
