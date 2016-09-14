@@ -308,6 +308,8 @@ set keymap vi-command
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+# Disable Ctrl+S hanging terminal
+stty -ixon
 
 alias vimdiff="vimdiff -O"
 alias vi="vim -p"
