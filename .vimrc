@@ -490,3 +490,6 @@ map <Leader>s <Plug>(easymotion-s)
 
 " Make netrw use tree mode by default
 let g:netrw_liststyle = 3
+
+" Make nerdtree show dotfiles by default
+let NERDTreeShowHidden=1
