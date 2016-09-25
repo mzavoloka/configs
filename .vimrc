@@ -493,3 +493,5 @@ let g:netrw_liststyle = 3
 
 " Make nerdtree show dotfiles by default
 let NERDTreeShowHidden=1
+
+map <Leader>t :NERDTreeToggle<CR>
