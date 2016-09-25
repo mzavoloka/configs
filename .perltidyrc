@@ -1,0 +1,4 @@
+# Config for perltidy command line utility
+
+# It's 21st century, use 120 letter lines instead of 80 letter lines:
+-l=120

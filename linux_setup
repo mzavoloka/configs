@@ -499,3 +499,9 @@ make install
 # There's a problem with mt4setup.exe installation with wine (it asks to specify a proxy). I really tried to overcome it, but with no luck.
 # So the easiest way is to just copy some existing installation of mt4 and run copied terminal.exe with the /portable argument.
 # If you don't have a copy of an existing installation, than install mt4 on virtualbox and than copy this installation to .wine
+
+
+-------------------------------------------------------------------
+# Install perltidy utility
+sudo apt-get install perltidy
+# and move .perltidyrc config file to your homedir
