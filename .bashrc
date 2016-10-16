@@ -298,7 +298,13 @@ alias robinhood='(wine ~/.wine/drive_c/Program\ Files/Strategy\ First/Robin\ Hoo
 alias robinhood2='(wine explorer /desktop=RobinHood,1920x1080 ~/.wine/drive_c/Program\ Files/Strategy\ First/Robin\ Hood/Robin\ Hood.exe -opengl -console &)'
 alias commandos2="(wine explorer /desktop=Commandos2,1920x1080 ~/.wine/drive_c/Program\ Files/Commandos\ II/comm2.exe -opengl -console &)"
 alias commandos22="(wine ~/.wine/drive_c/Program\ Files/Commandos\ II/comm2.exe &)"
-alias resolution_restore='xrandr --output DVI-I-1 --auto'
+#alias resolution_restore='xrandr --output DVI-I-1 --auto'
+alias resolution_restore='xrandr -s 1920x1080'
+alias 1920='xrandr -s 1920x1080'
+alias 1440='xrandr -s 1440x900'
+alias 1280='xrandr -s 1280x720'
+alias 1024='xrandr -s 1024x768'
+alias 800='xrandr -s 800x600'
 
 
 set editing-mode vi
