@@ -321,3 +321,5 @@ stty -ixon
 alias vimdiff="vimdiff -O"
 alias vi="vim -p"
 alias vim="vim -p"
+
+alias kill="kill -9"
