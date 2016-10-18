@@ -323,3 +323,6 @@ alias vi="vim -p"
 alias vim="vim -p"
 
 alias kill="kill -9"
+
+# True clear screen
+alias cls='echo -en "\ec"'
