@@ -22,6 +22,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
+Plugin 'henrik/vim-indexed-search'
 
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
