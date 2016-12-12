@@ -505,3 +505,9 @@ make install
 # Install perltidy utility
 sudo apt-get install perltidy
 # and move .perltidyrc config file to your homedir
+
+
+-------------------------------------------------------------------
+# Configure git
+git config --global merge.tool vimdiff
+git config --global merge.conflictstyle diff3
