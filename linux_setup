@@ -43,6 +43,8 @@ sudo apt-get install compiz-plugins-extra
 # Then set Bindings in Static Application Switcher settings (to open it, press the button of
 # it, not the checkbox) for Next Window and Prev Window.
 
+# General Options ▸ Desktop Size
+# Set workspace grid there
 
 -------------------------------------------------------------------
 # Install google chrome
