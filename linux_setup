@@ -455,6 +455,9 @@ nohup upwork &
 -------------------------------------------------------------------
 # Install some software for clipboard management like ClipIt
 sudo apt-get install clipit
+# In its settings check:
+Use Primary (selection)
+Synchronize clipboards
 
 
 -------------------------------------------------------------------
