@@ -23,7 +23,13 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'henrik/vim-indexed-search'
+" Not tested section:
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-commentary'
+"Plugin 'svermeulen/vim-easyclip'
 
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
