@@ -62,3 +62,11 @@ For various games and applications from the Windows Store or other sources, phar
 
 2. After downloading the zip extract the zip, run install.cmd as an Administrator and follow the instructions on the screen.
 
+
+### Configure Steam
+
+Steam Overlay shows up as big picture mode at all times?
+https://www.reddit.com/r/Steam/comments/459e8v/steam_overlay_shows_up_as_big_picture_mode_at_all/
+It's an option in the new beta client, Steam > Settings > In-Game
+It's so you can use the Steam Controller without having to use Big Picture Mode, it will just used the BPM overlay instead of the desktop overlay.
+
