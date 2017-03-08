@@ -4,8 +4,8 @@ The manual is made for user mikhail. If you are setting up linux for another use
 to change all the commands and the shell scripts used in the manual accordingly.
 
 
-##### Upgrade freshly installed system
----
+#### Upgrade freshly installed system
+
 ```
 sudo apt-get update
 sudo apt-get dist-upgrade
@@ -13,16 +13,16 @@ sudo apt-get dist-upgrade
 CAUTION: Try to not run `sudo apt-get upgrade` or `sudo apt-get dist-upgrade` after you have your linux properly configured, because there is a big chance of breaking some parts of the system by upgrading it. Always upgrade your packages one by one so that you always know what can be the cause of problems.
 
 
-##### Install vim package and make vim a default text editor
----
+#### Install vim package and make vim a default text editor
+
 ```
 sudo apt-get install vim-gtk
 sudo update-alternatives --config editor
 ```
 
 
-##### Add user to sudoers
----
+#### Add user to sudoers
+
 ```
 sudoedit /etc/sudoers
 ```
@@ -32,8 +32,8 @@ mikhail ALL=(ALL:ALL) NOPASSWD:ALL
 ```
 
 
-##### Install and confugure git
----
+#### Install and confugure git
+
 ```
 sudo apt-get install git
 ```
@@ -49,8 +49,8 @@ git config --global merge.conflictstyle diff3
 ```
 
 
-##### Configure vim
----
+#### Configure vim
+
 Download and place .vim and .vimrc to ~
 .vimrc may be modified specifically for different linux distros
 No modification required for making Debian files work in Ubuntu
@@ -63,8 +63,8 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 After that you'll be able to install all other plugins listed in .vimrc running 'PluginInstall' command in vim
 
 
-##### Configure bash shell
----
+#### Configure bash shell
+
 
 Download and place .bashrc to ~
 .bashrc may be modified specially for different linux distros
@@ -77,15 +77,15 @@ Font to Ubuntu Mono (Regular) of size 11 or 10
 
 
 
-##### Install tree utility to view folder trees in terminal
----
+#### Install tree utility to view folder trees in terminal
+
 ```
 sudo apt-get install tree
 ```
 
 
-##### If using Unity desktop environment, you better to change Alt+Tab switching behaviour. Install:
----
+#### If using Unity desktop environment, you better to change Alt+Tab switching behaviour. Install:
+
 ```
 sudo apt-get install compizconfig-settings-manager
 sudo apt-get install compiz-plugins-extra
@@ -106,8 +106,8 @@ General Options ▸ Desktop Size
 Set workspace grid there
 
 
-##### Install google chrome
----
+#### Install google chrome
+
 Для установки Google Chrome сперва нужно загрузить ключ репозитория:
 ```
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
@@ -123,8 +123,8 @@ It can either be google-chrome-beta or google-chrome-unstable
 sudo apt-get install google-chrome-stable
 ```
 
-##### Install and configure samba
----
+#### Install and configure samba
+
 ```
 sudo apt-get install samba
 ```
@@ -143,7 +143,7 @@ sudoedit /etc/samba/smb.conf
 Find these lines:
 
 ```
-####### Authentication #######
+###### Authentication #######
 
 # “security = user” is always a good idea. This will require a Unix account
 # in this server for every user accessing the server. See
@@ -210,8 +210,8 @@ sudo service nmbd restart
 ```
 
 
-##### Download and install some cloud hosting service like Tresorit (no linux support) or Dropbox
----
+#### Download and install some cloud hosting service like Tresorit (no linux support) or Dropbox
+
 
 *Install Dropbox using only this way!!! If you'll try to install it via package nautilus-dropbox
 or via Ubuntu Software Center, you'll stuck!!!*
@@ -228,8 +228,8 @@ Next, run the Dropbox daemon from the newly created .dropbox-dist folder:
 And create dropbox shortcut for this. Copy some shortcut from /usr/share/applications, change it's name and properties in vim. Even download some Icon for this. And then put back to /usr/share/applications
 
 
-##### Set up gxneur package.
----
+#### Set up gxneur package.
+
 ```
 sudo apt-get install gxneur
 ```
@@ -240,8 +240,8 @@ sudo apt-get install gconf-editor
 Copy ~/.xneur/xneurrc files from clouds
 
 
-##### If Ubuntu has wireless disabled after booting
----
+#### If Ubuntu has wireless disabled after booting
+
 To overcome this
 ```
 sudoedit /etc/rc.local
@@ -252,8 +252,8 @@ sudo rfkill unblock wifi
 ```
 
 
-##### On laptops Ubuntu can always set maximum brightnes level on startup
----
+#### On laptops Ubuntu can always set maximum brightnes level on startup
+
 Set the startup level of brightness:
 ```
 sudoedit /etc/rc.local
@@ -272,8 +272,8 @@ sudo apt-get install sysvinit-backlight
 ```
 
 
-##### On laptops Ubuntu can change brightness too dramatically with each step
----
+#### On laptops Ubuntu can change brightness too dramatically with each step
+
 To make brightness changes smoother:
 ```
 sudo apt-get install xbacklight
@@ -281,8 +281,8 @@ sudo apt-get install xbacklight
 Now add new shortcuts to this
 
 
-##### Permanently disable Caps Lock
----
+#### Permanently disable Caps Lock
+
 Go to Keyboard Layout, select Options... Caps Lock behaviour -> disabled
 
 In Debian?
@@ -292,36 +292,36 @@ sudo apt-get install gnome-tweak-tool
 Run Tweak Tool, select Typing and set Caps Lock key behavior from "Disabled" to "Caps Lock is disabled"
 
 
-##### Russian layout may not work by default
----
+#### Russian layout may not work by default
+
 To enable it go to Keyboard Layout. Press on plus sign and select Russian in the list
 
 Go to Keyboard Layout, select Options... Key(s) to change layout. Set it to Alt+Shift
 
 
-##### In gnome-tweak-tool you can set fonts. Just run through the options available there.
----
+#### In gnome-tweak-tool you can set fonts. Just run through the options available there.
 
 
-##### In Settigs go to Appearece and set Wallpapers, Launcher Icons size, auto-hide Launcher
----
+
+#### In Settigs go to Appearece and set Wallpapers, Launcher Icons size, auto-hide Launcher
 
 
-##### Disable sleep, hibernate and suspend buttons
----
+
+#### Disable sleep, hibernate and suspend buttons
+
 ```
 gsettings set org.gnome.settings-daemon.plugins.power button-suspend "nothing"
 gsettings set org.gnome.settings-daemon.plugins.power button-sleep "nothing"
 gsettings set org.gnome.settings-daemon.plugins.power button-hibernate "nothing"
 ```
 
-##### Disable sleep on lid closing
----
+#### Disable sleep on lid closing
+
 In /etc/UPower/UPower.conf set option `Ignored=true`
 
 
-##### Download from cloud startup script and modify it if needed
----
+#### Download from cloud startup script and modify it if needed
+
 To make it run on boot:
 ```
 crontab -e
@@ -332,17 +332,17 @@ Add line
 ```
 
 
-##### Make Num Lock enabled by default
----
+#### Make Num Lock enabled by default
 
 
-##### The screen is completely dark while installing Ubuntu?
----
+
+#### The screen is completely dark while installing Ubuntu?
+
 In such cases just volume brightness up.
 
 
-##### (may be obsolete) Change keybindings for moving between workspaces.
----
+#### (may be obsolete) Change keybindings for moving between workspaces.
+
 There may be a problem with 4-buttons shortcuts, so install dconf-editor package.
 ```
 sudo apt-get install dconf-editor
@@ -353,16 +353,16 @@ There are all the shortcuts that can be manually modified
 Maybe there is some CLI way. There is a dconf-cli package. Have not tryed it yet.
 
 
-##### (may be obsolete) In Debian install icedove
----
+#### (may be obsolete) In Debian install icedove
+
 ```
 sudo apt-get install icedove
 ```
 Create or export all the existing email accounts. Maybe there is some way to export them from already existing icedove/thunderbird configuration.
 
 
-##### (may be obsolete) Set up auto save when taking screenshots. To do this, install scrot:
----
+#### (may be obsolete) Set up auto save when taking screenshots. To do this, install scrot:
+
 ```
 sudo apt-get install scrot
 ```
@@ -390,23 +390,23 @@ and create new shortcut. The command should be the following:
 ```
 
 
-##### (may be obsolete) Install adobe flash:
----
+#### (may be obsolete) Install adobe flash:
+
 ```
 sudo apt-get install adobe-flashplugin
 ```
 Or through Ubuntu software center if there is no such package. Search for 'adobe flash'.
 
 
-##### Install all the archivators
----
+#### Install all the archivators
+
 ```
 sudo apt-get install p7zip-full rar lha unrar unzip unace unp
 ```
 
 
-##### For Ubuntu >14.04 install tweak tool
----
+#### For Ubuntu >14.04 install tweak tool
+
 ```
 sudo apt-get install unity-tweak-tool
 ```
@@ -415,30 +415,30 @@ Go to Switcher. Uncheck show desktop icon.
 Go through all the options of this tool.
 
 
-##### If using Ubuntu, uninstall Ubuntu One:
----
+#### If using Ubuntu, uninstall Ubuntu One:
+
 ```
 sudo apt-get --purge remove .*ubuntuone.* .*couch.*
 ```
 
 
-##### Change Lenovo notebooks/keyboards default F-keys behaviour
----
+#### Change Lenovo notebooks/keyboards default F-keys behaviour
+
 If behaviour of Function keys such that you have to press Fn to access F1-F12 keys, do the following:
 In BIOS go to Configuration tab and disable HotKey Mode (or change it to Legacy Mode). Save
 and exit. Done. It affects only F keys and doesn't affect, for example, Home, End, Pause,
 Break keys, which is what I need.
 
 
-##### Openvpn
----
+#### Openvpn
+
 ```
 sudo apt-get install openvpn
 ```
 
 
-##### On Ubuntu remove trash packages
----
+#### On Ubuntu remove trash packages
+
 ```
 remove totem
 remove totem-common
@@ -446,8 +446,8 @@ remove rhythmbox
 ```
 
 
-##### Change scrollbar appearence to normal
----
+#### Change scrollbar appearence to normal
+
 In Ubuntu <=12.04
 ```
 gsettings set org.gnome.desktop.interface ubuntu-overlay-scrollbars false
@@ -479,35 +479,35 @@ In vim you can use the following command for this (just change line numbers acco
 ```
 
 
-##### Make Ubuntu dash search only for applications
----
+#### Make Ubuntu dash search only for applications
+
 ```
 sudo apt-get remove --purge unity-lens-*
 ```
 And delete everything except unity-lens-applications
 
 
-##### Unity3D installation
----
+#### Unity3D installation
+
 There is a linux version of Unity3D available since August, 2015!!!
 Just download and the .deb file: http://blogs.unity3d.com/2015/08/26/unity-comes-to-linux-experimental-build-now-available/
 
 
-##### Install vlc
----
+#### Install vlc
+
 sudo apt-get install vlc
 
 
-##### If using Ubuntu 12.04 install MyUnity
----
+#### If using Ubuntu 12.04 install MyUnity
+
 ```
 sudo apt-get install myunity
 ```
 Go through options, you can add workspaces there
 
 
-##### If you're having problems with sound in wine in Ubuntu 12.04
----
+#### If you're having problems with sound in wine in Ubuntu 12.04
+
 Install package:
 ```
 sudo apt-get install ia32-libs-multiarch
@@ -515,13 +515,13 @@ sudo apt-get install ia32-libs-multiarch
 And restart pc
 
 
-##### Disable Ubuntu default Alt behavior
----
+#### Disable Ubuntu default Alt behavior
+
 Go to Keyboard. And disable "Key To show the HUD"
 
 
-##### Install this thing https://github.com/GGleb/indicator-systemtray-unity
----
+#### Install this thing https://github.com/GGleb/indicator-systemtray-unity
+
 ```
 sudo apt-add-repository ppa:fixnix/indicator-systemtray-unity
 sudo apt-get update
@@ -530,8 +530,8 @@ sudo apt-get install indicator-systemtray-unity
 And relogin, then middle-click on its icon in tray and then scroll middle mouse button while hovering the cursor on top of its icon
 
 
-##### Fix UpWork tracker:
----
+#### Fix UpWork tracker:
+
 ```
 wget http://security.ubuntu.com/ubuntu/pool/main/n/nss/libnss3_3.19.2-1ubuntu1_amd64.deb
 dpkg -x libnss3_3.19.2-1ubuntu1_amd64.deb .
@@ -542,8 +542,8 @@ It should start working now
 Got it from here: https://community.upwork.com/t5/Freelancers/Error-Message-THERE-WAS-A-PROBLEM-LOADING-UPWORK/td-p/83016/page/15
 
 
-##### Install some software for clipboard management like ClipIt
----
+#### Install some software for clipboard management like ClipIt
+
 ```
 sudo apt-get install clipit
 ```
@@ -552,13 +552,13 @@ Use Primary (selection)
 Synchronize clipboards
 
 
-##### Install gparted
----
+#### Install gparted
+
 sudo apt-get install gparted
 
 
-##### Install my utilities:
----
+#### Install my utilities:
+
 ```
 mkdir ~/dev/utilities/; cd !$
 git clone https://github.com/mzavoloka/gitls
@@ -585,22 +585,22 @@ make install
 ```
 
 
-##### Install fl studio
----
+#### Install fl studio
+
 Install it through Playonlinux, cause wine 1.6 can't handle fl studio.
 Don't forget to go to Settings->Install Components and install Microsoft Core Fonts and tahoma
 You may need to make changes in PoL's registry with .reg file for some of the cracks. Use Registry Editor in options for implementing this.
 
 
-##### Install metatrader 4
----
+#### Install metatrader 4
+
 There's a problem with mt4setup.exe installation with wine (it asks to specify a proxy). I really tried to overcome it, but with no luck.
 So the easiest way is to just copy some existing installation of mt4 and run copied terminal.exe with the /portable argument.
 If you don't have a copy of an existing installation, than install mt4 on virtualbox and than copy this installation to .wine
 
 
-##### Install perltidy utility
----
+#### Install perltidy utility
+
 ```
 sudo apt-get install perltidy
 ```
