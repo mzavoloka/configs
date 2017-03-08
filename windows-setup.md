@@ -1,4 +1,4 @@
-#### Virtualizing existing Ubuntu installation if you have it in dualboot
+### Virtualizing existing Ubuntu installation if you have it in dualboot
 
 Actually you can find all the info here: https://www.virtualbox.org/manual/ch09.html#rawdisk
 You have to have properly configured grub (i.e. you have to be able to actually dualboot to Ubuntu from grub)
@@ -32,11 +32,11 @@ sudo mount -t vboxsf ubuntu /home/mikhail/windows
 ```
 
 
-#### In Win 7 or 2008 R2 disable Caps Lock by creating running disable-caps-lock.reg file (in this repo)
+### In Win 7 or 2008 R2 disable Caps Lock by creating running disable-caps-lock.reg file (in this repo)
 
 
 
-#### If using bloody mouse, disable the mouse wheel appearing on the right side of chrome glitch:
+### If using bloody mouse, disable the mouse wheel appearing on the right side of chrome glitch:
 
 Right-click on the system icon and go to 4-way mouse scrolling and set it to "normal wheel".
 
