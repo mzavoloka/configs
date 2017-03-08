@@ -25,5 +25,13 @@ install unity
 # Then run:
 sudo mount -t vboxsf ubuntu /home/mikhail/windows
 
+
 -------------------------------------------------------------------
 # In Win 7 or 2008 R2 disable Caps Lock by creating running disable-caps-lock.reg file (in this repo)
+
+
+-------------------------------------------------------------------
+# If using bloody mouse, disable the mouse wheel appearing on the right side of chrome glitch:
+# Right-click on the system icon and go to 4-way mouse scrolling and set it to "normal wheel".
+
+# Got it here: https://productforums.google.com/forum/#!msg/chrome/RpBmvrQZa1Q/2q82ma30JysJ
