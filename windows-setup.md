@@ -51,3 +51,14 @@ Right-click on the system icon and go to 4-way mouse scrolling and set it to "no
 
 Got it here: https://productforums.google.com/forum/#!msg/chrome/RpBmvrQZa1Q/2q82ma30JysJ
 
+
+### On Windows server install Xinput and XAudio Dll’s
+
+Got it from here: http://www.win2012workstation.com/xinput-and-xaudio-dlls/
+
+For various games and applications from the Windows Store or other sources, pharmacy you will need to have Xinput1_4.dll, buy XInput9_1_0.dll and XAudio2_8.dll installed in order to work. If these files are not installed, stuff the applications will crash or just disappear when running them. The files from this package are extracted from a fresh installation of Windows 8 RTM.
+
+1. Download X_Audio_Input.zip (313 KB) from win2012workstation ( http://www.win2012workstation.com/wp-content/uploads/2012/08/X_Audio_Input.zip ).
+
+2. After downloading the zip extract the zip, run install.cmd as an Administrator and follow the instructions on the screen.
+
