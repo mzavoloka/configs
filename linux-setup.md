@@ -605,3 +605,11 @@ If you don't have a copy of an existing installation, than install mt4 on virtua
 sudo apt-get install perltidy
 ```
 and move .perltidyrc config file to your homedir
+
+
+### Install python package manager
+
+```
+sudo apt-get install python-pip
+```
+
