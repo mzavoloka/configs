@@ -31,9 +31,18 @@ Then run:
 sudo mount -t vboxsf ubuntu /home/mikhail/windows
 ```
 
-
 ### In Win 7 or 2008 R2 disable Caps Lock by creating running disable-caps-lock.reg file (in this repo)
 
+
+### Install essential programs:
+http://www.7-zip.org/
+http://www.videolan.org/vlc/index.html
+http://clipdiary.com/
+http://www.stdutility.com/stduviewer.html
+
+
+### Install Punto Switcher
+https://yandex.ru/soft/punto/
 
 
 ### If using bloody mouse, disable the mouse wheel appearing on the right side of chrome glitch:
@@ -41,3 +50,4 @@ sudo mount -t vboxsf ubuntu /home/mikhail/windows
 Right-click on the system icon and go to 4-way mouse scrolling and set it to "normal wheel".
 
 Got it here: https://productforums.google.com/forum/#!msg/chrome/RpBmvrQZa1Q/2q82ma30JysJ
+
