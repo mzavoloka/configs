@@ -353,13 +353,20 @@ There are all the shortcuts that can be manually modified
 Maybe there is some CLI way. There is a dconf-cli package. Have not tryed it yet.
 
 
-### (may be obsolete) In Debian install icedove
+### Configure Thunderbird
 
+Copy-paste all the existing email accounts from existing OS installation.
+```
+%APPDATA%\Thunderbird\Profiles\ for windows
+and
+~/.thunderbird for linux
+```
+Maybe there is some way to export them from already existing icedove/thunderbird configuration.
+
+For Debian the alternative is icedove
 ```
 sudo apt-get install icedove
 ```
-Create or export all the existing email accounts. Maybe there is some way to export them from already existing icedove/thunderbird configuration.
-
 
 ### (may be obsolete) Set up auto save when taking screenshots. To do this, install scrot:
 
