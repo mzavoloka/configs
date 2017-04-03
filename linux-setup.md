@@ -599,12 +599,9 @@ Don't forget to go to Settings->Install Components and install Microsoft Core Fo
 You may need to make changes in PoL's registry with .reg file for some of the cracks. Use Registry Editor in options for implementing this.
 
 
-### Install metatrader 4
+### Install metatrader 5
 
-There's a problem with mt4setup.exe installation with wine (it asks to specify a proxy). I really tried to overcome it, but with no luck.
-So the easiest way is to just copy some existing installation of mt4 and run copied terminal.exe with the /portable argument.
-If you don't have a copy of an existing installation, than install mt4 on virtualbox and than copy this installation to .wine
-
+MT4 is obsolete.
 
 ### Install perltidy utility
 
