@@ -601,7 +601,12 @@ You may need to make changes in PoL's registry with .reg file for some of the cr
 
 ### Install metatrader 5
 
-MT4 is obsolete.
+MT4 is obsolete. If you have any problems installing it on linux, just copy existsing windows MT installation.
+
+In order to set specific default appearence you for the charts you open, first open any
+chart and set timeframe, zoom, candlesticks etc. as you wish it to be for all
+freshly opened chart windows. Then go to Charts->Templates and add new template
+named default.tpl. That's it.
 
 ### Install perltidy utility
 
