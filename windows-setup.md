@@ -70,3 +70,20 @@ https://www.reddit.com/r/Steam/comments/459e8v/steam_overlay_shows_up_as_big_pic
 It's an option in the new beta client, Steam > Settings > In-Game
 It's so you can use the Steam Controller without having to use Big Picture Mode, it will just used the BPM overlay instead of the desktop overlay.
 
+### Install Git
+https://git-for-windows.github.io/
+Add this path to $PATH env var (in order to have access to mingw binaries from cmd):
+```
+C:\Program Files\Git\mingw64\bin
+```
+Configure its MinGW. Put .vimrc and .vim/ to c:\Users\Mikhail\
+Then install Vundle repo:
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+Run vim and run :PluginInstall
+
+Install python and set env var for its binary:
+```
+C:\Python27
+```
