@@ -87,3 +87,4 @@ Install python and set env var for its binary:
 ```
 C:\Python27
 ```
+But python with vim will only work after a reboot
