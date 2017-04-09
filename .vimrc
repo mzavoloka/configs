@@ -12,7 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'valloric/MatchTagAlways'
 Plugin 'ConradIrwin/vim-bracketed-paste'
-Plugin 'vobornik/vim-mql4'
+Plugin 'mzavoloka/vim-mql'
 Plugin 'rkennedy/vim-delphi'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'mzavoloka/nginx-vim-syntax'
@@ -502,5 +502,7 @@ let g:netrw_liststyle = 3
 
 " Make nerdtree show dotfiles by default
 let NERDTreeShowHidden=1
+
+autocmd BufNewFile,BufReadPost *.mq[h45] setlocal filetype=mql
 
 map <Leader>t :NERDTreeToggle<CR>
