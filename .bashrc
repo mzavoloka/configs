@@ -332,3 +332,34 @@ alias kill="kill -9"
 alias cls='echo -en "\ec"'
 
 alias perl_check_syntax_in_dir='for code in $(find . -type f -name "*.p[ml]"); do perl -c "$code"; done';
+
+croncheck() {
+  echo;
+  echo "Backing up cron using command:";
+  echo "crontab -l > backup.cron";
+  crontab -l > backup.cron;
+  echo;
+
+  echo "Checking syntax of input files..."
+
+  for item in "$@"; do
+    echo;
+    echo "crontab $item"
+    if crontab "$item"; then
+      echo "$item syntax is correct";
+    else
+      echo "$item ERROR";
+    fi
+  done;
+
+  echo;
+  echo "Reverting backed up data:";
+  echo "crontab backup.cron";
+  crontab backup.cron;
+
+  echo;
+  echo "Removing backup:";
+  echo "rm backup.cron";
+  rm backup.cron;
+  echo;
+}
