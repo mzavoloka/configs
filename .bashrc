@@ -60,6 +60,16 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 # Disable Ctrl+S hanging terminal
 stty -ixon
 
+# Check if user can run sudo and fill sudo var for aliases
+CAN_RUN_SUDO=$(sudo -n uptime 2>&1|grep "load"|wc -l)
+SUDO='';
+if [ ${CAN_RUN_SUDO} -gt 0 ]
+then
+  SUDO='sudo '
+  echo "Current user is a sudoer. Setting up aliases accordingly."
+else
+  echo "Current user is not a sudoer.  Setting up aliases accordingly."
+fi
 
 #################################################################
 # PROMPT
@@ -117,15 +127,16 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='sudo ls -I .. --color=auto'
-    alias lal='sudo ls -I .. -lahF --color=auto'
-    alias la='sudo ls -I .. -ahF --color=auto'
-    #alias ls='sudo ls -I . -I .. --color=auto'
-    #alias lal='sudo ls -I . -I .. -lahF --color=auto'
-    #alias la='sudo ls -I . -I .. -ahF --color=auto'
+    alias ls="${SUDO}ls -I .. --color=auto"
+    alias lal="${SUDO}ls -I .. -lahF --color=auto"
+    alias la="${SUDO}ls -I .. -ahF --color=auto"
+    #alias ls="${SUDO}ls -I . -I .. --color=auto"
+    #alias ls="${SUDO}ls -I . -I .. --color=auto"
+    #alias lal="${SUDO}ls -I . -I .. -lahF --color=auto"
+    #alias la="${SUDO}ls -I . -I .. -ahF --color=auto"
 
-    alias dir='sudo dir --color=auto'
-    alias vdir='sudo vdir --color=auto'
+    alias dir="${SUDO}dir --color=auto"
+    alias vdir="${SUDO}vdir --color=auto"
 fi
 
 # To output only filenames use:
@@ -135,7 +146,7 @@ mygrep() {
 }
 
 
-#alias myfind="sudo find . -iname '$@'"
+#alias myfind="${SUDO}find . -iname '$@'"
 alias myfind="perl ~/dev/utilities/myfind/myfind.pl"
 
 # Faster access to bashrc
@@ -151,33 +162,33 @@ alias sisroot="ssh -Y root@104.160.37.229"
 alias pingsis="ping -c 4 104.160.37.229"
 
 # Solving networking problems
-alias resnet="sudo service network-manager restart;
+alias resnet="${SUDO}service network-manager restart;
 echo 'consider using the following commands:';
-echo 'sudo ifdown wlan0 && sudo ifup wlan0';
+echo '${SUDO}ifdown wlan0 && ifup wlan0'
 echo 'or these commands:'
-echo 'sudo ifconfig wlan0 down && sudo ifconfig wlan0 up';"
-alias dnsfix="sudo sed -i 's/nameserver 127.[0-9].[0-9].[0-9]/nameserver 8.8.8.8/' /etc/resolv.conf"
+echo '${SUDO}ifconfig wlan0 down && ifconfig wlan0 up';"
+alias dnsfix="${SUDO}sed -i 's/nameserver 127.[0-9].[0-9].[0-9]/nameserver 8.8.8.8/' /etc/resolv.conf"
 
 # Apache
-alias apacher="sudo service apache2 restart"
-alias taillog="sudo tail -f /var/log/apache2/error.log"
+alias apacher="${SUDO}service apache2 restart"
+alias taillog="${SUDO}tail -f /var/log/apache2/error.log"
 
 # Package managing in Ubuntu
-alias autoremove="sudo apt-get autoremove"
-alias update="sudo apt-get update"
-alias upgrade="sudo apt-get dist-upgrade"
-alias autoremove="sudo apt-get autoremove"
+alias autoremove="${SUDO}apt-get autoremove"
+alias update="${SUDO}apt-get update"
+alias upgrade="${SUDO}apt-get dist-upgrade"
+alias autoremove="${SUDO}apt-get autoremove"
 
 remove() {
   for item in "$@";
-    do echo "sudo apt-get remove --purge $item";
+    do echo "${SUDO}apt-get remove --purge $item";
     sudo apt-get remove --purge "$item";
   done;
 }
 
 install() {
   for item in "$@";
-    do echo "sudo apt-get install $item";
+    do echo "${SUDO}apt-get install $item";
     sudo apt-get install "$item";
   done;
 }
@@ -195,9 +206,9 @@ grant_permissions() {
   done;
 }
 
-alias samba_restart='sudo service smbd restart; sudo service nmbd restart'
+alias samba_restart="${SUDO}service smbd restart; service nmbd restart"
 
-alias ports_usage='sudo netstat -tulpn';
+alias ports_usage="${SUDO}netstat -tulpn'"
 
 # Lists git directory with last commit info for each file
 alias gitls='bash ~/dev/utilities/gitls/gitls'
@@ -219,7 +230,7 @@ alias formatjson="python -mjson.tool" # and write json filename. It will output 
 
 alias emacs="emacs -nw" # Open emacs inside terminal (you're calling this alias in terminal, right). Suspend it with C-x C-z
 
-alias playaudio="sudo /home/mikhail/playaudio"
+alias playaudio="${SUDO}/home/mikhail/playaudio"
 
 # Display management
 #alias resolution_restore='xrandr --output DVI-I-1 --auto'
@@ -282,7 +293,6 @@ croncheck() {
   echo;
 }
 
-# 
 alias loadkeys='eval `ssh-agent -s`; ssh-add /home/mikhail/.ssh/mygithubkey' # seems obsolete
 # Permanently add keys to ssh in Git Bash. Got it here: https://help.github.com/articles/working-with-ssh-key-passphrases/#auto-launching-ssh-agent-on-git-for-windows
 env=~/.ssh/agent.env
