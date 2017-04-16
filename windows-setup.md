@@ -88,3 +88,9 @@ Install python and set env var for its binary:
 C:\Python27
 ```
 But python with vim will only work after a reboot
+
+Get tree utility here http://gnuwin32.sourceforge.net/packages/tree.htm
+And add it to path:
+```
+pathadd /c/Program\ Files\ \(x86\)/x86\)/GnuWin32/bin/ 
+```
