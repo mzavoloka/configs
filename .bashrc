@@ -391,3 +391,10 @@ fi
 add_all_keys
 
 unset env
+
+# Func to permanently add paths to $PATH on windows
+pathadd () {
+  for new_path in "$@"; do
+    setx path "%path%;$new_path"
+  done
+}
