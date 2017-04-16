@@ -398,3 +398,5 @@ pathadd () {
     setx path "%path%;$new_path"
   done
 }
+
+alias tree="tree -C"
