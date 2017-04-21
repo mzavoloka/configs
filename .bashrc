@@ -131,17 +131,22 @@ esac
 #################################################################
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls="${SUDO}ls -I .. --color=auto"
-    alias lal="${SUDO}ls -I .. -lahF --color=auto"
-    alias la="${SUDO}ls -I .. -ahF --color=auto"
-    #alias ls="${SUDO}ls -I . -I .. --color=auto"
-    #alias ls="${SUDO}ls -I . -I .. --color=auto"
-    #alias lal="${SUDO}ls -I . -I .. -lahF --color=auto"
-    #alias la="${SUDO}ls -I . -I .. -ahF --color=auto"
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+  alias ls="${SUDO}ls -I .. --color=auto"
+  alias lal="${SUDO}ls -I .. -lahF --color=auto"
+  alias la="${SUDO}ls -I .. -ahF --color=auto"
+  #alias ls="${SUDO}ls -I . -I .. --color=auto"
+  #alias ls="${SUDO}ls -I . -I .. --color=auto"
+  #alias lal="${SUDO}ls -I . -I .. -lahF --color=auto"
+  #alias la="${SUDO}ls -I . -I .. -ahF --color=auto"
 
-    alias dir="${SUDO}dir --color=auto"
-    alias vdir="${SUDO}vdir --color=auto"
+  alias dir="${SUDO}dir --color=auto"
+  alias vdir="${SUDO}vdir --color=auto"
+else
+  # Got from freebsd
+  alias ls='ls -G'
+  alias lal='ls -G -lahF'
+  alias la='ls -G -ahF'
 fi
 
 # To output only filenames use:
