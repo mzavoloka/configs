@@ -256,7 +256,11 @@ alias vir="LC_ALL=ru_RU.cp1251 vi -p"
 # True clear screen
 alias cls='echo -en "\ec"'
 
-alias perl_check_syntax_in_dir='for code in $(find . -type f -name "*.p[ml]"); do perl -c "$code"; done';
+alias perl_check_syntax_in_dir='for code in $(find . -type f -name "*.p[ml]"); do perl -c "$code"; done'
+
+# multiple files replace. example:
+# perl -i -pe 's/\!system/0 == system/'  daemon/*/*
+alias perlipe='perl -i -pe'
 
 # Check cron files syntax
 croncheck() {
