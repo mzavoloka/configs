@@ -26,6 +26,11 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'henrik/vim-indexed-search'
+" Snippets
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'mzavoloka/vim-snippets'
 " Not tested section:
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
