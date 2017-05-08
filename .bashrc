@@ -294,7 +294,8 @@ croncheck() {
   echo;
 }
 
-if [ $OSTYPE = 'windows' ]; then
+# msys for Git Bash
+if [ $OSTYPE = 'windows' ] || [ $OSTYPE = 'msys' ]; then
   alias loadkeys='eval `ssh-agent -s`; ssh-add /home/mikhail/.ssh/mygithubkey' # seems obsolete
   # Permanently add keys to ssh in Git Bash. Got it here: https://help.github.com/articles/working-with-ssh-key-passphrases/#auto-launching-ssh-agent-on-git-for-windows
   env=~/.ssh/agent.env
