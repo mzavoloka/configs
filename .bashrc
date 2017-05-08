@@ -139,7 +139,7 @@ fi
 # To output only filenames use:
 # mygrep -l
 mygrep() {
-  sudo grep -iRnI --color=always --exclude-dir={.git} $@ | nl;
+  ${SUDO} grep -iRnI --color=always --exclude-dir={.git} $@ | nl;
 }
 
 
@@ -179,27 +179,27 @@ alias autoremove="${SUDO}apt-get autoremove"
 remove() {
   for item in "$@";
     do echo "${SUDO}apt-get remove --purge $item";
-    sudo apt-get remove --purge "$item";
+    ${SUDO} apt-get remove --purge "$item";
   done;
 }
 
 install() {
   for item in "$@";
     do echo "${SUDO}apt-get install $item";
-    sudo apt-get install "$item";
+    ${SUDO} apt-get install "$item";
   done;
 }
 
 upgrades_available() {
   echo "UPGRADES AVAILABLE:";
-  sudo apt-get --just-print upgrade 2>&1 | perl -ne 'if (/Inst\s([\w,\-,\d,\.,~,:,\+]+)\s\[([\w,\-,\d,\.,~,:,\+]+)\]\s\(([\w,\-,\d,\.,~,:,\+]+)\)? /i) {print "PROGRAM: $1 INSTALLED: $2 AVAILABLE: $3\n"}' | column -t;
+  ${SUDO} apt-get --just-print upgrade 2>&1 | perl -ne 'if (/Inst\s([\w,\-,\d,\.,~,:,\+]+)\s\[([\w,\-,\d,\.,~,:,\+]+)\]\s\(([\w,\-,\d,\.,~,:,\+]+)\)? /i) {print "PROGRAM: $1 INSTALLED: $2 AVAILABLE: $3\n"}' | column -t;
 }
 
 
 grant_permissions() {
   for file in "$@"; do
-    sudo chmod -R 755 $file
-    sudo chown -R mikhail:mikhail $file
+    ${SUDO} chmod -R 755 $file;
+    ${SUDO} chown -R mikhail:mikhail $file;
   done;
 }
 
