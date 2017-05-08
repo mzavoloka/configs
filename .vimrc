@@ -517,3 +517,6 @@ let NERDTreeShowHidden=1
 autocmd BufNewFile,BufReadPost *.mq[h45] setlocal filetype=mql
 
 map <Leader>t :NERDTreeToggle<CR>
+
+" allow to move cursor anywhere
+set virtualedit=all
