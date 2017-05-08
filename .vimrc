@@ -520,3 +520,8 @@ map <Leader>t :NERDTreeToggle<CR>
 
 " allow to move cursor anywhere
 set virtualedit=all
+
+" enable selecting with mouse
+set mouse=a
+" enable to copy selected text with mouse
+vmap <C-C> "+y
