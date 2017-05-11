@@ -339,3 +339,5 @@ if [ $OSTYPE = 'windows' ] || [ $OSTYPE = 'msys' ]; then
   # Colored tree output
   alias tree="tree -C"
 fi
+
+cd ~ # default directory
