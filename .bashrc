@@ -205,7 +205,7 @@ grant_permissions() {
 
 alias samba_restart="${SUDO}service smbd restart; service nmbd restart"
 
-alias ports_usage="${SUDO}netstat -tulpn'"
+alias ports_usage="${SUDO}netstat -tulpn"
 
 # Lists git directory with last commit info for each file
 alias gitls='bash ~/dev/utilities/gitls/gitls'
