@@ -131,7 +131,7 @@ if [ -x /usr/bin/dircolors ]; then
   alias vdir="${SUDO}vdir --color=auto"
 else
   # Got from freebsd
-  alias ls='ls -G'
+  alias ls='ls -G' # TODO this -G hides group name from ls on FreeBSD. Need another switch
   alias lal='ls -G -lahF'
   alias la='ls -G -ahF'
 fi
