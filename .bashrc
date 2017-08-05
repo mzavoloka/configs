@@ -344,4 +344,6 @@ if [ $OSTYPE = 'windows' ] || [ $OSTYPE = 'msys' ]; then
   alias tree="tree -C"
 fi
 
+unset SSH_ASKPASS
+
 cd ~ # default directory
