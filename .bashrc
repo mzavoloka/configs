@@ -251,6 +251,10 @@ alias vimdiff="vimdiff -O"
 alias vi="vim -p"
 alias vim="vim -p"
 
+# Set vim as default text editor
+export VISUAL=vim
+export EDITOR=vim
+
 alias vir="LC_ALL=ru_RU.cp1251 vi -p"
 
 # True clear screen
