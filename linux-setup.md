@@ -52,7 +52,7 @@ git config --global merge.conflictstyle diff3
 ### Configure vim
 
 Download and place .vim and .vimrc to ~
-.vimrc may be modified specifically for different linux distros
+.vimrc may be modified specifically for different linux distros.
 No modification required for making Debian files work in Ubuntu
 
 Move everything out of the folder ~/.vim/bundle/ (Vundle will put all plugins there after you install it).
@@ -66,8 +66,8 @@ After that you'll be able to install all other plugins listed in .vimrc running 
 ### Configure bash shell
 
 
-Download and place .bashrc to ~
-.bashrc may be modified specially for different linux distros
+Download and place .bashrc to ~.
+(.bashrc may be modified specifically for different linux distros)
 
 In Ubuntu go to preferences and set there
 Color scheme to 'White on black'
@@ -285,11 +285,15 @@ Now add new shortcuts to this
 
 Go to Keyboard Layout, select Options... Caps Lock behaviour -> disabled
 
-In Debian?
 ```
 sudo apt-get install gnome-tweak-tool
 ```
 Run Tweak Tool, select Typing and set Caps Lock key behavior from "Disabled" to "Caps Lock is disabled"
+
+Or you could use
+```
+setxkbmap -option ctrl:nocaps
+```
 
 
 ### Russian layout may not work by default
@@ -603,7 +607,7 @@ You may need to make changes in PoL's registry with .reg file for some of the cr
 
 MT4 is obsolete. If you have any problems installing it on linux, just copy existsing windows MT installation.
 
-In order to set specific default appearence you for the charts you open, first open any
+In order to set specific default appearence for the charts you open, first open any
 chart and set timeframe, zoom, candlesticks etc. as you wish it to be for all
 freshly opened chart windows. Then go to Charts->Templates and add new template
 named default.tpl. That's it.
@@ -622,7 +626,7 @@ and move .perltidyrc config file to your homedir
 sudo apt-get install python-pip
 ```
 
-### Install python package manager
+### Install Skype
 
 Got it from here: https://repo.skype.com/
 
