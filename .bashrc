@@ -346,4 +346,6 @@ fi
 
 unset SSH_ASKPASS
 
+alias tmux="tmux -2" # Force tmux assume 256 color support
+
 cd ~ # default directory
