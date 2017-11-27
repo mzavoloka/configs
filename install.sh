@@ -30,7 +30,8 @@ git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.v
 vim +PluginInstall +qa # runs :PluginInstall from the shell
 
 echo "Making current user a sudoer with no password..."
-sudo echo "$SUDO_USER ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
+# NOTE you can't just do `echo >> /etc/sudoers`
+echo "$SUDO_USER ALL=(ALL:ALL) NOPASSWD:ALL" | sudo EDITOR='tee -a' visudo
 
 echo "Making vim a difftool..."
 git config --global merge.tool vimdiff
