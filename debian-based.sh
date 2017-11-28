@@ -31,6 +31,24 @@ sudo apt-get -y install google-chrome-stable
 echo "Perl"
 sudo apt-get -y install perl-doc
 
+
+#+-------------------------------------------------------------------+
+#  Gnome extensions
+#+-------------------------------------------------------------------+
+# TODO check if gnome is really in use
+
+# NOTE Ubuntu-specific, I don't like the dock
+sudo apt-get -y remove --purge gnome-shell-extension-ubuntu-dock
+
+sudo apt-get -y install gnome-shell-extension-shortcuts
+sudo apt-get -y install gnome-shell-extension-impatience
+sudo apt-get -y install gnome-shell-extension-hard-disk-led
+# NOTE required for Ubuntu clipboards to work properly (see https://wiki.ubuntu.com/ClipboardPersistence )
+sudo apt-get -y install gnome-shell-extensions-gpaste
+
+gsettings set org.gnome.shell enabled-extensions "['GPaste@gnome-shell-extensions.gnome.org', 'Shortcuts@kyle.aims.ac.za', 'impatience@gfxmonk.net', 'harddiskled@bijidroid.gmail.com']"
+
+
 #+-------------------------------------------------------------------+
 #  Gsettings stuff
 #+-------------------------------------------------------------------+
