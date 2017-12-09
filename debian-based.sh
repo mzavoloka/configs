@@ -87,3 +87,9 @@ gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view'
 gsettings set org.gnome.nautilus.list-view default-zoom-level 'small'
 gsettings set org.gnome.nautilus.list-view use-tree-view true
 gsettings set org.gnome.nautilus.preferences show-hidden-files true
+
+
+echo "Setting up workspaces..."
+gsettings set org.gnome.desktop.wm.preferences num-workspaces 6
+gsettings set org.gnome.shell.overrides dynamic-workspaces false
+gsettings set org.gnome.shell.overrides workspaces-only-on-primary false
