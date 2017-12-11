@@ -48,6 +48,12 @@ git config --global merge.tool vimdiff
 git config --global merge.conflictstyle diff3
 ```
 
+Set your name and email:
+```
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+
 
 ### Configure vim
 
