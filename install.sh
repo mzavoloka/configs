@@ -33,6 +33,8 @@ echo "Making current user a sudoer with no password..."
 # NOTE you can't just do `echo >> /etc/sudoers`
 echo "$SUDO_USER ALL=(ALL:ALL) NOPASSWD:ALL" | sudo EDITOR='tee -a' visudo
 
+git config --global alias.co checkout
+
 echo "Making vim a difftool..."
 git config --global merge.tool vimdiff
 git config --global merge.conflictstyle diff3
