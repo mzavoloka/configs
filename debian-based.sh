@@ -24,5 +24,4 @@ sudo apt-get -y install google-chrome-stable
 
 
 echo "Perl"
-sudo apt-get -y install perl-doc
-sudo apt-get -y install cpanm
+sudo apt-get -y install perl-doc cpanminus
