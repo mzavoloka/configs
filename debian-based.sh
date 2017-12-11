@@ -8,6 +8,7 @@ sudo apt-get -y install tree
 sudo apt-get -y install telegram-desktop
 sudo apt-get -y install vlc
 sudo apt-get -y install youtube-dl
+sudo apt-get -y install ack-grep
 
 echo "Installing google-chrome"
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
