@@ -25,7 +25,8 @@ echo "Copying .bashrc to homedir..."
 cp .bashrc $HOME
 
 echo "Setting up vim..."
-cp -r .vim* $HOME
+cp -r .vimrc $HOME
+#cp -r .vim* $HOME # NOTE revise .vim dir, some files from there are still viable
 git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 vim +PluginInstall +qa # runs :PluginInstall from the shell
 
