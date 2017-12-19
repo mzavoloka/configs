@@ -32,7 +32,7 @@ vim +PluginInstall +qa # runs :PluginInstall from the shell
 
 echo "Making current user a sudoer with no password..."
 # NOTE you can't just do `echo >> /etc/sudoers`
-echo "$SUDO_USER ALL=(ALL:ALL) NOPASSWD:ALL" | sudo EDITOR='tee -a' visudo
+echo "$USER ALL=(ALL:ALL) NOPASSWD:ALL" | sudo EDITOR='tee -a' visudo
 
 git config --global alias.co checkout
 
