@@ -645,3 +645,4 @@ sudo apt-get update
 sudo apt-get install skypeforlinux -y
 ```
 
+### Patch xorg to change layout on shortcut release (xorg-patch-ubuntu-16.04.sh)
