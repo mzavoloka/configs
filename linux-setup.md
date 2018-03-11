@@ -287,6 +287,16 @@ sudo apt-get install xbacklight
 Now add new shortcuts to this
 
 
+### On laptops Ubuntu has by default enabled retarded continuos scrolling feature (for touchpads)
+
+That is if you fast-scroll with your touchpad, it continues scrolling for several seconds after you release your fingers.
+If at that moment you're switching tabs with Ctrl+Tab, it will catch pressed Ctrl key + scrolling combination.
+This way it will zoom the page. To disable such behaviour run:
+```
+synclient CoastingSpeed=0
+```
+
+
 ### Permanently disable Caps Lock
 
 Go to Keyboard Layout, select Options... Caps Lock behaviour -> disabled
