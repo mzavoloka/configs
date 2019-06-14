@@ -1,3 +1,7 @@
+" Modelines functionnality is insecure (see CVE-2002-1377, CVE-2016-1248, CVE-2019-12735)
+set modelines=0
+set nomodeline
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
