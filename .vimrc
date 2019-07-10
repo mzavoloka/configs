@@ -126,6 +126,7 @@ nmap <leader>w :w!<cr>
 
 " Make hotkeys work with russian. To change language press C+^
 set keymap=russian-jcukenwin
+let g:airline#extensions#keymap#enabled = 0 " don't show keymap in airline
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
