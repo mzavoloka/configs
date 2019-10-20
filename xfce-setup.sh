@@ -18,6 +18,7 @@ xfconf-query -c xfce4-keyboard-shortcuts -p '/xfwm4/custom/<Primary>F12' -r # re
 # commands
 xfconf-query -c xfce4-keyboard-shortcuts -np '/commands/custom/<Super>W' -t string -s 'xfce4-appfinder'
 xfconf-query -c xfce4-keyboard-shortcuts -np '/commands/custom/<Primary><Super>L' -t string -s 'xflock4'
+xfconf-query -c xfce4-keyboard-shortcuts -np '/commands/custom/<Shift>Print' -t string -s 'xfce4-screenshooter -r -o "mv -t /home/mikhail/Pictures/"'
 
 # window management
 xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Super>d' -t string -s 'show_desktop_key'
