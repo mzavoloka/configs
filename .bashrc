@@ -240,6 +240,7 @@ alias 800='xrandr -s 800x600'
 
 alias brightness_low="xrandr --output DVI-I-1 --brightness 0.5"
 alias brightness_medium="xrandr --output DVI-I-1 --brightness 1"
+alias brightness_high="xrandr --output DVI-I-1 --brightness 1.5"
 
 
 alias kill="kill -9"
