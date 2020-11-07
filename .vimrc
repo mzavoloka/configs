@@ -27,6 +27,7 @@ Plugin 'travisjeffery/vim-auto-mkdir'     " Automatically mkdir when writing fil
 Plugin 'ntpeters/vim-better-whitespace'   " Highlight trailing whitespaces. Provides :StripWhitespace
 "Plugin 'ctrlpvim/ctrlp.vim'              " Full path fuzzy file, buffer, mru, tag, ... finder
 Plugin 'vim-airline/vim-airline'          " Statusline at the bottom of each vim window
+Plugin 'vim-airline/vim-airline-themes'   " Contains 'tomorrow' airline theme
 Plugin 'tpope/vim-vinegar'                " Enhances vim's default file exlorer called netrw,
 Plugin 'scrooloose/nerdtree'              " Project browser (press ,t to open it)
 Plugin 'henrik/vim-indexed-search'        " While searching, shows the total number of matches and the number(index) of current match
@@ -520,6 +521,12 @@ let g:netrw_liststyle = 3
 let NERDTreeShowHidden=1
 
 autocmd BufNewFile,BufReadPost *.mq[h45] setlocal filetype=mql
+
+let g:airline_powerline_fonts = 1
+let g:airline_detect_paste=0
+" don't show keymap 'Keymap: russian-jcukenwin' in airline (it takes too much space)
+let g:airline#extensions#keymap#enabled = 0
+let g:airline_theme='tomorrow'
 
 map <Leader>t :NERDTreeToggle<CR>
 
