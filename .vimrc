@@ -13,34 +13,34 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
+Plugin 'VundleVim/Vundle.vim'             " Package manager
+Plugin 'tpope/vim-fugitive'               " Integration with git
 if !has('win32') && !has('win32unix')
-  Plugin 'valloric/MatchTagAlways'
+  Plugin 'valloric/MatchTagAlways'        " Always highlights the XML/HTML tags that enclose your cursor location
 endif
-Plugin 'ConradIrwin/vim-bracketed-paste'
+Plugin 'ConradIrwin/vim-bracketed-paste'  " whenever you are in the insert mode and paste into your terminal emulator using command+v, shift+insert, ctrl+shift+v or middle-click, vim will automatically :set paste for you.
 Plugin 'mzavoloka/vim-mql'
 Plugin 'rkennedy/vim-delphi'
-Plugin 'easymotion/vim-easymotion'
+Plugin 'easymotion/vim-easymotion'        " Travel letters on the screen (press ,s to initiate it)
 Plugin 'mzavoloka/nginx-vim-syntax'
-Plugin 'travisjeffery/vim-auto-mkdir'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'kien/ctrlp.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'tpope/vim-vinegar'
-Plugin 'scrooloose/nerdtree'
-Plugin 'henrik/vim-indexed-search'
+Plugin 'travisjeffery/vim-auto-mkdir'     " Automatically mkdir when writing file in non-existant directory
+Plugin 'ntpeters/vim-better-whitespace'   " Highlight trailing whitespaces. Provides :StripWhitespace
+"Plugin 'ctrlpvim/ctrlp.vim'              " Full path fuzzy file, buffer, mru, tag, ... finder
+Plugin 'vim-airline/vim-airline'          " Statusline at the bottom of each vim window
+Plugin 'tpope/vim-vinegar'                " Enhances vim's default file exlorer called netrw,
+Plugin 'scrooloose/nerdtree'              " Project browser (press ,t to open it)
+Plugin 'henrik/vim-indexed-search'        " While searching, shows the total number of matches and the number(index) of current match
 " Snippets
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'mzavoloka/vim-snippets'
+Plugin 'MarcWeber/vim-addon-mw-utils'     " Dependency of vim-snipmate. Provides some utility functions
+Plugin 'tomtom/tlib_vim'                  " Dependency of vim-snipmate. Provides some utility functions
+Plugin 'garbas/vim-snipmate'              " Support for textual snippets, similar to TextMate or other Vim plugins like UltiSnips
+Plugin 'mzavoloka/vim-snippets'           " My Snippets for vim
 " Not tested section:
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-commentary'
+Plugin 'glts/vim-radical'                 " gA shows the four representations of the number under the cursor (or selected in Visual mode).
+                                          " crd, crx, cro, crb convert the number under the cursor to decimal, hex, octal, binary, respectively.
+Plugin 'tpope/vim-commentary'             " Use gcc to comment out a line (takes a count), gc to comment out the target of a motion (for example, gcap to comment out a paragraph), gc in visual mode to comment out the selection, and gc in operator pending mode to target a comment. You can also use it as a command, either with a range like :7,17Commentary, or as part of a :global invocation like with :g/TODO/Commentary.
+" Colorschemes
+Plugin 'flazz/vim-colorschemes'           " Contains molokai and github colorschemes
 "Plugin 'svermeulen/vim-easyclip'
 
 " " The following are examples of different formats supported.
@@ -160,7 +160,7 @@ set whichwrap+=<,>,h,l
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Highlight search results
@@ -192,6 +192,7 @@ set tm=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 color molokai
+"color github
 
 " This line needed to stop vim from deleting indentation when placing # character in perl files
 filetype plugin indent on
