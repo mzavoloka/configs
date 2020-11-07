@@ -43,6 +43,17 @@ git config --global merge.conflictstyle diff3
 echo "Setting git push.default option to simple..."
 git config --global push.default simple
 
+echo "Setting git name and email"
+git config --global user.name "Mikhail Zavoloka"
+git config --global user.email "mikhail.zavoloka@gmail.com"
+
+echo "Avoiding 'git pull' warning:
+warning: Pulling without specifying how to reconcile divergent branches is
+discouraged. You can squelch this message by running one of the following
+commands sometime before your next pull:"
+git config pull.rebase false # merge (the default strategy)
+
+
 echo "Disabling Caps Lock..."
 sudo setxkbmap -option ctrl:nocaps
 
