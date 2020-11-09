@@ -537,3 +537,6 @@ set virtualedit=all
 set mouse=a
 " enable to copy selected text with mouse
 vmap <C-C> "+y
+
+" Affects tabbing while using cmdline :
+set wildmode=list:longest "	When more than one match, list all matches and complete till longest common string.
