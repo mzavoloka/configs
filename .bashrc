@@ -345,10 +345,10 @@ if [ $OSTYPE = 'windows' ] || [ $OSTYPE = 'msys' ]; then
       setx path "%path%;$new_path"
     done
   }
-
-  # Colored tree output
-  alias tree="tree -C"
 fi
+
+# Colored tree output
+alias tree="tree -C -a -I '.git|.svn'"
 
 unset SSH_ASKPASS
 
