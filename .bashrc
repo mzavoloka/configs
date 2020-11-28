@@ -238,8 +238,14 @@ alias 1280='xrandr -s 1280x720'
 alias 1024='xrandr -s 1024x768'
 alias 800='xrandr -s 800x600'
 
-alias brightness_low="xrandr --output DVI-I-1 --brightness 0.5"
-alias brightness_medium="xrandr --output DVI-I-1 --brightness 1"
+alias fixrate='xrandr --output HDMI-0 --mode 3840x2160 --rate 60'
+
+#current_display=DVI-I-1
+current_display=HDMI-0
+alias brightness_low="xrandr --output $current_display --brightness 0.5"
+alias brightness_lowmedium="xrandr --output $current_display --brightness 0.75"
+alias brightness_medium="xrandr --output $current_display --brightness 1"
+alias brightness_high="xrandr --output $current_display --brightness 1.5"
 
 
 alias kill="kill -9"
