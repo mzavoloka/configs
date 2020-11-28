@@ -83,3 +83,11 @@ cd $PWD
 
 echo "DONE. Sourcing .bashrc and quitting"
 source ~/.bashrc
+
+# NOTE very specific to current installation
+#echo "Add mounts to /etc/rc.local"
+##mount /dev/sda1 /mnt/winserv2008c/
+##mount /dev/sda5 /mnt/winserv2008d/
+#echo 'mount /dev/sdb1 /mnt/debian/
+#mount /dev/sdb3 /mnt/2tbdisk/
+#mount /dev/sdb5 /mnt/yetanotherwinserv2008/' >> /etc/rc.local
