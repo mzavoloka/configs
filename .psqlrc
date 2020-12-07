@@ -1,0 +1,17 @@
+\pset pager 0
+/* Show server port and user in prompt */
+\set PROMPT1 '%M:%> %n@%/%R%#%x '
+/*
+%M refers to the database server’s hostname – is “[local]” if the connection is over a Unix domain socket
+%> refers to the listening port
+%n refers to the session username
+%/ refers the current database
+%R refers to whether you’re in single-line mode (^) or disconnected (!) but is normally =
+%# refers to whether you’re a superuser (#) or a regular user (>)
+%x refers to the transaction status – usually blank unless in a transaction block (*)
+*/
+
+/*
+More colorful variant:
+\set PROMPT1 '\n%[%033[1;34;40m%]psql %[%033[;30;45m%] %M:%> %[%033[;35;40m%] %[%033[36m%]%n %# %[%033[35m%]%~ %[%033[37m%]%x%[%033[;30;49m%]%[%033[0m%] '
+*/
