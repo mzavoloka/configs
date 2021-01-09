@@ -1,0 +1,7 @@
+For Civ 5 Brave New World put this CIV5Controls.xml file into:
+C:\Program Files (x86)\Steam\steamapps\common\Sid Meier's Civilization V\Assets\DLC\Expansion2\Gameplay\XML\Units\CIV5Controls.xml
+
+List of changes:
+- use 1 and 2 to cycle through your cities
+- use Tab and Ctrl+Tab to cycle through your units
+- or use Numpad Up and Numpad Down to cycle through your units
