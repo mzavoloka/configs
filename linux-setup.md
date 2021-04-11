@@ -656,3 +656,13 @@ sudo apt-get install skypeforlinux -y
 ```
 
 ### Patch xorg to change layout on shortcut release (xorg-patch-ubuntu-16.04.sh)
+
+
+### Ubuntu 16.04 LTS sound bug
+Related to bug in Intel HD Audio driver package (error in c code). Just install an older package that has no bug (included in this folder as oem-audio-hda-daily-lts-xenial-dkms_0.201707180447-ubuntu16.04.1_all.deb).
+
+Delete an auto-installed package if such exists.
+sudo apt remove --purge oem-audio-hda-daily-lts-xenial-dkms
+
+And install the package without a bug:
+dpkg -i oem-audio-hda-daily-lts-xenial-dkms_0.201707180447-ubuntu16.04.1_all.deb
