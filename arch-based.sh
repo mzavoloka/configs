@@ -8,6 +8,7 @@ pacman -S        \
     inetutils    \
     net-tools    \
     mlocate      \
+    make         \
     dhcp         \ # probably, not needed
     wget         \
     openssh      \ # enables ssh
