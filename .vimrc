@@ -540,3 +540,5 @@ vmap <C-C> "+y
 
 " Affects tabbing while using cmdline :
 set wildmode=list:longest "	When more than one match, list all matches and complete till longest common string.
+
+let g:snipMate = { 'snippet_version' : 1 } " supress message about deprecated snipmate version 0
