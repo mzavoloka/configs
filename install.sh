@@ -72,9 +72,9 @@ sudo setxkbmap -option ctrl:nocaps' > ~/.config/autostart/setxkbmap.desktop
 echo "Installing my utilites..."
 mkdir $HOME/dev/
 mkdir $HOME/dev/utilities/; cd $HOME/dev/utilities
-git clone https://github.com/mzavoloka/gitls
-git clone https://github.com/mzavoloka/myfind
-git clone https://github.com/mzavoloka/git-cal
+git clone git@github.com:mzavoloka/gitls
+git clone git@github.com:mzavoloka/myfind
+git clone git@github.com:mzavoloka/git-cal
 cd git-cal/
 perl Makefile.PL
 make
@@ -83,11 +83,3 @@ cd $PWD
 
 echo "DONE. Sourcing .bashrc and quitting"
 source ~/.bashrc
-
-# NOTE very specific to current installation
-#echo "Add mounts to /etc/rc.local"
-##mount /dev/sda1 /mnt/winserv2008c/
-##mount /dev/sda5 /mnt/winserv2008d/
-#echo 'mount /dev/sdb1 /mnt/debian/
-#mount /dev/sdb3 /mnt/2tbdisk/
-#mount /dev/sdb5 /mnt/yetanotherwinserv2008/' >> /etc/rc.local
