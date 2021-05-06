@@ -10,6 +10,9 @@ echo "Detecting distribution name..."
 if [ -f /etc/redhat-release ]; then
   OS=`cat /etc/redhat-release`
   sh redhat-based.sh
+elif [ -f /etc/arch-release ]; then
+  OS=arch
+  sh arch-based.sh
 elif [ -f /etc/debian_version ]; then
   OS=`cat /etc/debian_version`
   sh debian-based.sh
