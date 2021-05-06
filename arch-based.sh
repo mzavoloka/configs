@@ -16,20 +16,20 @@ pacman -S        \
     parcellite   \ # clipboard manager
     ack          \
     git          \
-    trash-cli    \
-    gvfs-mtp     \ # enable file transfer from mobile devices
-    file-roller           \ # archive manager
-    thunar-archive-plugin   # thunar's context menu for extracting archives
+    trash-cli
 
 # For booting you might need some of these packages:
 pacman -S        \
     grub         \
-    refind       \ # configure it afterwars according to https://wiki.archlinux.org/index.php/REFInd
-    efibootmgr   \
+    refind       \ # configure it afterwards according to https://wiki.archlinux.org/index.php/REFInd
+    efibootmgr
 
 pacman -S        \
     xorg         \
-    xfce4
+    xfce4        \
+    gvfs-mtp     \ # enable file transfer from mobile devices
+    file-roller           \ # archive manager
+    thunar-archive-plugin   # thunar's context menu for extracting archives
 
 useradd --create-home mikhail
 passwd mikhail
@@ -38,3 +38,5 @@ usermod -aG tty mikhail # to be able to run Xorg
 
 pacman -S        \
     chromium
+
+bash xfce-setup.sh
