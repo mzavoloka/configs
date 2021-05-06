@@ -35,8 +35,7 @@ useradd --create-home mikhail
 passwd mikhail
 usermod -aG tty mikhail # to be able to run Xorg
 
-# add this line to /etc/sudoers:
-mikhail ALL=(ALL) NOPASSWD:ALL
+echo '$USER ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers
 
 pacman -S        \
     chromium
