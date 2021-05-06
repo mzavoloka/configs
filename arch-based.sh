@@ -34,8 +34,7 @@ pacman -S        \
 useradd --create-home mikhail
 passwd mikhail
 usermod -aG tty mikhail # to be able to run Xorg
-
-echo '$USER ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers
+# NOTE see install.sh script, it makes your user a sudoer
 
 pacman -S        \
     chromium
