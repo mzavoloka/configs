@@ -30,12 +30,15 @@ xfconf-query -c xfce4-keyboard-shortcuts -np '/commands/custom/<Shift>Print' -t 
 # window management
 xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Super>d' -t string -s 'show_desktop_key'
 
-xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>1' -t string -s 'tile_up_left_key'
-xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>2' -t string -s 'tile_up_right_key'
-xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>3' -t string -s 'tile_down_left_key'
-xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>4' -t string -s 'tile_down_right_key'
-xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>5' -t string -s 'tile_up_key'
-xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>6' -t string -s 'tile_down_key'
+xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_1' -t string -s 'tile_down_left_key'
+xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_2' -t string -s 'tile_down_key'
+xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_3' -t string -s 'tile_down_right_key'
+xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_4' -t string -s 'tile_left_key'
+xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_5' -t string -s 'move_window_workspace_5_key'
+xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_6' -t string -s 'tile_right_key'
+xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_7' -t string -s 'tile_up_left_key'
+xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_8' -t string -s 'tile_up_key'
+xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_9' -t string -s 'tile_up_right_key'
 
 xfconf-query -c xfce4-keyboard-shortcuts -p '/xfwm4/custom/<Alt>F7'  -r # reset old 'maximize_window_key'
 xfconf-query -c xfce4-keyboard-shortcuts -p '/xfwm4/default/<Alt>F7' -r # reset old 'maximize_window_key'
