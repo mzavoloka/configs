@@ -18,6 +18,10 @@ xfconf-query -c xfce4-keyboard-shortcuts -p '/xfwm4/custom/<Primary>F12' -r # re
 
 # Setting new shortcuts
 
+# volume control for keyboard w/0 media buttons
+xfconf-query -c xfce4-keyboard-shortcuts -np '/commands/custom/<Primary>minus' -t string -s 'amixer set Master 3%-'
+xfconf-query -c xfce4-keyboard-shortcuts -np '/commands/custom/<Primary>equal' -t string -s 'amixer set Master 3%+'
+
 # commands
 xfconf-query -c xfce4-keyboard-shortcuts -np '/commands/custom/<Super>W' -t string -s 'xfce4-appfinder'
 xfconf-query -c xfce4-keyboard-shortcuts -np '/commands/custom/<Primary><Super>L' -t string -s 'xflock4'
