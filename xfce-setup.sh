@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Disable tearing
+xfconf-query -c xfwm4 -p /general/vblank_mode -s glx
+
 # Unsetting stupid shortcuts
 xfconf-query -c xfce4-keyboard-shortcuts -p '/xfwm4/custom/<Primary>F1'  -r # reset workspace_1_key
 xfconf-query -c xfce4-keyboard-shortcuts -p '/xfwm4/custom/<Primary>F2'  -r # reset workspace_2_key
