@@ -16,6 +16,7 @@ pacman -S        \
     parcellite   \ # clipboard manager
     ack          \
     git          \
+    ntfs-3g      \
     trash-cli
 
 # For booting you might need some of these packages:
@@ -37,6 +38,7 @@ usermod -aG tty mikhail # to be able to run Xorg
 # NOTE see install.sh script, it makes your user a sudoer
 
 pacman -S        \
+    vlc          \
     chromium
 
 bash xfce-setup.sh
