@@ -5,11 +5,11 @@ pacman -S        \
     htop         \
     man-db       \
     dhclient     \
+    dhcpcd       \
     inetutils    \
     net-tools    \
     mlocate      \
     make         \
-    dhcp         \ # probably, not needed
     wget         \
     openssh      \ # enables ssh
     gvim         \ # gvim to enable clipboard sharing
@@ -36,6 +36,8 @@ useradd --create-home mikhail
 passwd mikhail
 usermod -aG tty mikhail # to be able to run Xorg
 # NOTE see install.sh script, it makes your user a sudoer
+
+systemctl enable dhcpcd
 
 pacman -S        \
     vlc          \
