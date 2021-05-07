@@ -56,21 +56,13 @@ discouraged. You can squelch this message by running one of the following
 commands sometime before your next pull:"
 git config pull.rebase false # merge (the default strategy)
 
-echo "Setxkbmap on wm startup..."
-mkdir -p ~/.config/autostart/
-echo '[Desktop Entry]
-Version=1.0
-Encoding=UTF-8
-Name=Script
-Type=Application
-Exec=setxkbmap -layout us,ru -option caps:escape,grp:alt_shift_toggle
-Icon=
-Terminal=false
-StartupNotify=false
-Hidden=false
-GenericName=
-GenericName[en_US]=
-sudo setxkbmap -option ctrl:nocaps' > ~/.config/autostart/setxkbmap.desktop
+echo "Setxkbmap on xorg startup..."
+sudo echo 'Section "InputClass"
+  Identifier "system-keyboard"
+  MatchIsKeyboard "on"
+  Option "XkbLayout" "us,ru"
+  Option "XkbOptions" "caps:escape,grp:sclk_toggle,grp_led:scroll"
+EndSection' > /etc/X11/xorg.conf.d/00-keyboard.conf
 
 echo "Installing my utilites..."
 mkdir $HOME/dev/
