@@ -15,7 +15,9 @@ pacman -S        \
     gvim         \ # gvim to enable clipboard sharing
     parcellite   \ # clipboard manager
     ack          \
+    tree         \
     git          \
+    cpanminus    \
     ntfs-3g      \
     trash-cli
 
