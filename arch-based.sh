@@ -40,6 +40,9 @@ usermod -aG tty mikhail # to be able to run Xorg
 
 systemctl enable dhcpcd
 
+mkdir /home/mikhail/Pictures # dir to save screenshots with xfce4-screenshooter
+chown mikhail:mikhail /home/mikhail/Pictures
+
 pacman -S        \
     vlc          \
     chromium
