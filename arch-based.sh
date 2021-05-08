@@ -45,6 +45,8 @@ systemctl enable dhcpcd
 mkdir /home/mikhail/Pictures # dir to save screenshots with xfce4-screenshooter
 chown mikhail:mikhail /home/mikhail/Pictures
 
+cp -r xfce4.config/* /home/mikhail/.config/xfce4/
+
 pacman -S        \
     vlc          \
     chromium

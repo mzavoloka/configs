@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-appfinder" version="1.0">
+  <property name="icon-view" type="bool" value="false"/>
+  <property name="text-beside-icons" type="bool" value="false"/>
+  <property name="item-icon-size" type="uint" value="0"/>
+  <property name="hide-category-pane" type="bool" value="true"/>
+</channel>
