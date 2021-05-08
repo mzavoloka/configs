@@ -3,14 +3,16 @@
 # Disable tearing
 xfconf-query -c xfwm4 -p /general/vblank_mode -s glx
 
-# Unsetting stupid shortcuts
+# Unsetting unused default shortcuts
 xfconf-query -c xfce4-keyboard-shortcuts -p '/xfwm4/custom/<Primary>F1'  -r # reset workspace_1_key
 xfconf-query -c xfce4-keyboard-shortcuts -p '/xfwm4/custom/<Primary>F2'  -r # reset workspace_2_key
 xfconf-query -c xfce4-keyboard-shortcuts -p '/xfwm4/custom/<Primary>F3'  -r # reset workspace_3_key
 xfconf-query -c xfce4-keyboard-shortcuts -p '/xfwm4/custom/<Primary>F4'  -r # reset workspace_4_key
 xfconf-query -c xfce4-keyboard-shortcuts -p '/xfwm4/custom/<Primary>F5'  -r # reset workspace_5_key
 xfconf-query -c xfce4-keyboard-shortcuts -p '/xfwm4/custom/<Primary>F6'  -r # reset workspace_6_key
+xfconf-query -c xfce4-keyboard-shortcuts -p '/xfwm4/custom/<Primary>F7'  -r # reset workspace_7_key
 xfconf-query -c xfce4-keyboard-shortcuts -p '/xfwm4/custom/<Primary>F8'  -r # reset workspace_8_key
+xfconf-query -c xfce4-keyboard-shortcuts -p '/xfwm4/custom/<Primary>F9'  -r # reset workspace_9_key
 xfconf-query -c xfce4-keyboard-shortcuts -p '/xfwm4/custom/<Primary>F10' -r # reset workspace_10_key
 xfconf-query -c xfce4-keyboard-shortcuts -p '/xfwm4/custom/<Primary>F11' -r # reset workspace_11_key
 xfconf-query -c xfce4-keyboard-shortcuts -p '/xfwm4/custom/<Primary>F12' -r # reset workspace_12_key
@@ -33,9 +35,9 @@ xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Super>d' -t string 
 xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_1' -t string -s 'tile_down_left_key'
 xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_2' -t string -s 'tile_down_key'
 xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_3' -t string -s 'tile_down_right_key'
-xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_4' -t string -s 'tile_left_key'
+#xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_4' -t string -s 'tile_left_key'  # conflicts with another tile_left_key shortcut
 xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_5' -t string -s 'move_window_workspace_5_key'
-xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_6' -t string -s 'tile_right_key'
+#xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_6' -t string -s 'tile_right_key' # conflicts with another tile_right_key shortcut
 xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_7' -t string -s 'tile_up_left_key'
 xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_8' -t string -s 'tile_up_key'
 xfconf-query -c xfce4-keyboard-shortcuts -np '/xfwm4/custom/<Primary><Alt>KP_9' -t string -s 'tile_up_right_key'
