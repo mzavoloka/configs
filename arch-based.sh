@@ -11,13 +11,16 @@ pacman -S        \
     mlocate      \
     make         \
     wget         \
-    openssh      \ # enables ssh
+    openssh      \
+    openvpn      \
     gvim         \ # gvim to enable clipboard sharing
     parcellite   \ # clipboard manager
     ack          \
     tree         \
     git          \
     cpanminus    \
+    gcc          \
+    docker       \
     ntfs-3g      \
     trash-cli
 
@@ -47,8 +50,16 @@ chown mikhail:mikhail /home/mikhail/Pictures
 
 cp -r xfce4.config/* /home/mikhail/.config/xfce4/
 
-pacman -S        \
-    vlc          \
+pacman -S             \
+    vlc               \
+    telegram-desktop  \
+    libreoffice-fresh \
     chromium
+
+# perl packages
+pacman -S            \
+    perl-xml-libxml  \
+    perl-datetime
+
 
 bash xfce-setup.sh
