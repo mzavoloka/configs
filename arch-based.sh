@@ -56,6 +56,12 @@ pacman -S             \
     libreoffice-fresh \
     chromium
 
+pacman -S            \
+    ttf-dejavu       \
+    noto-fonts       \ # arabian, georgian, hindi, etc...
+    noto-fonts-cjk   \ # chinese japenese korean
+    noto-fonts-emoji   # smiles
+
 # perl packages
 pacman -S            \
     perl-xml-libxml  \
