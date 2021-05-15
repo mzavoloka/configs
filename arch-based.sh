@@ -1,27 +1,36 @@
 # Upon following arch linux installation guide https://wiki.archlinux.org/index.php/Installation_guide
 # run this after arch-chrooting into /mnt:
-pacman -S        \
-    sudo         \
-    htop         \
-    man-db       \
-    dhclient     \
-    dhcpcd       \
-    inetutils    \
-    net-tools    \
-    mlocate      \
-    make         \
-    wget         \
-    openssh      \
-    openvpn      \
-    gvim         \ # gvim to enable clipboard sharing
-    parcellite   \ # clipboard manager
-    ack          \
-    tree         \
-    git          \
-    cpanminus    \
-    gcc          \
-    docker       \
-    ntfs-3g      \
+pacman -S              \
+    sudo               \
+    htop               \
+    man-db             \
+    dhclient           \
+    dhcpcd             \
+    inetutils          \
+    net-tools          \
+    mlocate            \
+    make               \
+    wget               \
+    openssh            \
+    openvpn            \
+    gvim               \ # gvim to enable clipboard sharing
+    vim-airline        \
+    vim-airline-themes \
+    vim-ansible        \
+    vim-csound         \
+    vim-latexsuite     \
+    vim-indent-object  \ # select tabulated block of code with ii, ai, aI
+    vim-molokai        \
+    vim-fugitive       \
+    vim-tabular        \
+    parcellite         \ # clipboard manager
+    ack                \
+    tree               \
+    git                \
+    cpanminus          \
+    gcc                \
+    docker             \
+    ntfs-3g            \
     trash-cli
 
 # For booting you might need some of these packages:
@@ -30,12 +39,12 @@ pacman -S        \
     refind       \ # configure it afterwards according to https://wiki.archlinux.org/index.php/REFInd
     efibootmgr
 
-pacman -S        \
-    xorg         \
-    xfce4        \
-    gvfs-mtp     \ # enable file transfer from mobile devices
-    file-roller           \ # archive manager
-    xfce4-screenshooter   \
+pacman -S               \
+    xorg                \
+    xfce4               \
+    gvfs-mtp            \ # enable file transfer from mobile devices
+    file-roller         \ # archive manager
+    xfce4-screenshooter \
     thunar-archive-plugin   # thunar's context menu for extracting archives
 
 useradd --create-home mikhail

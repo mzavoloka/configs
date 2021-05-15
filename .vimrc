@@ -21,13 +21,13 @@ endif
 Plugin 'ConradIrwin/vim-bracketed-paste'  " whenever you are in the insert mode and paste into your terminal emulator using command+v, shift+insert, ctrl+shift+v or middle-click, vim will automatically :set paste for you.
 Plugin 'mzavoloka/vim-mql'
 Plugin 'rkennedy/vim-delphi'
-Plugin 'easymotion/vim-easymotion'        " Travel letters on the screen (press ,s to initiate it)
+"Plugin 'easymotion/vim-easymotion'        " Travel letters on the screen (press ,s to initiate it)    (install it via package vim-easymotion)
 Plugin 'mzavoloka/nginx-vim-syntax'
 Plugin 'travisjeffery/vim-auto-mkdir'     " Automatically mkdir when writing file in non-existant directory
 Plugin 'ntpeters/vim-better-whitespace'   " Highlight trailing whitespaces. Provides :StripWhitespace
 "Plugin 'ctrlpvim/ctrlp.vim'              " Full path fuzzy file, buffer, mru, tag, ... finder
-Plugin 'vim-airline/vim-airline'          " Statusline at the bottom of each vim window
-Plugin 'vim-airline/vim-airline-themes'   " Contains 'tomorrow' airline theme
+"Plugin 'vim-airline/vim-airline'          " Statusline at the bottom of each vim window               (install it via package vim-airline)
+"Plugin 'vim-airline/vim-airline-themes'   " Contains 'tomorrow' airline theme                         (install it via package vim-airline)
 Plugin 'tpope/vim-vinegar'                " Enhances vim's default file exlorer called netrw,
 Plugin 'scrooloose/nerdtree'              " Project browser (press ,t to open it)
 Plugin 'henrik/vim-indexed-search'        " While searching, shows the total number of matches and the number(index) of current match
