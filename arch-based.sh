@@ -63,7 +63,11 @@ pacman -S             \
     vlc               \
     telegram-desktop  \
     libreoffice-fresh \
+    transmission-gtk  \
     chromium
+
+# enable port for transmission?
+#iptables -I INPUT -p tcp --dport 51413 --syn -j ACCEPT
 
 pacman -S            \
     ttf-dejavu       \
