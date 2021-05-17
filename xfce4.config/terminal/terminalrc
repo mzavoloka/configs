@@ -29,10 +29,10 @@ MiscShowUnsafePasteDialog=FALSE
 TitleInitial=xfce4-terminal
 ScrollingUnlimited=TRUE
 ScrollingBar=TERMINAL_SCROLLBAR_LEFT
-FontUseSystem=TRUE
 BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
 BackgroundDarkness=0.740000
 ShortcutsNoMnemonics=TRUE
 ShortcutsNoMenukey=TRUE
 ShortcutsNoHelpkey=TRUE
-
+FontName=Liberation Mono 9
+FontUseSystem=TRUE
