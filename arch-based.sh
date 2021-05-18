@@ -29,6 +29,7 @@ pacman -S              \
     git                \
     cpanminus          \
     gcc                \
+    lua                \
     docker             \
     ntfs-3g            \
     trash-cli
@@ -61,9 +62,13 @@ cp -r xfce4.config/* /home/mikhail/.config/xfce4/
 
 pacman -S             \
     vlc               \
+    ristretto         \
     telegram-desktop  \
     libreoffice-fresh \
     transmission-gtk  \
+    xreader djvulibre \
+    fbreader          \
+    calc              \
     chromium
 
 # enable port for transmission?
