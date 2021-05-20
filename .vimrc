@@ -268,10 +268,10 @@ map <c-space> ?
 map <silent> <leader><cr> :noh<cr>
 
 " Smart way to move between windows
-noremap <C-j> <C-W>j
-noremap <C-k> <C-W>k
-noremap <C-h> <C-W>h
-noremap <C-l> <C-W>l
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
@@ -542,3 +542,8 @@ vmap <C-C> "+y
 set wildmode=list:longest "	When more than one match, list all matches and complete till longest common string.
 
 let g:snipMate = { 'snippet_version' : 0 } " supress message about deprecated snipmate version 0
+
+" unmap stupid snipmate keybinding: x  <Tab>         <Plug>snipMateVisual
+autocmd VimEnter * xunmap <Tab>
+" unmap stupid snipmate keybinding: s  <Tab>         <Plug>snipMateNextOrTrigger
+autocmd VimEnter * sunmap <Tab>
