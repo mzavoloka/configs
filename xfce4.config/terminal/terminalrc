@@ -36,3 +36,4 @@ ShortcutsNoMenukey=TRUE
 ShortcutsNoHelpkey=TRUE
 FontName=Liberation Mono 9
 FontUseSystem=TRUE
+ScrollingOnOutput=FALSE
