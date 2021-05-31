@@ -26,7 +26,7 @@
     <property name="focus_delay" type="int" value="250"/>
     <property name="focus_hint" type="bool" value="true"/>
     <property name="focus_new" type="bool" value="true"/>
-    <property name="frame_opacity" type="int" value="100"/>
+    <property name="frame_opacity" type="int" value="80"/>
     <property name="frame_border_top" type="int" value="0"/>
     <property name="full_width_title" type="bool" value="true"/>
     <property name="horiz_scroll_opacity" type="bool" value="false"/>
@@ -44,7 +44,7 @@
     <property name="raise_with_any_button" type="bool" value="true"/>
     <property name="repeat_urgent_blink" type="bool" value="false"/>
     <property name="resize_opacity" type="int" value="100"/>
-    <property name="scroll_workspaces" type="bool" value="true"/>
+    <property name="scroll_workspaces" type="bool" value="false"/>
     <property name="shadow_delta_height" type="int" value="0"/>
     <property name="shadow_delta_width" type="int" value="0"/>
     <property name="shadow_delta_x" type="int" value="0"/>
@@ -82,12 +82,12 @@
     <property name="zoom_desktop" type="bool" value="true"/>
     <property name="zoom_pointer" type="bool" value="true"/>
     <property name="workspace_names" type="array">
-      <value type="string" value="Workspace 1"/>
-      <value type="string" value="Workspace 2"/>
-      <value type="string" value="Workspace 3"/>
-      <value type="string" value="Workspace 4"/>
-      <value type="string" value="Workspace 5"/>
-      <value type="string" value="Workspace 6"/>
+      <value type="string" value="inet"/>
+      <value type="string" value="prog"/>
+      <value type="string" value="run"/>
+      <value type="string" value="db"/>
+      <value type="string" value="scratch"/>
+      <value type="string" value="media"/>
     </property>
   </property>
 </channel>
