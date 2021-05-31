@@ -45,6 +45,7 @@ pacman -S               \
     gvfs-mtp            \ # enable file transfer from mobile devices
     file-roller         \ # archive manager
     xfce4-screenshooter \
+    xfce4-screensaver   \
     thunar-archive-plugin   # thunar's context menu for extracting archives
 
 useradd --create-home mikhail
