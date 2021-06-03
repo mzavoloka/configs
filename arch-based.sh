@@ -31,7 +31,8 @@ pacman -S              \
     lua                \
     docker             \
     ntfs-3g            \
-    trash-cli
+    trash-cli          \
+    fzf
 
 # For booting you might need some of these packages:
 pacman -S        \

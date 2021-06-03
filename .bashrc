@@ -357,3 +357,5 @@ alias tmux="tmux -2" # Force tmux assume 256 color support
 cd ~ # default directory
 
 alias passgen='cat /dev/urandom | tr -dc A-Za-z0-9 | head -c16 && echo'
+
+fo() { find * -not -iwholename '*.git*' -not -iwholename '*.svn*' | fzf --height=10 --layout=reverse | xargs -ro vim; }
