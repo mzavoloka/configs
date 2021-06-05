@@ -32,6 +32,7 @@ pacman -S              \
     docker             \
     ntfs-3g            \
     trash-cli          \
+    pacman-contrib     \ # rankmirrors script and others
     fzf
 
 # For booting you might need some of these packages:
