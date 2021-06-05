@@ -71,6 +71,8 @@ pacman -S             \
     xreader djvulibre \
     fbreader          \
     calc              \
+    discount          \ # provides `markdown` utility to convert .md to .html
+    ghostwriter       \ # markdown editor
     chromium
 
 # enable port for transmission?
