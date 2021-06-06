@@ -237,7 +237,6 @@ set shiftwidth=2
 set tabstop=2
 
 set nolbr
-set tw=0
 
 set ai "Auto indent
 set si "Smart indent
@@ -547,3 +546,6 @@ let g:snipMate = { 'snippet_version' : 0 } " supress message about deprecated sn
 autocmd VimEnter * xunmap <Tab>
 " unmap stupid snipmate keybinding: s  <Tab>         <Plug>snipMateNextOrTrigger
 autocmd VimEnter * sunmap <Tab>
+
+set tw=0             " Might not work (overridden by plugins)
+set formatoptions-=t " Disables text wrapping
