@@ -21,7 +21,7 @@ pacman -S              \
     vim-indent-object  \ # select tabulated block of code with ii, ai, aI
     vim-molokai        \
     vim-fugitive       \
-    vim-tabular        \
+    vim-tabular        \ # Align declarations with :Tab /=
     parcellite         \ # clipboard manager
     ack                \
     tree               \
