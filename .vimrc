@@ -529,6 +529,8 @@ let g:airline_powerline_fonts = 1
 let g:airline_detect_paste=0
 " don't show keymap 'Keymap: russian-jcukenwin' in airline (it takes too much space)
 let g:airline#extensions#keymap#enabled = 0
+let g:airline_section_x='' " (tagbar, filetype, virtualenv)
+let g:airline_section_y='' " disable (fileencoding, fileformat)
 let g:airline_theme='tomorrow'
 
 map <Leader>t :NERDTreeToggle<CR>
