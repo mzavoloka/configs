@@ -88,54 +88,64 @@ set splitright
 " Make fugitive open Gdiff vertically
 set diffopt+=vertical
 
-nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Sets how many lines of history VIM has to remember
-set history=700
+set history=10000
 
 set nu
-set hlsearch
-
-"set lines=55
-"set columns=100
+set rnu
 
 set t_Co=256
 
-set ruler
+set colorcolumn=100
 
-if has("syntax")
-  syntax on
-  filetype on
-  au BufNewFile,BufRead *.pl,*.pm set filetype=perl
-endif
+set autoread " autodetect file changes by another program
 
-filetype on
-
-
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
-
-" Set to auto read when a file is changed from the outside
-set autoread
-
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
 let mapleader = ","
 let g:mapleader = ","
 
-" Fast saving
-nmap <leader>w :w!<cr>
+au BufNewFile,BufRead *html.ep set filetype=html " Embedded perl .html.ep (used by Mojolicious)
+autocmd BufNewFile,BufReadPost *.mq[h45] setlocal filetype=mql
+
+let $PAGER='' " View man pages in vim
 
 " Make hotkeys work with russian. To change language press C+^
 set keymap=russian-jcukenwin
-let g:airline#extensions#keymap#enabled = 0 " don't show keymap in airline
 set iminsert=0
 set imsearch=0
-highlight lCursor guifg=NONE guibg=Cyan
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Hotkeys
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Hotkey to change vim current directory
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+
+" Remove the Windows ^M - when the encodings gets messed up
+noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+
+" while cursor is under perl module name for accessing its source code
+function! LoadPerlModule()
+    execute 'e `perldoc -l ' . expand("<cWORD>") . '`'
+endfunction
+nnoremap <Leader>pm :call LoadPerlModule()<CR>
+
+" Use Shift + K shortcut while cursor is under perl module name for accessing its documentation
+au FileType perl setlocal keywordprg=perldoc\ -T\ -f
+
+" :W writes files with sudo even if current vim instance has no sudo privilege
+command W w !sudo tee % > /dev/null
+
+map <Leader>s <Plug>(easymotion-s)
+map <Leader>co :copen<CR>
+
+map <Leader>t :NERDTreeToggle<CR>
+
+" enable selecting with mouse
+set mouse=a
+" enable to copy selected text with mouse
+vmap <C-C> "+y
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -145,35 +155,25 @@ highlight lCursor guifg=NONE guibg=Cyan
 set so=7
 
 " Turn on the WiLd menu
-set wildmenu
+"set wildmenu
 
 " Ignore compiled files
-set wildignore=*.o,*~,*.pyc
-
-"Always show current position
-set ruler
+"set wildignore=*.o,*~,*.pyc
 
 " Height of the command bar
-set cmdheight=2
+"set cmdheight=2
 
 " A buffer becomes hidden when it is abandoned
 set hid
 
-" Configure backspace so it acts as it should act
-set backspace=eol,start,indent
+" Allow backspacing over everything in insert mode.
+set backspace=indent,eol,start
 set whichwrap+=<,>,h,l
 
-" Ignore case when searching
-set ignorecase
-
-" When searching try to be smart about cases
-set smartcase
-
-" Highlight search results
-set hlsearch
-
-" Makes search act like search in modern browsers
-set incsearch
+set hlsearch   " Highlight search
+set ignorecase " Ignore case when searching
+set smartcase  " When searching try to be smart about cases
+set incsearch  " Makes search act like search in modern browsers
 
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
@@ -200,15 +200,12 @@ set tm=500
 color molokai
 "color github
 
-" This line needed to stop vim from deleting indentation when placing # character in perl files
-filetype plugin indent on
 syntax enable
 
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
     set guioptions+=e
-    set t_Co=256
     set guitablabel=%M\ %t
 endif
 
@@ -219,10 +216,7 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Files, backups and undo
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
+" Turn off backup and swap files
 set nobackup
 set nowb
 set noswapfile
@@ -231,30 +225,19 @@ set noswapfile
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use spaces instead of tabs
-set expandtab
+set expandtab " Use spaces instead of tabs
 
-" Be smart when using tabs ;)
 set smarttab
 
-" By default 1 tab == 2 spaces
-set shiftwidth=2
-set tabstop=2
-
-set nolbr
+" Tabwidth (num of spaces)
+set shiftwidth=4
+set tabstop=4
 
 set ai "Auto indent
 set si "Smart indent
-set wrap "Wrap lines
 
-
-""""""""""""""""""""""""""""""
-" => Visual mode related
-""""""""""""""""""""""""""""""
-" Visual mode pressing * or # searches for the current selection
-" Super useful! From an idea by Michael Naumann
-vnoremap <silent> * :call VisualSelection('f')<CR>
-vnoremap <silent> # :call VisualSelection('b')<CR>
+set wrap " wrap long lines
+set nolbr " wrap at any character
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -264,31 +247,13 @@ vnoremap <silent> # :call VisualSelection('b')<CR>
 map j gj
 map k gk
 
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <c-space> ?
-
-" Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
-
-" Smart way to move between windows
+" Switch windows faster
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" Close the current buffer
-map <leader>bd :Bclose<cr>
-
-" Close all the buffers
-map <leader>ba :1,1000 bd!<cr>
-
 set tabpagemax=100
-" Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
@@ -305,187 +270,21 @@ try
 catch
 endtry
 
-
-""""""""""""""""""""""""""""""
-" => Status line
-""""""""""""""""""""""""""""""
-" Always show the status line
-set laststatus=2
-
-" Format the status line
-set statusline=%P\ \ Line:\ %l\ of\ %L\ %{HasPaste()}%F%m%r%h\ %w
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Editing mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap VIM 0 to first non-blank character
+" 0 to move to first non-blank character
 map 0 ^
 
-" Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
-if has("mac") || has("macunix")
-  nmap <D-j> <M-j>
-  nmap <D-k> <M-k>
-  vmap <D-j> <M-j>
-  vmap <D-k> <M-k>
-endif
+""""""""""""""""""""""""""""""
+" =>  Airline
+""""""""""""""""""""""""""""""
+let g:airline_powerline_fonts=1
+let g:airline_detect_paste=0
+" don't show keymap 'Keymap: russian-jcukenwin' in airline (it takes too much space)
+let g:airline#extensions#keymap#enabled=0
+let g:airline_section_x='' " (tagbar, filetype, virtualenv)
+let g:airline_section_y='' " disable (fileencoding, fileformat)
+let g:airline_theme='tomorrow'
 
-" Delete trailing white space on save, useful for Python and CoffeeScript ;)
-func! DeleteTrailingWS()
-  exe "normal mz"
-  %s/\s\+$//ge
-  exe "normal `z"
-endfunc
-autocmd BufWrite *.py :call DeleteTrailingWS()
-autocmd BufWrite *.coffee :call DeleteTrailingWS()
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vimgrep searching and cope displaying
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" When you press gv you vimgrep after the selected text
-vnoremap <silent> gv :call VisualSelection('gv')<CR>
-
-" Open vimgrep and put the cursor in the right position
-map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
-
-" Vimgreps in the current file
-map <leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
-
-" When you press <leader>r you can search and replace the selected text
-vnoremap <silent> <leader>r :call VisualSelection('replace')<CR>
-
-" Do :help cope if you are unsure what cope is. It's super useful!
-"
-" When you search with vimgrep, display your results in cope by doing:
-"   <leader>cc
-"
-" To go to the next search result do:
-"   <leader>n
-"
-" To go to the previous search results do:
-"   <leader>p
-"
-"map <leader>cc :botright cope<cr>
-"map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
-map <leader>n :cn<cr>
-map <leader>p :cp<cr>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Spell checking
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Pressing ,ss will toggle and untoggle spell checking
-" map <leader>ss :setlocal spell!<cr>
-
-" Shortcuts using <leader>
-" map <leader>sn ]s
-" map <leader>sp [s
-" map <leader>sa zg
-" map <leader>s? z=
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Misc
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
-
-" Quickly open a buffer for scripbble
-map <leader>q :e ~/buffer<cr>
-
-" Toggle paste mode on and off
-map <leader>pp :setlocal paste!<cr>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => View man pages in vim
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let $PAGER=''
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Helper functions
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! CmdLine(str)
-    exe "menu Foo.Bar :" . a:str
-    emenu Foo.Bar
-    unmenu Foo
-endfunction
-
-function! VisualSelection(direction) range
-    let l:saved_reg = @"
-    execute "normal! vgvy"
-
-    let l:pattern = escape(@", '\\/.*$^~[]')
-    let l:pattern = substitute(l:pattern, "\n$", "", "")
-
-    if a:direction == 'b'
-        execute "normal ?" . l:pattern . "^M"
-    elseif a:direction == 'gv'
-        call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
-    elseif a:direction == 'replace'
-        call CmdLine("%s" . '/'. l:pattern . '/')
-    elseif a:direction == 'f'
-        execute "normal /" . l:pattern . "^M"
-    endif
-
-    let @/ = l:pattern
-    let @" = l:saved_reg
-endfunction
-
-
-" Returns true if paste mode is enabled
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    en
-    return ''
-endfunction
-
-" Don't close window, when deleting a buffer
-command! Bclose call <SID>BufcloseCloseIt()
-function! <SID>BufcloseCloseIt()
-   let l:currentBufNum = bufnr("%")
-   let l:alternateBufNum = bufnr("#")
-
-   if buflisted(l:alternateBufNum)
-     buffer #
-   else
-     bnext
-   endif
-
-   if bufnr("%") == l:currentBufNum
-     new
-   endif
-
-   if buflisted(l:currentBufNum)
-     execute("bdelete! ".l:currentBufNum)
-   endif
-endfunction
-
-" execute pathogen#infect()
-
-
-" Use \pm command while cursor is under perl module name for accessing its source code
-nnoremap <Leader>pm :call LoadPerlModule()<CR>
-
-function! LoadPerlModule()
-          execute 'e `perldoc -l ' . expand("<cWORD>") . '`'
-  endfunction
-
-" Use Shift + K shortcut while cursor is under perl module name for accessing its documentation
-au FileType perl setlocal keywordprg=perldoc\ -T\ -f
-au BufNewFile,BufRead *html.ep set filetype=html " Embedded perl .html.ep (used by Mojolicious)
-
-set rnu
-
-command W w !sudo tee % > /dev/null
 
 " RS: repeat substitution command
 com! -range -nargs=* RS call RepeatSubst(<q-args>)
@@ -513,45 +312,23 @@ else
 endif
 
 
-map <Leader>s <Plug>(easymotion-s)
-
-map <Leader>co :copen<CR>
-map <Leader>cc :cclose<CR>
-
 " Make netrw use tree mode by default
 let g:netrw_liststyle = 3
 
 " Make nerdtree show dotfiles by default
 let NERDTreeShowHidden=1
 
-autocmd BufNewFile,BufReadPost *.mq[h45] setlocal filetype=mql
-
-let g:airline_powerline_fonts = 1
-let g:airline_detect_paste=0
-" don't show keymap 'Keymap: russian-jcukenwin' in airline (it takes too much space)
-let g:airline#extensions#keymap#enabled = 0
-let g:airline_section_x='' " (tagbar, filetype, virtualenv)
-let g:airline_section_y='' " disable (fileencoding, fileformat)
-let g:airline_theme='tomorrow'
-
-map <Leader>t :NERDTreeToggle<CR>
-
 " allow to move cursor anywhere
 set virtualedit=all
-
-" enable selecting with mouse
-set mouse=a
-" enable to copy selected text with mouse
-vmap <C-C> "+y
 
 " Affects tabbing while using cmdline :
 set wildmode=list:longest "	When more than one match, list all matches and complete till longest common string.
 
 let g:snipMate = { 'snippet_version' : 0 } " supress message about deprecated snipmate version 0
 
-" unmap stupid snipmate keybinding: x  <Tab>         <Plug>snipMateVisual
+" unmap conflicting snipmate keybinding: x  <Tab>         <Plug>snipMateVisual
 autocmd VimEnter * xunmap <Tab>
-" unmap stupid snipmate keybinding: s  <Tab>         <Plug>snipMateNextOrTrigger
+" unmap conflicting snipmate keybinding: s  <Tab>         <Plug>snipMateNextOrTrigger
 autocmd VimEnter * sunmap <Tab>
 
 set tw=0             " Might not work (overridden by plugins)
