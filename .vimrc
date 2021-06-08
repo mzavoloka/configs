@@ -96,6 +96,9 @@ set history=10000
 set nu
 set rnu
 
+set regexpengine=1 " use old regexp engine because old one produces lags upon typing if syntax is enabled
+"set nornu         " NOTE for speeding up even more, consider to stop using relative line numbers
+
 set t_Co=256
 
 set colorcolumn=100
