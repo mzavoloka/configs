@@ -47,6 +47,7 @@ Plugin 'flazz/vim-colorschemes'           " Contains molokai and github colorsch
 "Plugin 'godlygeek/vim-indent-object'      " select tabulated block of code with ii, ai, aI (install it via package vim-indent-object)
 "Plugin 'luisjure/vim-csound'              " (install it via package vim-csound)
 "Plugin 'pearofducks/vim-ansible'          " (install it via package vim-ansible)
+"Plugin 'preservim/tagbar'                 " (install it via package vim-tagbar)
 
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.

@@ -22,6 +22,7 @@ pacman -S              \
     vim-molokai        \
     vim-fugitive       \
     vim-tabular        \ # Align declarations with :Tab /=
+    vim-tagbar         \ # view tags of a file
     parcellite         \ # clipboard manager
     ack                \
     tree               \
