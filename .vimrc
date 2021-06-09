@@ -25,7 +25,7 @@ Plugin 'rkennedy/vim-delphi'
 Plugin 'mzavoloka/nginx-vim-syntax'
 Plugin 'travisjeffery/vim-auto-mkdir'     " Automatically mkdir when writing file in non-existant directory
 Plugin 'ntpeters/vim-better-whitespace'   " Highlight trailing whitespaces. Provides :StripWhitespace
-"Plugin 'ctrlpvim/ctrlp.vim'              " Full path fuzzy file, buffer, mru, tag, ... finder
+"Plugin 'ctrlpvim/ctrlp.vim'               " Full path fuzzy file, buffer, mru, tag, ... finder        (install it via package vim-ctrlp)
 "Plugin 'vim-airline/vim-airline'          " Statusline at the bottom of each vim window               (install it via package vim-airline)
 "Plugin 'vim-airline/vim-airline-themes'   " Contains 'tomorrow' airline theme                         (install it via package vim-airline)
 Plugin 'tpope/vim-vinegar'                " Enhances vim's default file exlorer called netrw,
