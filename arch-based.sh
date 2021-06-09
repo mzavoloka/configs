@@ -66,6 +66,7 @@ cp -r xfce4.config/* /home/mikhail/.config/xfce4/
 pacman -S             \
     vlc               \
     ristretto         \
+    gimp              \
     telegram-desktop  \
     libreoffice-fresh \
     transmission-gtk  \
