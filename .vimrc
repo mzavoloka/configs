@@ -321,6 +321,8 @@ let g:netrw_liststyle = 3
 " Make nerdtree show dotfiles by default
 let NERDTreeShowHidden=1
 
+let g:tagbar_sort = 0 " tagbar sort order as in source file
+
 " allow to move cursor anywhere
 set virtualedit=all
 
