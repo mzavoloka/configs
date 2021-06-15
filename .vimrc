@@ -31,10 +31,7 @@ Plugin 'ntpeters/vim-better-whitespace'   " Highlight trailing whitespaces. Prov
 Plugin 'tpope/vim-vinegar'                " Enhances vim's default file exlorer called netrw,
 Plugin 'scrooloose/nerdtree'              " Project browser (press ,t to open it)
 Plugin 'henrik/vim-indexed-search'        " While searching, shows the total number of matches and the number(index) of current match
-" Snippets
-Plugin 'MarcWeber/vim-addon-mw-utils'     " Dependency of vim-snipmate. Provides some utility functions
-Plugin 'tomtom/tlib_vim'                  " Dependency of vim-snipmate. Provides some utility functions
-Plugin 'garbas/vim-snipmate'              " Support for textual snippets, similar to TextMate or other Vim plugins like UltiSnips
+"Plugin 'SirVer/ultisnips'                 " (install it via package vim-ultisnips)
 Plugin 'mzavoloka/vim-snippets'           " My Snippets for vim
 " Not tested section:
 Plugin 'glts/vim-radical'                 " gA shows the four representations of the number under the cursor (or selected in Visual mode).
@@ -328,13 +325,6 @@ set virtualedit=all
 
 " Affects tabbing while using cmdline :
 set wildmode=list:longest "	When more than one match, list all matches and complete till longest common string.
-
-let g:snipMate = { 'snippet_version' : 0 } " supress message about deprecated snipmate version 0
-
-" unmap conflicting snipmate keybinding: x  <Tab>         <Plug>snipMateVisual
-autocmd VimEnter * xunmap <Tab>
-" unmap conflicting snipmate keybinding: s  <Tab>         <Plug>snipMateNextOrTrigger
-autocmd VimEnter * sunmap <Tab>
 
 set tw=0             " Might not work (overridden by plugins)
 set formatoptions-=t " Disables text wrapping

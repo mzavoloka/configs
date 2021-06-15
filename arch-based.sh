@@ -24,6 +24,7 @@ pacman -S              \
     vim-tabular        \ # Align declarations with :Tab /=
     vim-tagbar         \ # view tags of a file
     vim-ctrlp          \
+    vim-ultisnips      \
     parcellite         \ # clipboard manager
     ack                \
     tree               \
