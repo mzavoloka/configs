@@ -338,3 +338,19 @@ autocmd VimEnter * sunmap <Tab>
 
 set tw=0             " Might not work (overridden by plugins)
 set formatoptions-=t " Disables text wrapping
+
+" Adds ability to select a specific jump when calling :jumps
+function! GotoJump()
+  jumps
+  let j = input("Please select your jump: ")
+  if j != ''
+    let pattern = '\v\c^\+'
+    if j =~ pattern
+      let j = substitute(j, pattern, '', 'g')
+      execute "normal " . j . "\<c-i>"
+    else
+      execute "normal " . j . "\<c-o>"
+    endif
+  endif
+endfunction
+nmap <Leader>j :call GotoJump()<CR>
