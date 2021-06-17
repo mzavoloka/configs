@@ -199,6 +199,15 @@ set tm=500
 " Enable syntax highlighting
 color molokai
 "color github
+"Change theme depending on the time of day
+let hr = (strftime('%H'))
+if hr >= 20 " evening
+    color molokai
+elseif hr >= 7 " day
+    color github
+elseif hr >= 0 " night
+    color molokai
+endif
 
 syntax enable
 
