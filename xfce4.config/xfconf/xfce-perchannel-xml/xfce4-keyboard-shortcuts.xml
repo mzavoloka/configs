@@ -47,7 +47,6 @@
       <property name="&lt;Primary&gt;Escape" type="string" value="xfdesktop --menu"/>
       <property name="&lt;Shift&gt;Print" type="string" value="xfce4-screenshooter -r -o &quot;mv -t /home/mikhail/Pictures/&quot;"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="xfce4-session-logout"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="exo-open --launch TerminalEmulator"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;f" type="string" value="thunar"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="xflock4"/>
       <property name="&lt;Alt&gt;F1" type="string" value="xfce4-popup-applicationsmenu"/>
@@ -63,6 +62,7 @@
       <property name="&lt;Primary&gt;minus" type="string" value="amixer set Master 3%-"/>
       <property name="&lt;Primary&gt;equal" type="string" value="amixer set Master 3%+"/>
       <property name="&lt;Super&gt;Tab" type="string" value="rofi -modi window -show window -show-icons -sidebar-mode"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="/home/mikhail/dev/configs/xfce4-terminal-colored-by-time.sh"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
