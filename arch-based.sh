@@ -13,19 +13,19 @@ pacman -S              \
     wget               \
     openssh            \
     openvpn            \
-    gvim               \ # gvim to enable clipboard sharing
+    gvim               `# gvim to enable clipboard sharing` \
     vim-airline        \
     vim-airline-themes \
     vim-ansible        \
     vim-csound         \
-    vim-indent-object  \ # select tabulated block of code with ii, ai, aI
+    vim-indent-object  `# select tabulated block of code with ii, ai, aI` \
     vim-molokai        \
     vim-fugitive       \
-    vim-tabular        \ # Align declarations with :Tab /=
-    vim-tagbar         \ # view tags of a file
+    vim-tabular        `# Align declarations with :Tab /=` \
+    vim-tagbar         `# view tags of a file` \
     vim-ctrlp          \
     vim-ultisnips      \
-    parcellite         \ # clipboard manager
+    parcellite         `# clipboard manager` \
     ack                \
     tree               \
     git                \
@@ -35,20 +35,20 @@ pacman -S              \
     docker             \
     ntfs-3g            \
     trash-cli          \
-    pacman-contrib     \ # rankmirrors script and others
+    pacman-contrib     `# rankmirrors script and others` \
     fzf
 
 # For booting you might need some of these packages:
 pacman -S        \
     grub         \
-    refind       \ # configure it afterwards according to https://wiki.archlinux.org/index.php/REFInd
+    refind       `# configure it afterwards according to https://wiki.archlinux.org/index.php/REFInd` \
     efibootmgr
 
 pacman -S               \
     xorg                \
     xfce4               \
-    gvfs-mtp            \ # enable file transfer from mobile devices
-    file-roller         \ # archive manager
+    gvfs-mtp            `# enable file transfer from mobile devices` \
+    file-roller         `# archive manager` \
     rofi                \
     xfce4-screenshooter \
     xfce4-screensaver   \
@@ -76,8 +76,8 @@ pacman -S             \
     xreader djvulibre \
     fbreader          \
     calc              \
-    discount          \ # provides `markdown` utility to convert .md to .html
-    ghostwriter       \ # markdown editor
+    discount          `# provides "markdown" utility to convert .md to .html` \
+    ghostwriter       `# markdown editor` \
     chromium
 
 # enable port for transmission?
@@ -85,8 +85,8 @@ pacman -S             \
 
 pacman -S            \
     ttf-dejavu       \
-    noto-fonts       \ # arabian, georgian, hindi, etc...
-    noto-fonts-cjk   \ # chinese japenese korean
+    noto-fonts       `# arabian, georgian, hindi, etc...` \
+    noto-fonts-cjk   `# chinese japenese korean` \
     noto-fonts-emoji   # smiles
 
 # perl packages
