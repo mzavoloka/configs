@@ -1,5 +1,7 @@
 # Upon following arch linux installation guide https://wiki.archlinux.org/index.php/Installation_guide
 # run this after arch-chrooting into /mnt:
+pacman -Sy
+
 pacman -S              \
     sudo               \
     htop               \
@@ -64,6 +66,8 @@ systemctl enable dhcpcd
 mkdir /home/mikhail/Pictures # dir to save screenshots with xfce4-screenshooter
 chown mikhail:mikhail /home/mikhail/Pictures
 
+mkdir -p /home/mikhail/.config/xfce4/
+chown mikhail:mikhail /home/mikhail/.config/xfce4/
 cp -r xfce4.config/* /home/mikhail/.config/xfce4/
 
 pacman -S             \
