@@ -66,6 +66,7 @@ systemctl enable dhcpcd
 mkdir /home/mikhail/Pictures # dir to save screenshots with xfce4-screenshooter
 chown mikhail:mikhail /home/mikhail/Pictures
 
+# bash xfce-setup.sh # obsolete
 mkdir -p /home/mikhail/.config/xfce4/
 chown mikhail:mikhail /home/mikhail/.config/xfce4/
 cp -r xfce4.config/* /home/mikhail/.config/xfce4/
@@ -97,6 +98,3 @@ pacman -S            \
 pacman -S            \
     perl-xml-libxml  \
     perl-datetime
-
-
-bash xfce-setup.sh
