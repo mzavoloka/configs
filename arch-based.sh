@@ -59,7 +59,7 @@ pacman -S               \
 useradd --create-home mikhail
 passwd mikhail
 usermod -aG tty mikhail # to be able to run Xorg
-# NOTE see install.sh script, it makes your user a sudoer
+echo "mikhail ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 systemctl enable dhcpcd
 
