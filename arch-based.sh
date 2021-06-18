@@ -1,6 +1,7 @@
 # Upon following arch linux installation guide https://wiki.archlinux.org/index.php/Installation_guide
 # run this after arch-chrooting into /mnt:
-pacman -Sy
+
+pacman -Syu
 
 pacman -S              \
     sudo               \
