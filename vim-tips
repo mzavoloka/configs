@@ -2,3 +2,4 @@ In insert mode, Ctrl-T indents the current line, and Ctrl-D unindents.
 In normal mode, type == to automatically indent the current line according to your indentation settings.
 To reindent an entire buffer, use gg=G.
 Press C-^ (same as C-S-6) to switch to previously opened files in jumps
+:cw command is a fast way (maybe the fastest?) to open quickfix list
