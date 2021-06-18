@@ -33,9 +33,9 @@ cp -r .vimrc $HOME
 git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 vim +PluginInstall +qa # runs :PluginInstall from the shell
 
-echo "Making current user a sudoer with no password..."
+#echo "Making current user a sudoer with no password..."
 # NOTE you can't just do `echo >> /etc/sudoers`
-echo "$USER ALL=(ALL:ALL) NOPASSWD:ALL" | sudo EDITOR='tee -a' visudo
+#echo "$USER ALL=(ALL:ALL) NOPASSWD:ALL" | sudo EDITOR='tee -a' visudo
 
 git config --global alias.co checkout
 
