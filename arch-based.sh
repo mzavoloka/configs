@@ -68,8 +68,8 @@ chown mikhail:mikhail /home/mikhail/Pictures
 
 # bash xfce-setup.sh # obsolete
 mkdir -p /home/mikhail/.config/xfce4/
-chown mikhail:mikhail /home/mikhail/.config/xfce4/
 cp -r xfce4.config/* /home/mikhail/.config/xfce4/
+chown -R mikhail:mikhail /home/mikhail/.config
 
 pacman -S             \
     vlc               \
