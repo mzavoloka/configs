@@ -353,3 +353,5 @@ function! GotoJump()
   endif
 endfunction
 nmap <Leader>j :call GotoJump()<CR>
+
+set grepprg=ack\ -k " Use ack for :grep command
