@@ -47,7 +47,6 @@ pacman -S        \
     efibootmgr
 
 pacman -S               \
-    alsa-utils          \
     xorg                \
     xfce4               \
     gvfs-mtp            `# enable file transfer from mobile devices` \
@@ -99,3 +98,8 @@ pacman -S            \
 pacman -S            \
     perl-xml-libxml  \
     perl-datetime
+
+# enable sound
+pacman -S alsa-utils
+amixer -q sset Master unmute
+amixer -q sset Master 40%
