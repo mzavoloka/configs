@@ -103,3 +103,16 @@ pacman -S            \
 pacman -S alsa-utils
 amixer -q sset Master unmute
 amixer -q sset Master 40%
+
+
+# enhance video
+if lspci -v | grep -A1 -e VGA -e 3D | grep -i nvidia
+then
+    sudo pacman -S nvidia nvidia-settings pkgconf
+else
+    echo "Your videocard is not nvida. Cna't install drivers for it"
+fi
+# you possibly need to got to nvidia-settings
+# and then to your output (for example, HDMI-0),
+# go to Controls tab and set Color Range to Limited
+# Then go check your colors on monteon.ru
