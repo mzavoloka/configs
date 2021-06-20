@@ -116,3 +116,24 @@ fi
 # and then to your output (for example, HDMI-0),
 # go to Controls tab and set Color Range to Limited
 # Then go check your colors on monteon.ru
+
+# Only for old nvidia videocards supported by legacy 390xx aur package:
+yourcardisold=0
+if $yourcardisold
+then
+    pacman -S linux-headers dkms m4
+    mkdir -p /home/mikhail/aur
+    cd /home/mikhail/aur
+    git clone https://aur.archlinux.org/packages/nvidia-390xx-dkms/
+    git clone https://aur.archlinux.org/packages/nvidia-390xx-utils/
+    cd nvidia-390xx-dkms
+    makepkg
+    pacman -U opencl-nvidia-390xx-390.143-3-x86_64.pkg.tar.zst
+    pacman -U nvidia-390xx-utils-390.143-3-x86_64.pkg.tar.zst
+    pacman -U nvidia-390xx-dkms-390.143-3-x86_64.pkg.tar.zst
+    cd nvidia-390xx-utils
+    makepkg
+    sudo pacman -U libxnvctrl-390xx-390.143-2-x86_64.pkg.tar.zst
+    sudo pacman -U nvidia-390xx-settings-390.143-2-x86_64.pkg.tar.zst
+    nvidia-xconfig
+fi
