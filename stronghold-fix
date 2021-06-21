@@ -1,5 +1,4 @@
 #+-------------------------------------------------------------------+
 #  Fix alt tabbing black screen: https://www.protondb.com/app/40970
 #+-------------------------------------------------------------------+
-Type WINEPREFIX=/path to your steamapps/steamapps/compatdata/40970/pfx/ winecfg in terminal the like comrades advised in the comments below.
-2nd step: Graphics tab > check "capture the mouse" and "emulate a virtual desktop". You may need that to freely switch windows by pressing alt+tab.
+... the Alt-Tab issue can be fixed with the following command: "env WINEPREFIX=debian-installation/steamapps/compatdata/40970/pfx winecfg". After that, open Wine and go the Graphics tab. Put a tick in "Emulate a virtual desktop" and change to your screen resolution.
