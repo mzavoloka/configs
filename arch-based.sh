@@ -122,18 +122,27 @@ yourcardisold=0
 if $yourcardisold
 then
     pacman -S linux-headers dkms m4
-    mkdir -p /home/mikhail/aur
-    cd /home/mikhail/aur
+    mkdir -p /home/mikhail/aur/nvidia-390xx
+    cd /home/mikhail/aur/nvidia-390xx
+
     git clone https://aur.archlinux.org/packages/nvidia-390xx-dkms/
-    git clone https://aur.archlinux.org/packages/nvidia-390xx-utils/
     cd nvidia-390xx-dkms
     makepkg
     pacman -U opencl-nvidia-390xx-390.143-3-x86_64.pkg.tar.zst
     pacman -U nvidia-390xx-utils-390.143-3-x86_64.pkg.tar.zst
     pacman -U nvidia-390xx-dkms-390.143-3-x86_64.pkg.tar.zst
+
+    git clone https://aur.archlinux.org/packages/nvidia-390xx-utils/
     cd nvidia-390xx-utils
     makepkg
     sudo pacman -U libxnvctrl-390xx-390.143-2-x86_64.pkg.tar.zst
     sudo pacman -U nvidia-390xx-settings-390.143-2-x86_64.pkg.tar.zst
     nvidia-xconfig
+
+    # That's a 32 bit version for steam
+    git clone https://aur.archlinux.org/lib32-nvidia-390xx-utils.git
+    cd lib32-nvidia-390xx-utils
+    makepkg
+    sudo pacman -U lib32-opencl-nvidia-390xx-390.143-1-x86_64.pkg.tar.zst
+    sudo pacman -U lib32-nvidia-390xx-utils-390.143-1-x86_64.pkg.tar.zst
 fi
