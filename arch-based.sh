@@ -80,6 +80,8 @@ pacman -S             \
     transmission-gtk  \
     xreader djvulibre \
     fbreader          \
+    wine              \
+    winetricks        \
     calc              \
     discount          `# provides "markdown" utility to convert .md to .html` \
     ghostwriter       `# markdown editor` \
