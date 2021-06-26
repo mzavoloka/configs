@@ -69,6 +69,7 @@ mkdir $HOME/dev/
 mkdir $HOME/dev/utilities/; cd $HOME/dev/utilities
 git clone git@github.com:mzavoloka/gitls
 git clone git@github.com:mzavoloka/myfind
+git clone git@github.com:mzavoloka/todo
 git clone git@github.com:mzavoloka/git-cal
 cd git-cal/
 perl Makefile.PL
