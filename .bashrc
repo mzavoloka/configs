@@ -241,6 +241,7 @@ alias 800='xrandr -s 800x600'
 alias fixrate='xrandr --output HDMI-0 --mode 3840x2160 --rate 60'
 
 #current_display=DVI-I-1
+#current_display=eDP-1
 current_display=HDMI-0
 alias brightness_low="xrandr --output $current_display --brightness 0.5"
 alias brightness_lowmedium="xrandr --output $current_display --brightness 0.75"
