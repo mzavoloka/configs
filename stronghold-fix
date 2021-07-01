@@ -1,0 +1,4 @@
+#+-------------------------------------------------------------------+
+#  Fix alt tabbing black screen: https://www.protondb.com/app/40970
+#+-------------------------------------------------------------------+
+... the Alt-Tab issue can be fixed with the following command: "env WINEPREFIX=debian-installation/steamapps/compatdata/40970/pfx winecfg". After that, open Wine and go the Graphics tab. Put a tick in "Emulate a virtual desktop" and change to your screen resolution.

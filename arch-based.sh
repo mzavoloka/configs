@@ -53,6 +53,7 @@ pacman -S               \
     gvfs-mtp            `# enable file transfer from mobile devices` \
     file-roller         `# archive manager` \
     rofi                \
+    mousepad            \
     xfce4-screenshooter \
     xfce4-screensaver   \
     thunar-archive-plugin   # thunar's context menu for extracting archives
@@ -81,6 +82,8 @@ pacman -S             \
     transmission-gtk  \
     xreader djvulibre \
     fbreader          \
+    wine              \
+    winetricks        \
     calc              \
     discount          `# provides "markdown" utility to convert .md to .html` \
     ghostwriter       `# markdown editor` \
@@ -99,3 +102,51 @@ pacman -S            \
 pacman -S            \
     perl-xml-libxml  \
     perl-datetime
+
+# enable sound
+pacman -S alsa-utils
+amixer -q sset Master unmute
+amixer -q sset Master 40%
+
+
+# enhance video
+if lspci -v | grep -A1 -e VGA -e 3D | grep -i nvidia
+then
+    sudo pacman -S nvidia nvidia-settings pkgconf
+else
+    echo "Your videocard is not nvida. Cna't install drivers for it"
+fi
+# you possibly need to got to nvidia-settings
+# and then to your output (for example, HDMI-0),
+# go to Controls tab and set Color Range to Limited
+# Then go check your colors on monteon.ru
+
+# Only for old nvidia videocards supported by legacy 390xx aur package:
+yourcardisold=0
+if $yourcardisold
+then
+    pacman -S linux-headers dkms m4
+    mkdir -p /home/mikhail/aur/nvidia-390xx
+    cd /home/mikhail/aur/nvidia-390xx
+
+    git clone https://aur.archlinux.org/packages/nvidia-390xx-dkms/
+    cd nvidia-390xx-dkms
+    makepkg
+    pacman -U opencl-nvidia-390xx-390.143-3-x86_64.pkg.tar.zst
+    pacman -U nvidia-390xx-utils-390.143-3-x86_64.pkg.tar.zst
+    pacman -U nvidia-390xx-dkms-390.143-3-x86_64.pkg.tar.zst
+
+    git clone https://aur.archlinux.org/packages/nvidia-390xx-utils/
+    cd nvidia-390xx-utils
+    makepkg
+    sudo pacman -U libxnvctrl-390xx-390.143-2-x86_64.pkg.tar.zst
+    sudo pacman -U nvidia-390xx-settings-390.143-2-x86_64.pkg.tar.zst
+    nvidia-xconfig
+
+    # That's a 32 bit version for steam
+    git clone https://aur.archlinux.org/lib32-nvidia-390xx-utils.git
+    cd lib32-nvidia-390xx-utils
+    makepkg
+    sudo pacman -U lib32-opencl-nvidia-390xx-390.143-1-x86_64.pkg.tar.zst
+    sudo pacman -U lib32-nvidia-390xx-utils-390.143-1-x86_64.pkg.tar.zst
+fi
