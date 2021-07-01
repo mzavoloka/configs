@@ -76,6 +76,7 @@ chown -R mikhail:mikhail /home/mikhail/.config
 pacman -S             \
     vlc               \
     ristretto         \
+    webp-pixbuf-loader `# support .webp format` \
     gimp              \
     telegram-desktop  \
     libreoffice-fresh \
