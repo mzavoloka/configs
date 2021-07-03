@@ -368,3 +368,5 @@ fo() {
 
 NO_AT_BRIDGE=1 # disable at-spi dbus (accessibility feature)
 alias todo='vim ~/dev/todo/todo'
+
+alias calendar='cal -ym'
