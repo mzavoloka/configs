@@ -1,10 +1,15 @@
-Obtain version 1_28g
+Obtain version 1_28g "Download old legacy version" here https://forums.civfanatics.com/threads/enhanced-user-interface.512263/
 55756-eui_v1_28g.zip
+
+cd ~/Downloads
+mkdir eui_v1.28g
+mv 55756-eui_v1_28g.zip eui_v1.28g
+cd eui_v1.28g
 
 unzip -LL 55756-eui_v1_28g.zip
 
 cd ~/.steam/steam/steamapps/common/Sid\ Meier\'s\ Civilization\ V/steamassets/assets/dlc/
 trash ui_bc1 # remove previous version
-cp -r ~/Downloads/eui_1.28g/ui_bc1 .
+cp -r ~/Downloads/eui_v1.28g/ui_bc1 .
 
-cp ~/Downloads/eui_1.28g/eui_text_*.xml ~/.local/share/Aspyr/Sid\ Meier\'s\ Civilization\ 5/Text/
+cp ~/Downloads/eui_v1.28g/eui_text_*.xml ~/.local/share/Aspyr/Sid\ Meier\'s\ Civilization\ 5/Text/
