@@ -1,0 +1,7 @@
+# Empty cyrillic symbols fix
+vim ~/.local/share/Steam/steamapps/common/Sid Meier's Civilization V/steamassets/assets/gameplay/xml/newtext/english.xml
+
+Add these lines to path GameData->Languages->Row:
+
+<UseExtendedFont>1</UseExtendedFont>
+<FontName>Verdana</FontName>
