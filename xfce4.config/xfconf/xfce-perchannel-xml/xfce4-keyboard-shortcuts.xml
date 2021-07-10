@@ -63,6 +63,8 @@
       <property name="&lt;Primary&gt;equal" type="string" value="amixer set Master 3%+"/>
       <property name="&lt;Super&gt;Tab" type="string" value="rofi -modi window -show window -show-icons -sidebar-mode"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="/home/mikhail/dev/configs/xfce4-terminal-colored-by-time.sh"/>
+      <property name="AudioLowerVolume" type="string" value="amixer set Master 3%-"/>
+      <property name="AudioRaiseVolume" type="string" value="amixer set Master 3%+"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
