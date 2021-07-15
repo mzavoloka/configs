@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Run nvidia-settings to make its settings applied
+Exec=timeout 1s nvidia-settings
