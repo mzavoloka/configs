@@ -85,6 +85,7 @@ pacman -S             \
     fbreader          \
     wine              \
     winetricks        \
+    wine-mono         \
     calc              \
     discount          `# provides "markdown" utility to convert .md to .html` \
     ghostwriter       `# markdown editor` \
