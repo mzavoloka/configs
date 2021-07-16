@@ -83,13 +83,35 @@ pacman -S             \
     transmission-gtk  \
     xreader djvulibre \
     fbreader          \
-    wine              \
-    winetricks        \
-    wine-mono         \
     calc              \
     discount          `# provides "markdown" utility to convert .md to .html` \
     ghostwriter       `# markdown editor` \
     chromium
+
+# Wine and its recommended dependencies:
+pacman -S                         \
+    wine                          \
+    winetricks                    \
+    wine-mono                     \
+    lib32-mpg123                  \
+    lib32-giflib                  \
+    lib32-gnutls                  \
+    lib32-openal                  \
+    lib32-v4l-utils               \
+    lib32-libpulse                \
+    lib32-libxinerama             \
+    opencl-icd-loader             \
+    lib32-opencl-icd-loader       \
+    lib32-libxslt                 \
+    lib32-gst-plugins-base-libs   \
+    vkd3d                         \
+    lib32-vkd3d                   \
+    libgphoto2                    \
+    sane                          \
+    cups                          \
+    samba                         \
+    dosbox
+
 
 # enable port for transmission?
 #iptables -I INPUT -p tcp --dport 51413 --syn -j ACCEPT
