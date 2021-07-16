@@ -151,3 +151,8 @@ then
     sudo pacman -U lib32-opencl-nvidia-390xx-390.143-1-x86_64.pkg.tar.zst
     sudo pacman -U lib32-nvidia-390xx-utils-390.143-1-x86_64.pkg.tar.zst
 fi
+
+# If your nvidia-settings dous not apply after boot, try running nvidia-settings
+# at autostart stage. To achieve this, put .desktop script to user's autostart folder:
+mkdir -p ~/.config/autostart/
+cp fix-nvidia-colors.desktop ~/.config/autostart/
