@@ -83,12 +83,35 @@ pacman -S             \
     transmission-gtk  \
     xreader djvulibre \
     fbreader          \
-    wine              \
-    winetricks        \
     calc              \
     discount          `# provides "markdown" utility to convert .md to .html` \
     ghostwriter       `# markdown editor` \
     chromium
+
+# Wine and its recommended dependencies:
+pacman -S                         \
+    wine                          \
+    winetricks                    \
+    wine-mono                     \
+    lib32-mpg123                  \
+    lib32-giflib                  \
+    lib32-gnutls                  \
+    lib32-openal                  \
+    lib32-v4l-utils               \
+    lib32-libpulse                \
+    lib32-libxinerama             \
+    opencl-icd-loader             \
+    lib32-opencl-icd-loader       \
+    lib32-libxslt                 \
+    lib32-gst-plugins-base-libs   \
+    vkd3d                         \
+    lib32-vkd3d                   \
+    libgphoto2                    \
+    sane                          \
+    cups                          \
+    samba                         \
+    dosbox
+
 
 # enable port for transmission?
 #iptables -I INPUT -p tcp --dport 51413 --syn -j ACCEPT
@@ -151,3 +174,8 @@ then
     sudo pacman -U lib32-opencl-nvidia-390xx-390.143-1-x86_64.pkg.tar.zst
     sudo pacman -U lib32-nvidia-390xx-utils-390.143-1-x86_64.pkg.tar.zst
 fi
+
+# If your nvidia-settings dous not apply after boot, try running nvidia-settings
+# at autostart stage. To achieve this, put .desktop script to user's autostart folder:
+mkdir -p ~/.config/autostart/
+cp fix-nvidia-colors.desktop ~/.config/autostart/

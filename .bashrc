@@ -45,8 +45,9 @@ export TERM=xterm-256color
 
 # To check supported current colors you can run:
 #alias colors='for i in {1..256}; do tput setab 0; echo -n "$i:"; tput setab $i; echo; done; tput setab 0; echo;'
-alias colors='for i in {1..256}; do tput sgr 0; echo -n "$((i-1)):"; tput setab $i; echo; done; tput sgr 0; echo;'
+#alias colors='for i in {1..256}; do tput sgr 0; echo -n "$((i-1)):"; tput setab $i; echo; done; tput sgr 0; echo;'
 alias colors_row='for i in {1..256}; do tput setab $i; echo -n "$((i-1))    "; done; tput sgr 0; echo;'
+alias colors='msgcat --color=test'
 
 # Sets cursor color (it's an escape sequence)
 echo -ne '\e]12;magenta\a'
@@ -368,5 +369,6 @@ fo() {
 
 NO_AT_BRIDGE=1 # disable at-spi dbus (accessibility feature)
 alias todo='vim ~/dev/todo/todo'
+alias sx='startxfce4'
 
 alias calendar='cal -ym'
