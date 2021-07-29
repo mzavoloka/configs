@@ -14,6 +14,11 @@ if [ -f ~/.bash_machine_specifics.sh ]; then
     . ~/.bash_machine_specifics.sh
 fi
 
+# Work aliases
+if [ -f ~/dev/proto/aliases.sh ]; then
+    . ~/dev/proto/aliases.sh
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
