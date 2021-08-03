@@ -209,6 +209,8 @@ elseif hr >= 0 " night
     color molokai
 endif
 
+set termguicolors " full color support for colorschemes
+
 syntax enable
 
 " Set extra options when running in GUI mode
