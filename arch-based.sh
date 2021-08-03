@@ -30,7 +30,8 @@ pacman -S              \
     vim-ultisnips      \
     parcellite         `# clipboard manager` \
     ack                \
-    the_silver_searcher\
+    the_silver_searcher`# a faster version of ack. Dependency of vim-fzf`\
+    bat                `# syntax hilghlighted cat. Enables syntax highlighting in vim-fzf`\
     tree               \
     git                \
     cpanminus          \
