@@ -30,6 +30,7 @@ pacman -S              \
     vim-ultisnips      \
     parcellite         `# clipboard manager` \
     ack                \
+    the_silver_searcher\
     tree               \
     git                \
     cpanminus          \
