@@ -88,7 +88,8 @@ pacman -S             \
     calc              \
     discount          `# provides "markdown" utility to convert .md to .html` \
     ghostwriter       `# markdown editor` \
-    chromium
+    chromium          \
+    shotcut           `# video editor`
 
 # Wine and its recommended dependencies:
 pacman -S                         \
