@@ -361,3 +361,5 @@ set grepprg=ack\ -k " Use ack for :grep command
 
 let g:ctrlp_map = '<leader>p'
 nmap <Leader>f :Files<CR>
+
+let $BAT_THEME='Solarized (light)'
