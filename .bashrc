@@ -14,6 +14,11 @@ if [ -f ~/.bash_machine_specifics.sh ]; then
     . ~/.bash_machine_specifics.sh
 fi
 
+# Proto aliases
+if [ -f dev/proto/.bash_aliases ]; then
+    . dev/proto/.bash_aliases
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -45,8 +50,9 @@ export TERM=xterm-256color
 
 # To check supported current colors you can run:
 #alias colors='for i in {1..256}; do tput setab 0; echo -n "$i:"; tput setab $i; echo; done; tput setab 0; echo;'
-alias colors='for i in {1..256}; do tput sgr 0; echo -n "$((i-1)):"; tput setab $i; echo; done; tput sgr 0; echo;'
+#alias colors='for i in {1..256}; do tput sgr 0; echo -n "$((i-1)):"; tput setab $i; echo; done; tput sgr 0; echo;'
 alias colors_row='for i in {1..256}; do tput setab $i; echo -n "$((i-1))    "; done; tput sgr 0; echo;'
+alias colors='msgcat --color=test'
 
 # Sets cursor color (it's an escape sequence)
 echo -ne '\e]12;magenta\a'
@@ -79,11 +85,6 @@ fi
 #################################################################
 # PROMPT
 #################################################################
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color) color_prompt=yes;;
@@ -109,7 +110,10 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u@\h\[\033[00m\]:\[\033[01;33m\]\w\[\033[00m\]$(parse_git_branch)\$ '
+GREEN="$(tput setaf 2)"
+PURPLE="$(tput setaf 200)"
+
+PS1='${PURPLE}\u@\h\[\033[00m\]:${GREEN}\w\[\033[00m\]$(parse_git_branch)\$ '
 unset color_prompt force_color_prompt
 
 
