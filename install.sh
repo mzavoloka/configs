@@ -24,6 +24,9 @@ fi
 echo "OS version detected: $OS"
 
 
+echo "Copying .dircolors to homedir..."
+cp .dircolors $HOME
+
 echo "Copying .bashrc to homedir..."
 cp .bashrc $HOME
 
