@@ -1,4 +1,8 @@
 # This hook puts prepend new commit message with branchname.
 # Put this file to .git/hooks/prepare-commit-msg of your repository to enable it
+#!/bin/sh
 branchname=$(git branch --show-current)
-sed -i "1s/^/$branchname /" "$1" # add branchname to first line
+if ! grep -q "^$branchname" $1; then
+    # add branchname to first line if it's not there yet
+    sed -i "1s/^/$branchname /" "$1"
+fi
