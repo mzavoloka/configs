@@ -38,6 +38,7 @@ pacman -S              \
     gcc                \
     lua                \
     docker             \
+    postgresql         \
     ntfs-3g            \
     trash-cli          \
     pacman-contrib     `# rankmirrors script and others` \
