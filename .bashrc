@@ -110,10 +110,7 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-GREEN="$(tput setaf 2)"
-PURPLE="$(tput setaf 200)"
-
-PS1='${PURPLE}\u@\h\[\033[00m\]:${GREEN}\w\[\033[00m\]$(parse_git_branch)\$ '
+PS1='\[\033[01;35m\]\u@\h\[\033[00m\]:\[\033[01;32m\]\w\[\033[00m\]$(parse_git_branch)\$ '
 unset color_prompt force_color_prompt
 
 
