@@ -86,6 +86,7 @@ pacman -S             \
     transmission-gtk  \
     xreader djvulibre \
     fbreader          \
+    rbutil            `# rockbox utility`\
     calc              \
     discount          `# provides "markdown" utility to convert .md to .html` \
     ghostwriter       `# markdown editor` \
