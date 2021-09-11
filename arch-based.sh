@@ -145,7 +145,7 @@ then
 else
     echo "Your videocard is not nvida. Cna't install drivers for it"
 fi
-# you possibly need to got to nvidia-settings
+# you possibly need to go to nvidia-settings
 # and then to your output (for example, HDMI-0),
 # go to Controls tab and set Color Range to Limited
 # Then go check your colors on monteon.ru
