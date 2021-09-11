@@ -14,9 +14,9 @@ if [ -f ~/.bash_machine_specifics.sh ]; then
     . ~/.bash_machine_specifics.sh
 fi
 
-# Work aliases
-if [ -f ~/dev/proto/aliases.sh ]; then
-    . ~/dev/proto/aliases.sh
+# Proto aliases
+if [ -f dev/proto/.bash_aliases ]; then
+    . dev/proto/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -85,11 +85,6 @@ fi
 #################################################################
 # PROMPT
 #################################################################
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color) color_prompt=yes;;
@@ -115,7 +110,7 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u@\h\[\033[00m\]:\[\033[01;33m\]\w\[\033[00m\]$(parse_git_branch)\$ '
+PS1='\[\033[01;35m\]\u@\h\[\033[00m\]:\[\033[01;32m\]\w\[\033[00m\]$(parse_git_branch)\$ '
 unset color_prompt force_color_prompt
 
 

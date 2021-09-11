@@ -34,6 +34,5 @@ BackgroundDarkness=0.900000
 ShortcutsNoMnemonics=TRUE
 ShortcutsNoMenukey=TRUE
 ShortcutsNoHelpkey=TRUE
-FontName=Liberation Mono 9
-FontUseSystem=TRUE
+FontName=Monospace 9
 ScrollingOnOutput=FALSE
