@@ -37,6 +37,7 @@ pacman -S              \
     cpanminus          \
     gcc                \
     lua                \
+    ntp                \
     docker             \
     postgresql         \
     ntfs-3g            \
