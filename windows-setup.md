@@ -1,8 +1,10 @@
 ### Programs
+TechPowerUp GPU-Z
 CPU-Z
 FPS Monitor
 Crystal Disk Info
 Crystal Disk Mark
+FurMark
 
 
 ### Virtualizing existing Ubuntu installation if you have it in dualboot
