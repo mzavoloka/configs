@@ -37,6 +37,7 @@ pacman -S              \
     cpanminus          \
     gcc                \
     lua                \
+    ntp                \
     docker             \
     postgresql         \
     ntfs-3g            \
@@ -54,6 +55,7 @@ pacman -S               \
     xorg                \
     xfce4               \
     gvfs-mtp            `# enable file transfer from mobile devices` \
+    android-utils       `# adb utility (Android Debug Bridge)` \
     file-roller         `# archive manager` \
     rofi                \
     mousepad            \
