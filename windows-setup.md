@@ -6,6 +6,7 @@ Crystal Disk Info
 Crystal Disk Mark - может тестировать ОЗУ
 HD Tune
 FurMark
+Aida64
 
 
 ### Virtualizing existing Ubuntu installation if you have it in dualboot
