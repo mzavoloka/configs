@@ -7,6 +7,7 @@ Crystal Disk Mark - может тестировать ОЗУ
 HD Tune
 FurMark
 Aida64
+Linpack
 
 
 ### Virtualizing existing Ubuntu installation if you have it in dualboot
