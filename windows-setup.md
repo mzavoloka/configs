@@ -8,6 +8,7 @@ HD Tune
 FurMark
 Aida64
 Linpack
+ATTO Disk Benchmark
 
 
 ### Virtualizing existing Ubuntu installation if you have it in dualboot
