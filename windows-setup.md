@@ -3,7 +3,8 @@ TechPowerUp GPU-Z
 CPU-Z
 FPS Monitor
 Crystal Disk Info
-Crystal Disk Mark
+Crystal Disk Mark - может тестировать ОЗУ
+HD Tune
 FurMark
 
 
