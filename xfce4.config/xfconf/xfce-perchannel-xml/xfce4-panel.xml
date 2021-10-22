@@ -6,13 +6,12 @@
     <value type="int" value="1"/>
     <property name="dark-mode" type="bool" value="true"/>
     <property name="panel-1" type="empty">
-      <property name="position" type="string" value="p=10;x=1911;y=1994"/>
+      <property name="position" type="string" value="p=0;x=1913;y=461"/>
       <property name="length" type="uint" value="36"/>
       <property name="position-locked" type="bool" value="false"/>
       <property name="icon-size" type="uint" value="20"/>
       <property name="size" type="uint" value="53"/>
       <property name="plugin-ids" type="array">
-        <value type="int" value="2"/>
         <value type="int" value="15"/>
         <value type="int" value="9"/>
         <value type="int" value="10"/>
@@ -22,6 +21,7 @@
         <value type="int" value="12"/>
         <value type="int" value="13"/>
         <value type="int" value="14"/>
+        <value type="int" value="2"/>
       </property>
       <property name="disable-struts" type="bool" value="true"/>
       <property name="mode" type="uint" value="0"/>
