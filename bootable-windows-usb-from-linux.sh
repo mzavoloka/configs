@@ -1,3 +1,5 @@
+# NOTE woesub instead, this method doesn't work at this point
+
 sudo fdisk /dev/sdc
 g # create gpt partition table
 n # add new partition
