@@ -60,6 +60,7 @@ pacman -S               \
     file-roller         `# archive manager` \
     rofi                \
     mousepad            \
+    unrar               \
     xfce4-screenshooter \
     xfce4-screensaver   \
     thunar-archive-plugin   # thunar's context menu for extracting archives
@@ -187,3 +188,7 @@ fi
 # at autostart stage. To achieve this, put .desktop script to user's autostart folder:
 mkdir -p ~/.config/autostart/
 cp fix-nvidia-colors.desktop ~/.config/autostart/
+
+
+# Intel graphics;
+sudo pacman -S mesa lib32-mesa xf86-video-intel vulkan-intel
