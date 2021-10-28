@@ -14,7 +14,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'             " Package manager
-Plugin 'tpope/vim-fugitive'               " Integration with git
+"Plugin 'tpope/vim-fugitive'               " Integration with git (installed via vim-fugitive)
 if !has('win32') && !has('win32unix')
   Plugin 'valloric/MatchTagAlways'        " Always highlights the XML/HTML tags that enclose your cursor location
 endif

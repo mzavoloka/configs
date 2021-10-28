@@ -28,6 +28,7 @@ pacman -S              \
     vim-tagbar         `# view tags of a file` \
     vim-ctrlp          \
     vim-ultisnips      \
+    vim-easymotion     \
     parcellite         `# clipboard manager` \
     ack                \
     the_silver_searcher`# a faster version of ack. Dependency of vim-fzf`\
