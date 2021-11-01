@@ -75,6 +75,7 @@ systemctl enable dhcpcd
 mkdir /home/mikhail/Pictures # dir to save screenshots with xfce4-screenshooter
 chown mikhail:mikhail /home/mikhail/Pictures
 
+cp mimeapps.list /home/mikhail/.config/
 # bash xfce-setup.sh # obsolete
 mkdir -p /home/mikhail/.config/xfce4/
 cp -r xfce4.config/* /home/mikhail/.config/xfce4/

@@ -1,0 +1,34 @@
+[Default Applications]
+x-scheme-handler/http=xfce4-web-browser.desktop
+x-scheme-handler/https=xfce4-web-browser.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-KH6W20.desktop
+application/x-fictionbook+xml=FBReader.desktop
+application/pdf=xreader.desktop
+image/jpeg=org.xfce.ristretto.desktop
+x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop
+video/webm=vlc.desktop
+video/x-ms-wmv=vlc.desktop
+text/plain=gvim.desktop
+text/html=chromium.desktop
+audio/x-scpls=vlc.desktop
+application/x-mobipocket-ebook=FBReader.desktop
+application/rtf=libreoffice-writer.desktop
+
+[Added Associations]
+x-scheme-handler/http=xfce4-web-browser.desktop;
+x-scheme-handler/https=xfce4-web-browser.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-KH6W20.desktop;
+application/sql=gvim.desktop;
+application/pdf=xreader.desktop;
+image/jpeg=gimp.desktop;ristretto.desktop;org.xfce.ristretto.desktop;
+image/png=ristretto.desktop;gimp.desktop;
+text/x-python=gvim.desktop;
+video/mp4=vlc.desktop;
+video/webm=vlc.desktop;
+video/x-ms-wmv=vlc.desktop;
+text/plain=gvim.desktop;
+text/html=chromium.desktop;
+application/vnd.ms-htmlhelp=xchm.desktop;kchmviewer.desktop;
+audio/x-scpls=vlc.desktop;
+application/x-mobipocket-ebook=FBReader.desktop;
+application/rtf=libreoffice-writer.desktop;
