@@ -29,6 +29,7 @@ pacman -S              \
     vim-tagbar         `# view tags of a file` \
     vim-ctrlp          \
     vim-ultisnips      \
+    vim-easymotion     \
     parcellite         `# clipboard manager` \
     ack                \
     the_silver_searcher`# a faster version of ack. Dependency of vim-fzf`\
@@ -60,6 +61,7 @@ pacman -S               \
     file-roller         `# archive manager` \
     rofi                \
     mousepad            \
+    unrar               \
     xfce4-screenshooter \
     xfce4-screensaver   \
     thunar-archive-plugin   # thunar's context menu for extracting archives
@@ -74,6 +76,7 @@ systemctl enable dhcpcd
 mkdir /home/mikhail/Pictures # dir to save screenshots with xfce4-screenshooter
 chown mikhail:mikhail /home/mikhail/Pictures
 
+cp mimeapps.list /home/mikhail/.config/
 # bash xfce-setup.sh # obsolete
 mkdir -p /home/mikhail/.config/xfce4/
 cp -r xfce4.config/* /home/mikhail/.config/xfce4/
@@ -89,6 +92,7 @@ pacman -S             \
     transmission-gtk  \
     xreader djvulibre \
     fbreader          \
+    kchmviewer        \
     rbutil            `# rockbox utility`\
     calc              \
     discount          `# provides "markdown" utility to convert .md to .html` \
@@ -187,3 +191,7 @@ fi
 # at autostart stage. To achieve this, put .desktop script to user's autostart folder:
 mkdir -p ~/.config/autostart/
 cp fix-nvidia-colors.desktop ~/.config/autostart/
+
+
+# Intel graphics;
+sudo pacman -S mesa lib32-mesa xf86-video-intel vulkan-intel

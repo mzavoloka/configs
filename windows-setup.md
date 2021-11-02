@@ -1,3 +1,18 @@
+### Programs
+TechPowerUp GPU-Z
+CPU-Z
+FPS Monitor
+Crystal Disk Info
+Crystal Disk Mark - может тестировать ОЗУ
+HD Tune
+FurMark
+Aida64
+Linpack
+ATTO Disk Benchmark
+Cinebench
+PerformanceTEST
+
+
 ### Virtualizing existing Ubuntu installation if you have it in dualboot
 
 Actually you can find all the info here: https://www.virtualbox.org/manual/ch09.html#rawdisk

@@ -65,6 +65,7 @@
       <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="/home/mikhail/dev/configs/xfce4-terminal-colored-by-time.sh"/>
       <property name="AudioLowerVolume" type="string" value="amixer set Master 3%-"/>
       <property name="AudioRaiseVolume" type="string" value="amixer set Master 3%+"/>
+      <property name="&lt;Super&gt;Escape" type="string" value="/home/mikhail/dev/configs/xfce4.config/scripts/toggle-panels.sh"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
