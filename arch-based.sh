@@ -63,6 +63,7 @@ pacman -S               \
     rofi                \
     mousepad            \
     unrar               \
+    p7zip               \
     xfce4-screenshooter \
     xfce4-screensaver   \
     thunar-archive-plugin   # thunar's context menu for extracting archives
