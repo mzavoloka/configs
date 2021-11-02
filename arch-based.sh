@@ -10,6 +10,7 @@ pacman -S              \
     dhclient           \
     dhcpcd             \
     wpa_supplicant     \
+    iw                 \
     inetutils          \
     net-tools          \
     mlocate            \
