@@ -67,6 +67,12 @@ pacman -S               \
     xfce4-screensaver   \
     thunar-archive-plugin   # thunar's context menu for extracting archives
 
+# Benchmarking
+pacman -S               \
+    kdiskmark           \
+    i7z
+
+
 useradd --create-home mikhail
 passwd mikhail
 usermod -aG tty mikhail # to be able to run Xorg
