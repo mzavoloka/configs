@@ -7,3 +7,6 @@ watch -n 2 sensors
 
 3. Nvidia gpu temp and memory usage:
 watch -n 2 nvidia-smi
+
+4. See both at the same time:
+watch -n2 "sensors;nvidia-smi"
