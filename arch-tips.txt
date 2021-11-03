@@ -1,3 +1,9 @@
 1. To download package's tar.zst for offline installation via pacman -U do similar
 (sample for wpa_supplicant and iw packages) to this:
-$ sudo pacman -Syw wpa_supplicant iw --cachedir ~/pkg
+sudo pacman -Syw wpa_supplicant iw --cachedir ~/pkg
+
+2. Monitor cpu temp:
+watch -n 2 sensors
+
+3. Nvidia gpu temp and memory usage:
+watch -n 2 nvidia-smi
