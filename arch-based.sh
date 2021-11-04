@@ -152,6 +152,10 @@ pacman -S alsa-utils
 amixer -q sset Master unmute
 amixer -q sset Master 40%
 
+# Disable beeping of PC speaker
+rmmod pcspkr
+echo "blaclist pcspkr" | sudo tee -a /etc/modprobe.d/nobeep.conf
+
 
 # enhance video
 if lspci -v | grep -A1 -e VGA -e 3D | grep -i nvidia
