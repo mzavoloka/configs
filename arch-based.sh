@@ -153,7 +153,7 @@ amixer -q sset Master unmute
 amixer -q sset Master 40%
 
 # Disable beeping of PC speaker
-sudo rmmod pcspkr
+rmmod pcspkr
 echo "blacklist pcspkr" | sudo tee -a /etc/modprobe.d/nobeep.conf
 
 
