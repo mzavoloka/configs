@@ -114,7 +114,7 @@ let $PAGER='' " View man pages in vim
 " Make hotkeys work with russian. To change language press C+^
 set keymap=russian-jcukenwin
 set iminsert=0
-set imsearch=0
+set imsearch=-1 " Use current keymap while searching
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
