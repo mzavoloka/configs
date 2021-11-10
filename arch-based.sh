@@ -37,6 +37,7 @@ pacman -S              \
     bat                `# syntax hilghlighted cat. Enables syntax highlighting in vim-fzf`\
     tree               \
     git                \
+    nfs-utils          \
     cpanminus          \
     gcc                \
     lua                \
