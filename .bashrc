@@ -372,3 +372,5 @@ alias todo='vim ~/dev/todo/todo'
 alias sx='startxfce4'
 
 alias calendar='cal -ym'
+
+alias sshfvds='ssh mikhail@82.146.53.243'

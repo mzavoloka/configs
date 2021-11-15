@@ -1,0 +1,16 @@
+#+-------------------------------------------------------------------+
+#  82.146.53.243
+#+-------------------------------------------------------------------+
+
+hosting: firstvds
+tariff: VDS разминка
+cost: 90 rub/month
+ram: 512 MB
+cpu: 2 cores 2400 MHz
+disk: 10 GB hdd
+country: Russia
+
+Contents:
+landing http://82.146.53.243/
+
+domain stopskynet.ru
