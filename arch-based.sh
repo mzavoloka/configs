@@ -169,6 +169,7 @@ fi
 # and then to your output (for example, HDMI-0),
 # go to Controls tab and set Color Range to Limited
 # Then go check your colors on monteon.ru
+# Also go to PowerMizer and set Preferred Mode to "Prefer Maximum Performance"
 
 # Only for old nvidia videocards supported by legacy 390xx aur package:
 yourcardisold=0
