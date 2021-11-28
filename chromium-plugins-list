@@ -1,12 +1,20 @@
+#+-------------------------------------------------------------------+
+#  Essential
+#+-------------------------------------------------------------------+
 ublock
-Blitz Full Screen URL Launcher
 google search results shortcuts
 browsec
-hola vpn
-touch vpn
-fast tab switcher
+youtube watchmarker
 empty new tab page
 
-In settings:
+#+-------------------------------------------------------------------+
+#  Additional
+#+-------------------------------------------------------------------+
+Blitz Full Screen URL Launcher
+fast tab switcher
+
+#+-------------------------------------------------------------------+
+#  Manually in settings
+#+-------------------------------------------------------------------+
 Don't allow sites to see your location
 Don't allow sites to send notifications
