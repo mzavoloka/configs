@@ -376,5 +376,7 @@ alias calendar='cal -ym'
 alias sshfvds='ssh mikhail@82.146.53.243'
 
 # Make specific mouse to be Left/Right handed
-alias deluxl='xinput set-button-map $(xinput list | grep -i sinowealth | grep pointer | grep -oP "id=\d+" | grep -oP "\d+") 3 2 1'
-alias deluxr='xinput set-button-map $(xinput list | grep -i sinowealth | grep pointer | grep -oP "id=\d+" | grep -oP "\d+") 1 2 3'
+MOUSE_TITLE=sinowealth
+MOUSE_TITLE=lightsync
+alias mousel='xinput set-button-map $(xinput list | grep -i $MOUSE_TITLE | grep -vi keyboard | grep pointer | grep -oP "id=\d+" | grep -oP "\d+") 3 2 1'
+alias mouser='xinput set-button-map $(xinput list | grep -i $MOUSE_TITLE | grep -vi keyboard | grep pointer | grep -oP "id=\d+" | grep -oP "\d+") 1 2 3'
