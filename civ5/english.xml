@@ -7,8 +7,8 @@
             <Name>English</Name>
             <TableName>Language_en_US</TableName>
             <PluralRule>2</PluralRule>
-            <UseExtendedFont>1</UseExtendedFont>
-            <FontName>Verdana</FontName>
+			<UseExtendedFont>1</UseExtendedFont>
+			<FontName>Verdana</FontName>
         </Row>
     </Languages>
 
