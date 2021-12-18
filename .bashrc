@@ -4,7 +4,7 @@ case $- in
       *) return;;
 esac
 
-# Seprated aliases
+# Separated aliases
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
