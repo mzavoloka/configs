@@ -1,16 +1,19 @@
 ### Programs
-TechPowerUp GPU-Z
-CPU-Z
-FPS Monitor
-Crystal Disk Info
-Crystal Disk Mark - может тестировать ОЗУ
-HD Tune
-FurMark
-Aida64
-Linpack
-ATTO Disk Benchmark
-Cinebench
-PerformanceTEST
+- Gvim 
+- FastStone Image Viewer
+## Testing programs
+- TechPowerUp GPU-Z
+- CPU-Z
+- FPS Monitor
+- Crystal Disk Info
+- Crystal Disk Mark - может тестировать ОЗУ
+- HD Tune
+- FurMark
+- Aida64
+- Linpack
+- ATTO Disk Benchmark
+- Cinebench
+- PerformanceTEST
 
 
 ### Virtualizing existing Ubuntu installation if you have it in dualboot
