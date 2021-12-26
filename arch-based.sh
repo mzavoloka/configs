@@ -107,6 +107,7 @@ pacman -S             \
     discount          `# provides "markdown" utility to convert .md to .html` \
     ghostwriter       `# markdown editor` \
     chromium          \
+    playerctl         `# media playback control from console` \
     shotcut           `# video editor`
 
 # Wine and its recommended dependencies:

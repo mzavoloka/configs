@@ -66,6 +66,7 @@
       <property name="AudioLowerVolume" type="string" value="amixer set Master 3%-"/>
       <property name="AudioRaiseVolume" type="string" value="amixer set Master 3%+"/>
       <property name="&lt;Super&gt;Escape" type="string" value="/home/mikhail/dev/configs/xfce4.config/scripts/toggle-panels.sh"/>
+      <property name="AudioPlay" type="string" value="playerctl play-pause"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
