@@ -108,6 +108,7 @@ pacman -S             \
     ghostwriter       `# markdown editor` \
     chromium          \
     playerctl         `# media playback control from console` \
+    pulseaudio        \
     shotcut           `# video editor`
 
 # Wine and its recommended dependencies:
