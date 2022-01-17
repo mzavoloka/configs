@@ -71,6 +71,7 @@ pacman -S               \
 
 # Benchmarking
 pacman -S               \
+    stress              \
     kdiskmark           \
     i7z
 
