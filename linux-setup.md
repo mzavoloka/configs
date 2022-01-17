@@ -676,3 +676,9 @@ options snd-usb-audio index=-2
 ```
 Got it here: https://wiki.archlinux.org/title/Advanced_Linux_Sound_Architecture#Set_the_default_sound_card
 "You can also provide an index of -2 to instruct ALSA to never use a card as the primary one. Distributions such as Linux Mint and Ubuntu use the following settings to avoid USB and other "abnormal" drivers from getting index 0:"
+
+
+
+### NFS share configuration
+Put exports file to /etc/exports and start nfs server using command:
+sudo systemctl start nfs-server
