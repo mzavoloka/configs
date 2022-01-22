@@ -1,6 +1,8 @@
 ### Programs
 - Gvim 
 - FastStone Image Viewer
+- Ext2fsd
+- DiskInternals Linux Reader
 ## Testing programs
 - TechPowerUp GPU-Z
 - CPU-Z
