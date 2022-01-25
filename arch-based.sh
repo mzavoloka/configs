@@ -92,6 +92,10 @@ mkdir -p /home/mikhail/.config/xfce4/
 cp -r xfce4.config/* /home/mikhail/.config/xfce4/
 chown -R mikhail:mikhail /home/mikhail/.config
 
+# Disable mouse navigation buttons (maybe better remap?)
+cp .Xmodmap ~
+chown mikhail:mikhail ~/.Xmodmap
+
 pacman -S             \
     vlc               \
     ristretto         \
