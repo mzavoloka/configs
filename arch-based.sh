@@ -114,7 +114,10 @@ pacman -S             \
     chromium          \
     playerctl         `# media playback control from console` \
     pulseaudio        \
+    conky             \
     shotcut           `# video editor`
+
+cp .conkyrc ~
 
 # Wine and its recommended dependencies:
 pacman -S                         \
