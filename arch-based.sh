@@ -120,6 +120,8 @@ pacman -S             \
 
 cp .conkyrc ~
 
+sudo systemctl enable avahi-daemon # for local hostname resolution
+
 # Wine and its recommended dependencies:
 pacman -S                         \
     wine                          \
