@@ -121,6 +121,7 @@ pacman -S             \
 cp .conkyrc ~
 
 sudo systemctl enable avahi-daemon # for local hostname resolution
+sudo systemctl enable nfs-server
 
 # Wine and its recommended dependencies:
 pacman -S                         \
