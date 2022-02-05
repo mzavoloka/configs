@@ -18,6 +18,7 @@ pacman -S              \
     wget               \
     openssh            \
     openvpn            \
+    nss-mdns           `# local hostname resolution` \
     gvim               `# gvim to enable clipboard sharing` \
     vim-airline        \
     vim-airline-themes \
