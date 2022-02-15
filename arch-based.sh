@@ -97,6 +97,9 @@ chown -R mikhail:mikhail /home/mikhail/.config
 cp .Xmodmap ~
 chown mikhail:mikhail ~/.Xmodmap
 
+# Disable x suspending (fixes hdmi display not working after sleep)
+cp .xinitrc ~
+
 pacman -S             \
     vlc               \
     ristretto         \
