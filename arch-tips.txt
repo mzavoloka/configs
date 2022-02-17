@@ -12,3 +12,5 @@ watch -n 2 nvidia-smi
 watch -n2 "sensors;nvidia-smi"
 
 5. List of default Thunar shortcuts reside in ~/.config/Thunar/accels.scm
+
+6. Xreader find next, find previous shortctuts are Shift+g And Ctrl+Shift+g
