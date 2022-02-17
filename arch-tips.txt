@@ -10,3 +10,5 @@ watch -n 2 nvidia-smi
 
 4. See both at the same time:
 watch -n2 "sensors;nvidia-smi"
+
+5. List of default Thunar shortcuts reside in ~/.config/Thunar/accels.scm
