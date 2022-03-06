@@ -68,6 +68,7 @@ pacman -S               \
     p7zip               \
     xfce4-screenshooter \
     xfce4-screensaver   \
+    ranger              \
     thunar-archive-plugin   # thunar's context menu for extracting archives
 
 # Benchmarking
