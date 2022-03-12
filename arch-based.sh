@@ -69,6 +69,7 @@ pacman -S               \
     xfce4-screenshooter \
     xfce4-screensaver   \
     ranger              \
+    w3m                 `# enables images in ranger` \
     thunar-archive-plugin   # thunar's context menu for extracting archives
 
 # Benchmarking
