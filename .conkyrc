@@ -137,8 +137,9 @@ conky.text = [[
 ############
 # Calendar #
 ############
+${alignc}${font Mono:size=14}${color0}${time %d.%m.%y %H:%M:%S}${color}
 ${alignc}${font Mono:size=14}${color0}${time %b %Y}${color}
-${font Mono:size=12}${goto 5}${color}SU MO TU We Th FR SA
+${font Mono:size=12}${goto 5}${color}Mo Tu We Th Fr Sa Su
 ${goto 5}${color}${execpi 1800 LAR=`date +%-d`; cal -m | sed '2d' | sed -e '1d' -e 's/\<'$LAR'\>/${color0}&${color}/' | sed ':a;N;$!ba;s/\n/\n${goto 5}/g'}${color}${font}
 
 
