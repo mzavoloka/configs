@@ -121,6 +121,8 @@ pacman -S             \
     playerctl         `# media playback control from console` \
     pulseaudio        \
     conky             \
+    calibre           \
+    pdfarranger       \
     shotcut           `# video editor`
 
 cp .conkyrc ~
