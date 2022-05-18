@@ -17,3 +17,5 @@ watch -n2 "sensors;nvidia-smi"
 
 7. If you get a message about pacman signature is unknown trust than run:
 sudo pacman-key --refresh
+
+And if it doesn't help, read this https://wiki.archlinux.org/title/Pacman/Package_signing#Troubleshooting
