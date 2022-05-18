@@ -14,3 +14,6 @@ watch -n2 "sensors;nvidia-smi"
 5. List of default Thunar shortcuts reside in ~/.config/Thunar/accels.scm
 
 6. Xreader find next, find previous shortctuts are Shift+g And Ctrl+Shift+g
+
+7. If you get a message about pacman signature is unknown trust than run:
+sudo pacman-key --refresh
