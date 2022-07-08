@@ -67,12 +67,23 @@ sudo echo 'Section "InputClass"
   Option "XkbOptions" "caps:escape,grp:sclk_toggle,grp:toggle,grp_led:scroll"
 EndSection' > /etc/X11/xorg.conf.d/00-keyboard.conf
 
-echo "Installing my utilites..."
+echo "Init todo"
+mkdir $HOME/dev/
+mkdir $HOME/dev/todo/; cd $HOME/dev/todo
+git clone git@github.com:mzavoloka/todo
+
+echo "Installing utilites..."
 mkdir $HOME/dev/
 mkdir $HOME/dev/utilities/; cd $HOME/dev/utilities
 git clone git@github.com:mzavoloka/gitls
 git clone git@github.com:mzavoloka/myfind
-git clone git@github.com:mzavoloka/todo
+git clone git@github.com:jc00ke/move-to-next-monitor
+# quick stats
+git clone git@github.com:arzzen/git-quick-stats
+cd git-quick-stats/
+sudo make install
+cd $HOME/dev/utilities
+# git-cal
 git clone git@github.com:mzavoloka/git-cal
 cd git-cal/
 perl Makefile.PL
