@@ -33,6 +33,7 @@ pacman -S              \
     vim-ultisnips      \
     vim-easymotion     \
     parcellite         `# clipboard manager` \
+    gxkb               `# show current xkb layoout in tray` \
     ack                \
     the_silver_searcher`# a faster version of ack. Dependency of vim-fzf`\
     bat                `# syntax hilghlighted cat. Enables syntax highlighting in vim-fzf`\
