@@ -9,13 +9,16 @@
 - FPS Monitor
 - Crystal Disk Info
 - Crystal Disk Mark - может тестировать ОЗУ
-- HD Tune
+- HD Tune (проверка ssd)
 - FurMark
 - Aida64
 - Linpack
 - ATTO Disk Benchmark
 - Cinebench
 - PerformanceTEST
+- TestMem5 (проверка ОЗУ)
+- hwinfo
+- Superposition benchmark (тест видяхи)
 
 
 ### Virtualizing existing Ubuntu installation if you have it in dualboot
