@@ -230,4 +230,4 @@ cp fix-nvidia-colors.desktop ~/.config/autostart/
 
 
 # Intel graphics;
-sudo pacman -S mesa lib32-mesa # xf86-video-intel vulkan-intel # these two udner question
+sudo pacman -S mesa lib32-mesa # xf86-video-intel vulkan-intel # these two udner question, glamorgl is loaded by Xorg instead, and it works fine
