@@ -15,7 +15,17 @@ watch -n2 "sensors;nvidia-smi"
 
 6. Xreader find next, find previous shortctuts are Shift+g And Ctrl+Shift+g
 
-7. If you get a message about pacman signature is unknown trust than run:
+7.  Fix "invalid or corrupted package (PGP signature)" error in Arch Linux
+To solve "invalid or corrupted package (PGP signature)" error in Arch Linux, we need to update the archlinux-keyring package.
+
+To do so, run:
+
+$ sudo pacman -S archlinux-keyring
+
+8. if point 7 didn't help than run:
+
 sudo pacman-key --refresh
 
 And if it doesn't help, read this https://wiki.archlinux.org/title/Pacman/Package_signing#Troubleshooting
+
+
