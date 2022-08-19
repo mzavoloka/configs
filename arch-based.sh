@@ -112,7 +112,7 @@ pacman -S             \
     libreoffice-fresh \
     transmission-gtk  \
     xreader djvulibre \
-    fbreader          \
+    foliate           \
     kchmviewer        \
     rbutil            `# rockbox utility`\
     calc              \
