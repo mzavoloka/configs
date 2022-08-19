@@ -112,7 +112,8 @@ pacman -S             \
     libreoffice-fresh \
     transmission-gtk  \
     xreader djvulibre \
-    foliate           \
+    foliate           `# reads .mobi books`\
+    zathura zathura-pdf-mupdf zathura-ps `# reads .pdf .djvu .epub .fb2 books`\
     kchmviewer        \
     rbutil            `# rockbox utility`\
     calc              \
