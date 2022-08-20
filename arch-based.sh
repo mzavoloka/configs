@@ -71,6 +71,7 @@ pacman -S               \
     xfce4-screensaver   \
     ranger              \
     w3m                 `# enables images in ranger` \
+    ffmpeg-thumbnailer  `# enables video thumbnails in ranger` \
     thunar-archive-plugin   # thunar's context menu for extracting archives
 
 # Benchmarking
@@ -102,6 +103,9 @@ chown mikhail:mikhail ~/.Xmodmap
 
 # Disable x suspending (fixes hdmi display not working after sleep)
 cp .xinitrc ~
+
+# copy ranger config
+cp -r ranger ~/.config/
 
 pacman -S             \
     vlc               \
