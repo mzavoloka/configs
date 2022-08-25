@@ -141,12 +141,12 @@ handle_image() {
         ## Image
         image/*)
             local orientation
-            orientation="$( identify -format '%[EXIF:Orientation]\n' -- "${FILE_PATH}" )"
+            orientation="$( timeout 3s identify -format '%[EXIF:Orientation]\n' -- "${FILE_PATH}" )"
             ## If orientation data is present and the image actually
             ## needs rotating ("1" means no rotation)...
             if [[ -n "$orientation" && "$orientation" != 1 ]]; then
                 ## ...auto-rotate the image according to the EXIF data.
-                convert -- "${FILE_PATH}" -auto-orient "${IMAGE_CACHE_PATH}" && exit 6
+                timeout 3s convert -- "${FILE_PATH}" -auto-orient "${IMAGE_CACHE_PATH}" && exit 6
             fi
 
             ## `w3mimgdisplay` will be called for all images (unless overriden
@@ -156,12 +156,12 @@ handle_image() {
         ## Video
         video/*)
             # Thumbnail
-            ffmpegthumbnailer -i "${FILE_PATH}" -o "${IMAGE_CACHE_PATH}" -s 0 && exit 6
+            timeout 3s ffmpegthumbnailer -i "${FILE_PATH}" -o "${IMAGE_CACHE_PATH}" -s 0 && exit 6
             exit 1;;
 
         ## PDF
         application/pdf)
-            pdftoppm -f 1 -l 1 \
+            timeout 3s pdftoppm -f 1 -l 1 \
                      -scale-to-x "${DEFAULT_SIZE%x*}" \
                      -scale-to-y -1 \
                      -singlefile \
@@ -193,7 +193,7 @@ handle_image() {
                          --text "  The quick brown fox jumps over the lazy dog.  " \
                          "${FILE_PATH}";
             then
-                convert -- "${preview_png}" "${IMAGE_CACHE_PATH}" \
+                timeoute 3s convert -- "${preview_png}" "${IMAGE_CACHE_PATH}" \
                     && rm "${preview_png}" \
                     && exit 6
             else
