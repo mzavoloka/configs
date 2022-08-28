@@ -356,7 +356,7 @@ unset SSH_ASKPASS
 
 alias tmux="tmux -2" # Force tmux assume 256 color support
 
-cd ~ # default directory
+#cd ~ # default directory
 
 alias passgen='cat /dev/urandom | tr -dc A-Za-z0-9 | head -c16 && echo'
 
@@ -380,3 +380,30 @@ MOUSE_TITLE=sinowealth
 MOUSE_TITLE=lightsync
 alias mousel='xinput set-button-map $(xinput list | grep -i $MOUSE_TITLE | grep -vi keyboard | grep pointer | grep -oP "id=\d+" | grep -oP "\d+") 3 2 1'
 alias mouser='xinput set-button-map $(xinput list | grep -i $MOUSE_TITLE | grep -vi keyboard | grep pointer | grep -oP "id=\d+" | grep -oP "\d+") 1 2 3'
+
+#+-------------------------------------------------------------------+
+#  ranger_cd copied from /usr/share/doc/ranger/config/scope.sh
+#+-------------------------------------------------------------------+
+# shellcheck shell=sh
+
+# Compatible with ranger 1.4.2 through 1.9.*
+#
+# Automatically change the current working directory after closing ranger
+#
+# This is a shell function to automatically change the current working
+# directory to the last visited one after ranger quits. Either put it into your
+# .zshrc/.bashrc/etc or source this file from your shell configuration.
+# To undo the effect of this function, you can type "cd -" to return to the
+# original directory.
+
+ranger_cd() {
+    temp_file="$(mktemp -t "ranger_cd.XXXXXXXXXX")"
+    ranger --choosedir="$temp_file" -- "${@:-$PWD}"
+    if chosen_dir="$(cat -- "$temp_file")" && [ -n "$chosen_dir" ] && [ "$chosen_dir" != "$PWD" ]; then
+        cd -- "$chosen_dir"
+    fi
+    rm -f -- "$temp_file"
+}
+
+# This binds Alt-e (\e is alt, and e is letter e) to ranger_cd:
+bind '"\ee":"ranger_cd\C-m"'
