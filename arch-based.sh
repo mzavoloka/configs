@@ -71,7 +71,8 @@ pacman -S               \
     xfce4-screensaver   \
     ranger              \
     ueberzug            `# enables images in ranger` \
-    ffmpegthumbnailer  `# enables video thumbnails in ranger` \
+    ffmpegthumbnailer   `# enables video thumbnails in ranger` \
+    catdoc              `# enables .rtf and .doc previews in ranger` \
     thunar-archive-plugin   # thunar's context menu for extracting archives
 
 # Benchmarking
