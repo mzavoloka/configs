@@ -40,6 +40,7 @@ Plugin 'glts/vim-radical'                 " gA shows the four representations of
 Plugin 'tpope/vim-commentary'             " Use gcc to comment out a line (takes a count), gc to comment out the target of a motion (for example, gcap to comment out a paragraph), gc in visual mode to comment out the selection, and gc in operator pending mode to target a comment. You can also use it as a command, either with a range like :7,17Commentary, or as part of a :global invocation like with :g/TODO/Commentary.
 " Colorschemes
 Plugin 'flazz/vim-colorschemes'           " Contains molokai and github colorschemes
+Plugin 'tbastos/vim-lua'
 "Plugin 'svermeulen/vim-easyclip'
 "Plugin 'godlygeek/tabular'                " Align declarations with :Tab /= (install it via package vim-tabular)
 "Plugin 'godlygeek/vim-indent-object'      " select tabulated block of code with ii, ai, aI (install it via package vim-indent-object)
