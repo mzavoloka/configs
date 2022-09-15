@@ -1,6 +1,8 @@
 # Upon following arch linux installation guide https://wiki.archlinux.org/index.php/Installation_guide
 # run this after arch-chrooting into /mnt:
 
+sed -i 's/#Color/Color/' /etc/pacman.conf # enable pacman's colored output
+
 pacman -Syu
 
 pacman -S              \
