@@ -110,6 +110,9 @@ cp .xinitrc ~
 # copy ranger config
 cp -r ranger ~/.config/
 
+# copy zathura config
+cp -r zathura ~/.config/
+
 pacman -S             \
     vlc               \
     ristretto         \
