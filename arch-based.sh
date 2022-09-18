@@ -71,6 +71,7 @@ pacman -S               \
     p7zip               \
     xfce4-screenshooter \
     xfce4-screensaver   \
+    fx                  `# json viewer` \
     ranger              \
     ueberzug            `# enables images in ranger` \
     ffmpegthumbnailer   `# enables video thumbnails in ranger` \
