@@ -72,6 +72,7 @@ pacman -S               \
     xfce4-screenshooter \
     xfce4-screensaver   \
     fx                  `# json viewer` \
+    prettier            `# json, yaml, js, css, tabulated` \
     ranger              \
     ueberzug            `# enables images in ranger` \
     ffmpegthumbnailer   `# enables video thumbnails in ranger` \
