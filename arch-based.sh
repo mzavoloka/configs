@@ -62,6 +62,7 @@ pacman -S        \
 pacman -S               \
     xorg                \
     xfce4               \
+    xcursor-vanilla-dmz `# white cursor theme` \
     gvfs-mtp            `# enable file transfer from mobile devices` \
     android-utils       `# adb utility (Android Debug Bridge)` \
     file-roller         `# archive manager` \
