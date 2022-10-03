@@ -118,6 +118,8 @@ cp -r zathura ~/.config/
 
 pacman -S             \
     vlc               \
+    mpv               \
+    mpv-mpris         `# media keys support` \
     ristretto         \
     webp-pixbuf-loader `# support .webp format` \
     gimp              \
