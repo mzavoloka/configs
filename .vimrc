@@ -42,6 +42,7 @@ Plugin 'tpope/vim-commentary'             " Use gcc to comment out a line (takes
 Plugin 'flazz/vim-colorschemes'           " Contains molokai and github colorschemes
 Plugin 'tbastos/vim-lua'
 Plugin 'chrisbra/csv.vim'
+Plugin 'vim-utils/vim-man'
 "Plugin 'svermeulen/vim-easyclip'
 "Plugin 'godlygeek/tabular'                " Align declarations with :Tab /= (install it via package vim-tabular)
 "Plugin 'godlygeek/vim-indent-object'      " select tabulated block of code with ii, ai, aI (install it via package vim-indent-object)
