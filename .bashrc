@@ -368,7 +368,7 @@ fo() {
 }
 
 NO_AT_BRIDGE=1 # disable at-spi dbus (accessibility feature)
-alias todo='vim ~/dev/todo/todo'
+alias todo='cd ~/dev/todo && vim ~/dev/todo/todo'
 alias sx='startxfce4'
 
 alias calendar='cal -ym'
