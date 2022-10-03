@@ -258,6 +258,14 @@ set nolbr " wrap at any character
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Alt-j and Alt-k to move screen one line down or up
+" first make alt work
+map <Esc>j <A-j>
+map <Esc>k <A-k>
+" then actual mapping
+map <A-j> <C-e>
+map <A-k> <C-y>
+
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
