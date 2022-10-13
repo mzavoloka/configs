@@ -80,6 +80,10 @@ pacman -S               \
     catdoc              `# enables .rtf and .doc previews in ranger` \
     thunar-archive-plugin   # thunar's context menu for extracting archives
 
+# Make xfce actually use cursor theme. https://bugs.launchpad.net/ubuntu/+source/xfwm4/+bug/157447
+echo "[Icon Theme]" > /usr/share/icons/default/index.theme
+echo "Inherits=Vanilla-DMZ" >> /usr/share/icons/default/index.theme
+
 # Benchmarking
 pacman -S               \
     stress              \
