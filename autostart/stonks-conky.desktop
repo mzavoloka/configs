@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Run conky with stonks
+Exec=bash -c 'sleep 5 && cd /home/mikhail/dev/trading/iss && conky -c .stonks.conkyrc'

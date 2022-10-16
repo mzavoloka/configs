@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Run conky calendar and monitor
+Exec=bash -c 'sleep 5 && conky'

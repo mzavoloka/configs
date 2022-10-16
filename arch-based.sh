@@ -70,6 +70,7 @@ pacman -S               \
     mousepad            \
     unrar               \
     p7zip               \
+    newsboat            \
     xfce4-screenshooter \
     xfce4-screensaver   \
     fx                  `# json viewer` \
@@ -150,6 +151,8 @@ pacman -S             \
     shotcut           `# video editor`
 
 cp .conkyrc ~
+cp autostart/conky.desktop ~/.config/autostart/
+cp autostart/stonks-conky.desktop ~/.config/autostart/
 
 sudo systemctl enable avahi-daemon # for local hostname resolution
 sudo systemctl enable nfs-server
