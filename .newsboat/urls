@@ -1,0 +1,26 @@
+"---------- NEWS MAIN ----------"
+exec:/home/mikhail/dev/news/2ch-parser.pl
+http://static.feed.rbc.ru/rbc/logical/footer/news.rss "rbc"  "news"
+https://smart-lab.ru/rss/       "smartlab"                   "news"
+https://www.linux.org.ru/section-rss.jsp "linux.org.ru"      "news"
+https://www.gazprom.ru/rss/  "corporate"   "news"
+" "
+"---------- CB RF ----------"
+https://www.cbr.ru/rss/RssNews
+https://www.cbr.ru/rss/eventrss
+https://www.cbr.ru/rss/RssPress
+" "
+"---------- Gosduma ----------"
+http://duma.gov.ru/news/feed/ ~duma.gov.ru
+" "
+"---------- YOUTUBE main ----------"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC0OytamlH2cmX7P-Opp5vyw "youtube" "youtube/finance" # Экономика. Верным курсом
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9uayMAC_wWlEh96vCKq1Jw "youtube" "youtube/finance" # Банк России
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVA5heoUfs5yohiil9PJhRw "youtube" "youtube/finance" # Smirnova Capital
+https://www.youtube.com/feeds/videos.xml?channel_id=UCcVPismBTzyg9Rpe3mBd3yQ "youtube" "youtube/finance" # Гусев Владимир Павлович 1
+https://www.youtube.com/feeds/videos.xml?channel_id=UC70HXu5A9s115X7dNQeK7dQ "youtube" "youtube/finance" # "Кречетов - Инвестиции, Экономика, Трейдинг"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCo1RPtO57Izwy2wjBmPMjCw "youtube" "youtube/finance" # Деньги не спят
+https://www.youtube.com/feeds/videos.xml?channel_id=UC3OtKSWHXQyajk8P1mVi43w "youtube" "youtube/politics" # Саня во Флориде
+https://www.youtube.com/feeds/videos.xml?channel_id=UC5Bd7vj6oszn4khEubQdyjA "youtube" "youtube/politics" # Институт Правды
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsJn2vDKhf3YrCnSoKRv0lw "youtube" "youtube/finance" # Фанимани
+https://www.youtube.com/feeds/videos.xml?channel_id=UC7yMBOeBTcPhlTdI-PS-_Xg "youtube" "youtube/science" # БОРИС БОЯРШИНОВ СО ДНА НАУКИ

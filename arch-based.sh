@@ -117,6 +117,9 @@ cp .xinitrc ~
 # copy ranger config
 cp -r ranger ~/.config/
 
+# copy newsboat config
+cp -r .newsboat ~/
+
 # copy zathura config
 cp -r zathura ~/.config/
 

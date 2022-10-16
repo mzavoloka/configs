@@ -1,0 +1,117 @@
+# general settings
+auto-reload yes
+max-items 100
+reload-threads 12
+reload-time 10 # minutes
+
+# externel browser
+#browser "w3m %u"
+browser "chromium %u &>/dev/null"
+#macro m set browser "/usr/local/bin/mpv %u"; open-in-browser ; set browser "/usr/local/bin/w3m %u"
+#macro l set browser "chromium %u"; open-in-browser ;
+
+# bind keys - vim style
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key h quit
+
+bind-key u show-urls
+bind-key g home
+bind-key G end
+bind-key s sort
+bind-key S rev-sort
+
+bind-key m toggle-article-read
+
+datetime-format "%F %T"
+
+unbind-key C feedlist # unbind mark all feeds read
+
+# bind keys - vim style
+bind-key ^D pagedown
+bind-key ^U pageup
+bind-key ^F pagedown
+bind-key ^B pageup
+
+#bind-key b toggle-source-view
+#bind-key U toggle-show-read-feeds
+#bind-key b open-in-browser-and-mark-read
+#bind-key B open-in-browser
+
+color background         default   default
+color listnormal         default   default dim
+color listnormal_unread  default   default bold
+color info               default   default dim
+color article            default   default
+color listfocus          default   blue    dim
+color listfocus_unread   default   blue    bold
+
+# Highlight separators
+highlight feedlist "---.*---" green default bold
+highlight feedlist "^.*\\(0/0\\)" default default invis
+
+# Highlight article fields
+highlight article "^Feed: " cyan default bold
+highlight article "^Title: " cyan default bold
+highlight article "^Author: " cyan default bold
+highlight article "^Date: " cyan default bold
+highlight article "^Link: " cyan default bold
+highlight article "https?://[^ ]+" red default bold   # highlights links
+highlight article "[\[][0-9]+[\]]" green default bold # highlights link numbers
+#highlight article "^Author: https://smart[-]lab.ru/my/[[:alpha:]]+/blog/" cyan default bold
+
+
+#+-------------------------------------------------------------------+
+#  IGNORE INFO NOISE
+#+-------------------------------------------------------------------+
+# sampple ignore rules:
+ignore-article "*" "title =~ \"#shorts\"" # ignore short videos on youtube
+
+# Гусев
+ignore-article https://www.youtube.com/feeds/videos.xml?channel_id=UCcVPismBTzyg9Rpe3mBd3yQ "title =~ \"продаётся мнение\""
+ignore-article https://www.youtube.com/feeds/videos.xml?channel_id=UCcVPismBTzyg9Rpe3mBd3yQ "title =~ \"продается мнение\""
+ignore-article https://www.youtube.com/feeds/videos.xml?channel_id=UCcVPismBTzyg9Rpe3mBd3yQ "title =~ \"продаётся идея\""
+ignore-article https://www.youtube.com/feeds/videos.xml?channel_id=UCcVPismBTzyg9Rpe3mBd3yQ "title =~ \"продается идея\""
+ignore-article https://www.youtube.com/feeds/videos.xml?channel_id=UCcVPismBTzyg9Rpe3mBd3yQ "title =~ \"продаётся курс\""
+ignore-article https://www.youtube.com/feeds/videos.xml?channel_id=UCcVPismBTzyg9Rpe3mBd3yQ "title =~ \"продается курс\""
+ignore-article https://www.youtube.com/feeds/videos.xml?channel_id=UCcVPismBTzyg9Rpe3mBd3yQ "title =~ \"магазинчик\""
+
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Maxtrader\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"iticapital\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"41em1\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Video\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Tromil\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"just2trade\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Buybuy\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Traderc\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"andreihohrin\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Tyam\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"disclosure\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Sega2810\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"must\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"IWeHedgefund\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Redyert\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"autotrade\""
+
+ignore-article exec:/home/mikhail/dev/news/2ch-parser.pl "content =~ \"t.me/uranews\""
+ignore-article exec:/home/mikhail/dev/news/2ch-parser.pl "content =~ \"ukrinform.ru\""
+ignore-article exec:/home/mikhail/dev/news/2ch-parser.pl "content =~ \"newsroom.kh.ua\""
+ignore-article exec:/home/mikhail/dev/news/2ch-parser.pl "content =~ \"t.me/truexanewsua\""
+ignore-article exec:/home/mikhail/dev/news/2ch-parser.pl "content =~ \"t.me/bbbreaking\""
+#ignore-article exec:/home/mikhail/dev/news/2ch-parser.pl "content =~ \"t.me/swodki\"" # ???
+
+ignore-article http://static.feed.rbc.ru/rbc/logical/footer/news.rss "title =~ \"Военная операция на Украине. Онлайн\""
+ignore-article http://static.feed.rbc.ru/rbc/logical/footer/news.rss "title =~ \"Военная операция на Украине. Главное\""
+
+
+# Sample ignores:
+#ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCOFH59uoSs8SUF0L_p3W0sg" "(title !~ \"keyboard\") or (title !~ \"audio\")"                # Badseed Tech
+#ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCo3ixhcZiwcmwVnqJlFJ2Iw" "content =~ \"streamlabs\""                                      # B-rad
+#ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCDBCCMlFD-hArPbWv38FINA" "title !~ \"watches\""                                           # Daz Black
+#ignore-article "https://lbryfeed.melroy.org/channel/odysee/hexdsl"                            "(content =~ \"steampowered\") or (content =~ \"humblebundle\")" # Hex DSL
+#ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCuVgoagmU3hmfMwtxG9s4Sw" "title =~ \"#shorts\""                                           # Optimus
+#ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCOfelP_99_8AzQ4kbmTJrfQ" "content =~ \"streamlabs\""                                      # tmol
+#ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCRE3NFNtdjR96-H4QG4U1Fg" "title !~ \"Trendy\""                                            # Trendy Talk podcast
+#ignore-article "https://www.youtube.com/feeds/videos.xml?channel_id=UCGGdOIkVIZipux13jt7rprw" "content =~ \"streamlabs\""                                      # twomad 360
+

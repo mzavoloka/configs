@@ -407,3 +407,7 @@ ranger_cd() {
 
 # This binds Alt-e (\e is alt, and e is letter e) to ranger_cd:
 bind '"\ee":"ranger_cd\C-m"'
+
+alias news="newsboat"
+
+alias bc="bc -l"
