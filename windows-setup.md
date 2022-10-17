@@ -3,6 +3,20 @@
 - FastStone Image Viewer
 - Ext2fsd
 - DiskInternals Linux Reader
+- Chrome
+- Punto Switcher
+- Microsoft Office
+- Telegram
+- Steam
+- Oculus Link
+- VLC
+- AutoKotKey
+- Xreader (Evince?)
+- FB2Reader
+- OBS Studio
+- Arturia Keylab Essentials
+- Ext2 Volume Manager
+
 ## Testing programs
 - TechPowerUp GPU-Z
 - CPU-Z
@@ -19,6 +33,8 @@
 - TestMem5 (проверка ОЗУ)
 - hwinfo
 - Superposition benchmark (тест видяхи)
+
+
 
 
 ### Virtualizing existing Ubuntu installation if you have it in dualboot
