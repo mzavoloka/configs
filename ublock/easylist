@@ -1,0 +1,11 @@
+! Custom EasyList filters for ad blockers
+
+! 2ch.hk
+2ch.hk##section.mmm
+2ch.hk##div.header__logo
+2ch.hk##div.plashque
+2ch.hk##div.cntnt__aside
+
+! no vk auth
+##div#age-verification-container
+##div#age-verification-wrapper
