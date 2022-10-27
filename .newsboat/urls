@@ -10,9 +10,6 @@ https://www.cbr.ru/rss/RssNews
 https://www.cbr.ru/rss/eventrss
 https://www.cbr.ru/rss/RssPress
 " "
-"---------- Gosduma ----------"
-http://duma.gov.ru/news/feed/ ~duma.gov.ru
-" "
 "---------- YOUTUBE main ----------"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC0OytamlH2cmX7P-Opp5vyw "youtube" "youtube/finance" # Экономика. Верным курсом
 https://www.youtube.com/feeds/videos.xml?channel_id=UC9uayMAC_wWlEh96vCKq1Jw "youtube" "youtube/finance" # Банк России
