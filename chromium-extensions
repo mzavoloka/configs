@@ -10,6 +10,9 @@ Return Youtube Dislikes
 Empty New Tab Page
 I don't care about cookies
 Tab-snap
+Tampermonkey:
+    https://greasyfork.org/en/scripts/424823-disable-youtube-number-shortcuts
+    userscripts/disable-hotkeys-on-2ch.js # in this repo
 
 #+-------------------------------------------------------------------+
 #  Additional
