@@ -154,6 +154,11 @@ ignore-article https://smart-lab.ru/rss/ "author =~ \"SergeyAleksandrovich_b74\"
 ignore-article https://smart-lab.ru/rss/ "author =~ \"factor\""
 ignore-article https://smart-lab.ru/rss/ "author =~ \"ruh666\""
 ignore-article https://smart-lab.ru/rss/ "author =~ \"Igor-rusIgor-rus\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"mapyceuka\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"RISNK\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"ssrcp\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"DenisRazin\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Avant\""
 
 ignore-article https://smart-lab.ru/rss/ "(author =~ \"CaptainAlbinos\") and (title =~ \"Ежедневные наблюдения \")"
 
