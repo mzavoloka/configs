@@ -9,3 +9,8 @@
 ! no vk auth
 ##div#age-verification-container
 ##div#age-verification-wrapper
+
+! no upper menu on live translations
+matchtv.ru##div.header__main
+matchtv.ru##header.header
+matchtv.ru##div.banner-container
