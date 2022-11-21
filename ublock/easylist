@@ -10,7 +10,6 @@
 ##div#age-verification-container
 ##div#age-verification-wrapper
 
-! no upper menu on live translations
-matchtv.ru##div.header__main
+! no upper menu and chat button on live translations
 matchtv.ru##header.header
-matchtv.ru##div.banner-container
+matchtv.ru##button.reset-button
