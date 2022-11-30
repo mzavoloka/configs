@@ -21,6 +21,7 @@ pacman -S              \
     openssh            \
     openvpn            \
     nss-mdns           `# local hostname resolution` \
+    bind               `# dig utility` \
     gvim               `# gvim to enable clipboard sharing` \
     vim-airline        \
     vim-airline-themes \
