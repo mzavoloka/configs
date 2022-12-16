@@ -1,12 +1,16 @@
 "---------- NEWS MAIN ----------"
 exec:/home/mikhail/dev/news/2ch-parser.pl
-http://static.feed.rbc.ru/rbc/logical/footer/news.rss "rbc"  "news"
-https://smart-lab.ru/rss/       "smartlab"                   "news"
+http://static.feed.rbc.ru/rbc/logical/footer/news.rss "rbc"  "news" # or use https://rssexport.rbc.ru/rbcnews/news/30/full.rss
+# https://smart-lab.ru/rss/               "smartlab"                   "news"  # all articles with >5 likes
+https://smart-lab.ru/allblog/rss/       "smartlab"                   "news"  # all blog articles
+# https://smart-lab.ru/rss/blog/news/         "smartlab"                   "news"  # all blog-news articles wtf???
+https://smart-lab.ru/news/rss/          "smartlab"                   "news"  # all news articles
+# https://smart-lab.ru/disclosure/rss/    "smartlab"                   "news"  # all disclosure news
 https://www.linux.org.ru/section-rss.jsp "linux.org.ru"      "news"
 https://www.gazprom.ru/rss/  "corporate"   "news"
 " "
 "---------- CB RF ----------"
-https://www.cbr.ru/rss/RssNews
+#https://www.cbr.ru/rss/RssNews
 https://www.cbr.ru/rss/eventrss
 https://www.cbr.ru/rss/RssPress
 " "
@@ -20,4 +24,3 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCo1RPtO57Izwy2wjBmPMjCw "yo
 https://www.youtube.com/feeds/videos.xml?channel_id=UC3OtKSWHXQyajk8P1mVi43w "youtube" "youtube/politics" # Саня во Флориде
 https://www.youtube.com/feeds/videos.xml?channel_id=UC5Bd7vj6oszn4khEubQdyjA "youtube" "youtube/politics" # Институт Правды
 https://www.youtube.com/feeds/videos.xml?channel_id=UCsJn2vDKhf3YrCnSoKRv0lw "youtube" "youtube/finance" # Фанимани
-https://www.youtube.com/feeds/videos.xml?channel_id=UC7yMBOeBTcPhlTdI-PS-_Xg "youtube" "youtube/science" # БОРИС БОЯРШИНОВ СО ДНА НАУКИ
