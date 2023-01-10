@@ -125,6 +125,9 @@ cp -r .newsboat ~/
 # copy zathura config
 cp -r zathura ~/.config/
 
+# copy mpv config
+cp -r mpv ~/.config/
+
 pacman -S             \
     vlc               \
     mpv               \
