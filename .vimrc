@@ -119,6 +119,10 @@ set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=-1 " Use current keymap while searching
 
+" Mandatory. Fixes delay when exiting visual mode. Also affects leader key delay.
+" Default it 500 ms
+set timeoutlen=100
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Hotkeys
@@ -194,7 +198,6 @@ set mat=2
 set noerrorbells
 set novisualbell
 set t_vb=
-set tm=500
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -299,7 +302,6 @@ map 0 ^
 
 """"""""""""""""""""""""""""""
 " =>  Airline
-""""""""""""""""""""""""""""""
 let g:airline_powerline_fonts=1
 let g:airline_detect_paste=0
 " don't show keymap 'Keymap: russian-jcukenwin' in airline (it takes too much space)
