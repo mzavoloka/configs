@@ -6,6 +6,9 @@
 2ch.*##div.plashque
 2ch.*##div.cntnt__aside
 
+! no phone comfirmation on vk
+vk.com##div.vkuiPopoutWrapper
+
 ! no vk auth
 ##div#age-verification-container
 ##div#age-verification-wrapper
