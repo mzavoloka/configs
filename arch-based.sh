@@ -196,8 +196,10 @@ pacman -S            \
     noto-fonts-emoji   # smiles
 
 # perl packages
-pacman -S            \
-    perl-xml-libxml  \
+pacman -S                    \
+    perl-xml-libxml          \
+    perl-lwp-protocol-https  \
+    perl-html-tree           \
     perl-datetime
 
 # enable sound
