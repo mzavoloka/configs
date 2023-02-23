@@ -11,8 +11,9 @@
 var links = document.getElementsByTagName("a");
 
 for(var i=0, max=links.length; i<max; i++) {
+    if ( !links[i].href.match( /.+\/r.php\?u=/ ) ) { continue }
     var param_u = links[i].href
-        .replace(/.+\/r.php\?u=/g, '') // убрать всё до значения параметра 'u'
+        .replace(/^.+\/r.php\?u=/g, '') // убрать всё до значения параметра 'u'
         .replace(/&s=\d+$/g, '');      // убрать всё после значения параметра 'u'
 
     links[i].href = decodeURIComponent( param_u ); // деэкранизация параметра 'u'
