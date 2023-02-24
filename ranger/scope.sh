@@ -270,7 +270,7 @@ handle_mime() {
             ## Preview as text conversion
             ## note: catdoc does not always work for .doc files
             ## catdoc: http://www.wagner.pp.ru/~vitus/software/catdoc/
-            catdoc -- "${FILE_PATH}" && exit 5
+            catdoc -- "${FILE_PATH}" | head -n 150; exit 5
             exit 1;;
 
         ## DOCX, ePub, FB2 (using markdown)
