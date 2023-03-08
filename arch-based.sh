@@ -137,7 +137,8 @@ pacman -S             \
     gimp              \
     telegram-desktop  \
     libreoffice-fresh \
-    transmission-gtk  \
+    qbittorrent       \
+    yt-dlp            \
     xreader djvulibre \
     foliate           `# reads .mobi books`\
     zathura zathura-pdf-mupdf zathura-ps `# reads .pdf .djvu .epub .fb2 books`\
