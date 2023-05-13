@@ -251,6 +251,9 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
+"autocmd BufRead,BufNewFile *.htm,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType html setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
 set ai "Auto indent
 set si "Smart indent
 
