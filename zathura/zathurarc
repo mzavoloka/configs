@@ -1,1 +1,2 @@
 set scroll-page-aware true # Make C-f C-b scroll by full page
+set sandbox none
