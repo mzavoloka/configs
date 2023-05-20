@@ -203,6 +203,18 @@ pacman -S                    \
     perl-html-tree           \
     perl-datetime
 
+# python packages
+pacman -S          \
+    python         \
+    python-pip     \
+    python-pandas
+
+# r packages
+pacman -S          \
+    r         \
+    tk # makes quantmod work
+# Also, install quantmod and other r packages
+
 # enable sound
 pacman -S alsa-utils
 amixer -q sset Master unmute
