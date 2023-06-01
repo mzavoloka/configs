@@ -1,0 +1,50 @@
+<a href="/r.php?u=https%3A%2F%2Fwww.bn.ru%2F&amp;s=3715743404" target="_blank">bn.ru</a>
+<br>
+<a href="/r.php?u=https%3A%2F%2Fmyslo.ru%2Fnews%2Farhiv%2Fnews-51067&amp;s=918089649">smth</a>
+<br>
+<a href="/r.php?u=http%3A%2F%2Fhttps%3A%2F%2Fwww.avito.ru%2Fsankt-peterburg%2Fgruzoviki_i_spetstehnika%2Fiveco_magirus_1992_2178701077&amp;s=2828186474">готовый бизнес</a>
+<br>
+<a href="/r.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D7e7TD0flk6M&amp;s=4259788798">smth2</a>
+<br>
+
+<p>After processing:</p>
+
+<script>
+
+var links = document.getElementsByTagName("a");
+
+for(var i=0, max=links.length; i<max; i++) {
+
+    //addLink(links[i].href);
+
+    var param_u = links[i].href
+        .replace(/.+\/r.php\?u=/g, '') // убрать всё до значения параметра 'u'
+        .replace(/&s=\d+$/g, '');      // убрать всё после значения параметра 'u'
+
+    links[i].href = decodeURIComponent( param_u ); // деэкранизация параметра 'u'
+
+    //addLink(links[i].href);
+
+    //alert(links[i].href);
+    //href = href.replace(new RegExp (regexes[i]), '');
+    //links[i].setAttribute("href", "");
+}
+
+//function addLink( thetext ) {
+//    var alink = document.createElement('a');
+//    alink.href = thetext;
+//    alink.text = thetext;
+//    document.body.appendChild(alink);
+//    document.body.appendChild( document.createElement('br') );
+//}
+
+//$(function() {
+//    $("a").each(function() {
+//        var href = this.href;
+//        for (var i = 0; i < regexes.length; i++) {
+//            href = href.replace(new RegExp (regexes[i]), '');
+//        }
+//        this.href = href;
+//    });
+//}););
+</script>

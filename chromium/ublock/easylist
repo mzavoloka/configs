@@ -16,3 +16,7 @@ vk.com##div.vkuiPopoutWrapper
 ! no upper menu and chat button on live translations
 matchtv.ru##header.header
 matchtv.ru##button.reset-button
+
+! smart-lab.ru disable mood check every month
+smart-lab.ru##div.MooDialog
+smart-lab.ru##div#overlay
