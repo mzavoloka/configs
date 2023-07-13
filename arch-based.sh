@@ -52,6 +52,7 @@ pacman -S              \
     ntfs-3g            \
     trash-cli          \
     pacman-contrib     `# rankmirrors script and others` \
+    asp                `# source code downloader` \
     fzf
 
 # For booting you might need some of these packages:

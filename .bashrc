@@ -410,4 +410,12 @@ bind '"\ee":"ranger_cd\C-m"'
 
 alias news="newsboat"
 
+function getsrc()
+{
+    asp export $1 && \
+    pushd $1 && \
+    makepkg -do --skippgpcheck && \
+    pushd src
+}
+
 alias bc="bc -l"
