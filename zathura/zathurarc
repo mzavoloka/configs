@@ -1,2 +1,8 @@
-set scroll-page-aware true # Make C-f C-b scroll by full page
+# Enable following external links
 set sandbox none
+
+# Make C-f C-b scroll by full page
+set scroll-page-aware true
+
+# Make Ctrl+B act as PageUp that is to move to the start of previous page
+map <C-b> feedkeys <PageUp>
