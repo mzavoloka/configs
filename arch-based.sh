@@ -141,8 +141,9 @@ pacman -S             \
     qbittorrent       \
     yt-dlp            \
     xreader djvulibre \
+    djview            `# reads .djvu books`\
     foliate           `# reads .mobi books`\
-    zathura zathura-pdf-mupdf zathura-ps zathura-djvu `# reads .pdf .djvu .epub .fb2 books`\
+    zathura zathura-pdf-mupdf zathura-ps `# reads .pdf .epub .fb2 books`\
     kchmviewer        \
     rbutil            `# rockbox utility`\
     calc              \
