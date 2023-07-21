@@ -142,7 +142,7 @@ pacman -S             \
     yt-dlp            \
     xreader djvulibre \
     foliate           `# reads .mobi books`\
-    zathura zathura-pdf-mupdf zathura-ps `# reads .pdf .djvu .epub .fb2 books`\
+    zathura zathura-pdf-mupdf zathura-ps zathura-djvu `# reads .pdf .djvu .epub .fb2 books`\
     kchmviewer        \
     rbutil            `# rockbox utility`\
     calc              \
