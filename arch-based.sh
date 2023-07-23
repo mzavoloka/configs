@@ -72,6 +72,7 @@ pacman -S               \
     mousepad            \
     unrar               \
     p7zip               \
+    atool               \
     newsboat            \
     xfce4-screenshooter \
     xfce4-screensaver   \
