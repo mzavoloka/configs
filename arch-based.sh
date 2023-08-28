@@ -205,6 +205,7 @@ pacman -S                    \
     perl-lwp-protocol-https  \
     perl-html-tree           \
     perl-string-util         \
+    perl-dbi                 \
     perl-datetime
 
 # python packages
