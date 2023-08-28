@@ -67,6 +67,7 @@ export LESS_TERMCAP_se=$(printf '\E[0m'           ) # end standout-mode
 export LESS_TERMCAP_so=$(printf '\E[38;5;246m'    ) # begin standout-mode - info box
 export LESS_TERMCAP_ue=$(printf '\E[0m'           ) # end underline
 export LESS_TERMCAP_us=$(printf '\E[04;38;5;146m' ) # begin underline
+export GROFF_NO_SGR=1
 
 # Disable Ctrl+S hanging terminal
 stty -ixon
