@@ -204,6 +204,7 @@ pacman -S                    \
     perl-xml-libxml          \
     perl-lwp-protocol-https  \
     perl-html-tree           \
+    perl-string-util         \
     perl-datetime
 
 # python packages
