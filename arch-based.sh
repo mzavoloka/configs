@@ -209,9 +209,10 @@ pacman -S                    \
     perl-datetime
 
 # python packages
-pacman -S          \
-    python         \
-    python-pip     \
+pacman -S            \
+    python           \
+    python-pip       \
+    python-pyrss2gen \
     python-pandas
 
 # r packages
