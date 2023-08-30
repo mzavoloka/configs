@@ -1,18 +1,37 @@
+"---------- TELEGRAM ----------"
+"exec:/mnt/data2/dev/news/tgchnl2rss.py japancandelsrus"   "Гусев В.П. tgchnl"
+"exec:/mnt/data2/dev/news/tgchnl2rss.py ru2ch"   "Гусев В.П. tgchnl"
+"exec:/mnt/data2/dev/news/tgchnl2rss.py ru2ch"              "Ньюсач"
+"exec:/mnt/data2/dev/news/tgchnl2rss.py OlegDTrading"       "Олег Дубинский"
+"exec:/mnt/data2/dev/news/tgchnl2rss.py kuzmlab"            "Олег Кузьмичёв"
+"exec:/mnt/data2/dev/news/tgchnl2rss.py japancandelsrus"    "Гусев В.П."
+"exec:/mnt/data2/dev/news/tgchnl2rss.py korovinilya"        "Илья Коровин"
+"exec:/mnt/data2/dev/news/tgchnl2rss.py finsovetnik"        "Финсоветник"
+"exec:/mnt/data2/dev/news/tgchnl2rss.py centralbank_russia" "Банк России"
+"exec:/mnt/data2/dev/news/tgchnl2rss.py milinfolive"        "Военный Осведомитель"
+"exec:/mnt/data2/dev/news/tgchnl2rss.py sanya_florida"      "Саня во Флориде"
+"exec:/mnt/data2/dev/news/tgchnl2rss.py z4lpr"              "4ая бригада"
+"exec:/mnt/data2/dev/news/tgchnl2rss.py strelkovii"         "Стрелков"
+"exec:/mnt/data2/dev/news/tgchnl2rss.py wagnernew"          "WAGNER GROUP"
+"exec:/mnt/data2/dev/news/tgchnl2rss.py orchestra_w"        "Оркестр Вагнера"
+"exec:/mnt/data2/dev/news/tgchnl2rss.py grey_zone"          "GREY ZONE"
+" "
 "---------- NEWS MAIN ----------"
 exec:/home/mikhail/dev/news/2ch-parser.pl
 http://static.feed.rbc.ru/rbc/logical/footer/news.rss "rbc"  "news" # or use https://rssexport.rbc.ru/rbcnews/news/30/full.rss
-# https://smart-lab.ru/rss/               "smartlab"                   "news"  # all articles with >5 likes
-https://smart-lab.ru/allblog/rss/       "smartlab"                   "news"  # all blog articles
+https://smart-lab.ru/rss/               "smartlab"                   "news"  # all articles with >5 likes
+# https://smart-lab.ru/allblog/rss/       "smartlab"                   "news"  # all blog articles
 # https://smart-lab.ru/rss/blog/news/         "smartlab"                   "news"  # all blog-news articles wtf???
 https://smart-lab.ru/news/rss/          "smartlab"                   "news"  # all news articles
-# https://smart-lab.ru/disclosure/rss/    "smartlab"                   "news"  # all disclosure news
+https://smart-lab.ru/disclosure/rss/    "smartlab"                   "news"  # all disclosure news
 https://www.linux.org.ru/section-rss.jsp "linux.org.ru"      "news"
 https://www.gazprom.ru/rss/  "corporate"   "news"
 " "
-"---------- CB RF ----------"
+"---------- CB MINFIN ----------"
 #https://www.cbr.ru/rss/RssNews
 https://www.cbr.ru/rss/eventrss
 https://www.cbr.ru/rss/RssPress
+https://minfin.gov.ru/rss_news
 " "
 "---------- YOUTUBE main ----------"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC0OytamlH2cmX7P-Opp5vyw "youtube" "youtube/finance" # Экономика. Верным курсом
@@ -20,7 +39,13 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC9uayMAC_wWlEh96vCKq1Jw "yo
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVA5heoUfs5yohiil9PJhRw "youtube" "youtube/finance" # Smirnova Capital
 https://www.youtube.com/feeds/videos.xml?channel_id=UCcVPismBTzyg9Rpe3mBd3yQ "youtube" "youtube/finance" # Гусев Владимир Павлович 1
 https://www.youtube.com/feeds/videos.xml?channel_id=UC70HXu5A9s115X7dNQeK7dQ "youtube" "youtube/finance" # "Кречетов - Инвестиции, Экономика, Трейдинг"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCo1RPtO57Izwy2wjBmPMjCw "youtube" "youtube/finance" # Деньги не спят
-https://www.youtube.com/feeds/videos.xml?channel_id=UC3OtKSWHXQyajk8P1mVi43w "youtube" "youtube/politics" # Саня во Флориде
-https://www.youtube.com/feeds/videos.xml?channel_id=UC5Bd7vj6oszn4khEubQdyjA "youtube" "youtube/politics" # Институт Правды
-https://www.youtube.com/feeds/videos.xml?channel_id=UCsJn2vDKhf3YrCnSoKRv0lw "youtube" "youtube/finance" # Фанимани
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsJn2vDKhf3YrCnSoKRv0lw "youtube" "youtube/finance" # Деньги 24
+https://www.youtube.com/feeds/videos.xml?channel_id=UCFA0jKpj8-_XkEqq6aJBMGg "youtube" "youtube/finance" # Олег Дубинский
+https://www.youtube.com/feeds/videos.xml?channel_id=UClZEvF5R_myBUQN03i4UyxA "youtube" "youtube/finance" # Верников 100
+https://www.youtube.com/feeds/videos.xml?channel_id=UCCSXxF7rs8vaOQY2iPCCvZA "youtube" "youtube/finance" # Тимофей Мартынов
+https://www.youtube.com/feeds/videos.xml?channel_id=UCaT0EOA-ye8dGB5Z5WNn5bA "youtube" "youtube/finance" # AE exchange
+https://www.youtube.com/feeds/videos.xml?channel_id=UC1AvigMtjtV-InuGaEZBaHA "youtube" "youtube/finance" # Сергей Дроздов
+https://www.youtube.com/feeds/videos.xml?channel_id=UCk8pXs8s_RFjXATRYh_dkKg "youtube" "youtube/finance" # The Wall Street Pro
+https://www.youtube.com/feeds/videos.xml?channel_id=UCc1_X2DKAkptu75hsUzH81Q "youtube" "youtube/finance" # Alenka Capital
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9IsuS9NcVnWEo78M5IfvRA "youtube" "youtube/finance" # Финсоветник
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCo1RPtO57Izwy2wjBmPMjCw "youtube" "youtube/finance" # Деньги не спят

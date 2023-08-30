@@ -1,6 +1,6 @@
 # general settings
 auto-reload yes
-max-items 1000
+max-items 100000
 reload-threads 12
 reload-time 1 # minutes
 
@@ -71,6 +71,7 @@ ignore-article "*" "title =~ \"#shorts\"" # ignore short videos on youtube
 # Гусев
 ignore-article https://www.youtube.com/feeds/videos.xml?channel_id=UCcVPismBTzyg9Rpe3mBd3yQ "title =~ \"продаётся\""
 ignore-article https://www.youtube.com/feeds/videos.xml?channel_id=UCcVPismBTzyg9Rpe3mBd3yQ "title =~ \"продается\""
+ignore-article https://www.youtube.com/feeds/videos.xml?channel_id=UCcVPismBTzyg9Rpe3mBd3yQ "title =~ \"продаются\""
 ignore-article https://www.youtube.com/feeds/videos.xml?channel_id=UCcVPismBTzyg9Rpe3mBd3yQ "title =~ \"магазинчик\""
 ignore-article https://www.youtube.com/feeds/videos.xml?channel_id=UCcVPismBTzyg9Rpe3mBd3yQ "title =~ \"лекция\""
 ignore-article https://www.youtube.com/feeds/videos.xml?channel_id=UCcVPismBTzyg9Rpe3mBd3yQ "title =~ \"курс\""
@@ -282,12 +283,51 @@ ignore-article https://smart-lab.ru/rss/ "author =~ \"Grubov\""
 ignore-article https://smart-lab.ru/rss/ "author =~ \"NailHuzin\""
 ignore-article https://smart-lab.ru/rss/ "author =~ \"BolshoyBrat\""
 ignore-article https://smart-lab.ru/rss/ "author =~ \"lossboy\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"SimplePathToWealth\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"rovniy\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"biopsyhose\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"suvorov\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Igorek_Investor\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Bornv\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"gift\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"ilya12345\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"VipPREMIER\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"AzatIvanov\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"StockSharp\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"IgorSever\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"ridig\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"fnf2000\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"VladMadrid\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Gans96\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"profit_2020\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"lrnkp\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Katlet\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Gleb_022\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"IgnatLetuta\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Dmitry68\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Luka23101974\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"golovin69\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"timsmart\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"theWall\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"type568\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Amozov\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"KlugeEule_510\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"agasfer\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"AndreyFilippovich\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"sarmat_\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"AndreyZavedeev\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Anton1206\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"VladProDengi\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"Trading60ru\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"nick_tradermakemoney\""
+ignore-article https://smart-lab.ru/rss/ "author =~ \"speculme\""
 
 
 ignore-article https://smart-lab.ru/rss/ "(author =~ \"OlegDubinskiy\") and (title =~ \"Утро МСК\")"
 ignore-article https://smart-lab.ru/rss/ "(author =~ \"CaptainAlbinos\") and (title =~ \"Ежедневные наблюдения \")"
 
 ignore-article exec:/home/mikhail/dev/news/2ch-parser.pl "content =~ \"t.me/uranews\""
+ignore-article exec:/home/mikhail/dev/news/2ch-parser.pl "content =~ \"ura.news\""
 ignore-article exec:/home/mikhail/dev/news/2ch-parser.pl "content =~ \"ukrinform.ru\""
 ignore-article exec:/home/mikhail/dev/news/2ch-parser.pl "content =~ \"newsroom.kh.ua\""
 ignore-article exec:/home/mikhail/dev/news/2ch-parser.pl "content =~ \"t.me/truexanewsua\""
@@ -295,6 +335,7 @@ ignore-article exec:/home/mikhail/dev/news/2ch-parser.pl "content =~ \"t.me/bbbr
 ignore-article exec:/home/mikhail/dev/news/2ch-parser.pl "content =~ \"pravda.com.ua\""
 ignore-article exec:/home/mikhail/dev/news/2ch-parser.pl "content =~ \"t.me/ru4chan\""
 ignore-article exec:/home/mikhail/dev/news/2ch-parser.pl "content =~ \"meduza.io\""
+ignore-article exec:/home/mikhail/dev/news/2ch-parser.pl "content =~ \"unian.net\""
 #ignore-article exec:/home/mikhail/dev/news/2ch-parser.pl "content =~ \"t.me/swodki\"" # ???
 
 ignore-article http://static.feed.rbc.ru/rbc/logical/footer/news.rss "title =~ \"Военная операция на Украине. Онлайн\""
