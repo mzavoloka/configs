@@ -110,6 +110,7 @@ let mapleader = ","
 let g:mapleader = ","
 
 au BufNewFile,BufRead *html.ep set filetype=html " Embedded perl .html.ep (used by Mojolicious)
+au BufNewFile,BufRead *tmpl set filetype=html " HTML::Template templates
 autocmd BufNewFile,BufReadPost *.mq[h45] setlocal filetype=mql
 
 let $PAGER='' " View man pages in vim
@@ -253,7 +254,6 @@ set tabstop=4
 
 "autocmd BufRead,BufNewFile *.tmpl,*.htm,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType html setlocal tabstop=2 shiftwidth=2 softtabstop=2
-autocmd FileType tmpl setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 set ai "Auto indent
 set si "Smart indent
