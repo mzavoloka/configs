@@ -28,4 +28,4 @@ sudo pacman-key --refresh
 
 And if it doesn't help, read this https://wiki.archlinux.org/title/Pacman/Package_signing#Troubleshooting
 
-
+9. In ranger to read full files' contents or archive info and etc., use i (inspect)
