@@ -420,3 +420,5 @@ function getsrc()
 }
 
 alias bc="bc -l"
+
+alias pi="$HOME/.venv/bin/pip"
