@@ -380,3 +380,5 @@ let g:ctrlp_map = '<leader>p'
 nmap <Leader>f :Files<CR>
 
 let $BAT_THEME='Solarized (light)'
+
+let $BASH_ENV = "~/.bash_aliases" " Enable some bash aliases inside vim
