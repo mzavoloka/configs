@@ -1,5 +1,9 @@
 ! Custom EasyList filters for ad blockers
 
+! no 'time to purchase' on bandcamp
+bandcamp.com##div.ui-widget
+bandcamp.com##div.ui-widget-overlay
+
 ! 2ch.*
 2ch.*##section.mmm
 2ch.*##div.header__logo
