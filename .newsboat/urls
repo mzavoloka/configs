@@ -1,20 +1,23 @@
 "---------- TELEGRAM ----------"
 "exec:/mnt/data2/dev/news/tgchnl2rss.py japancandelsrus"   "Гусев В.П. tgchnl"
-"exec:/mnt/data2/dev/news/tgchnl2rss.py ru2ch"   "Гусев В.П. tgchnl"
 "exec:/mnt/data2/dev/news/tgchnl2rss.py ru2ch"              "Ньюсач"
 "exec:/mnt/data2/dev/news/tgchnl2rss.py OlegDTrading"       "Олег Дубинский"
 "exec:/mnt/data2/dev/news/tgchnl2rss.py kuzmlab"            "Олег Кузьмичёв"
 "exec:/mnt/data2/dev/news/tgchnl2rss.py japancandelsrus"    "Гусев В.П."
+"exec:/mnt/data2/dev/news/tgchnl2rss.py ProfitGate"         "Алексей Кречетов"
 "exec:/mnt/data2/dev/news/tgchnl2rss.py korovinilya"        "Илья Коровин"
 "exec:/mnt/data2/dev/news/tgchnl2rss.py finsovetnik"        "Финсоветник"
+"exec:/mnt/data2/dev/news/tgchnl2rss.py perfilov_invest"    "Александр Перфилов"
+"exec:/mnt/data2/dev/news/tgchnl2rss.py bondsmartlab"         "Смартлаб бонды"
+"exec:/mnt/data2/dev/news/tgchnl2rss.py vernikov_andrei"    "Андрей Верников"
 "exec:/mnt/data2/dev/news/tgchnl2rss.py centralbank_russia" "Банк России"
 "exec:/mnt/data2/dev/news/tgchnl2rss.py milinfolive"        "Военный Осведомитель"
 "exec:/mnt/data2/dev/news/tgchnl2rss.py sanya_florida"      "Саня во Флориде"
 "exec:/mnt/data2/dev/news/tgchnl2rss.py z4lpr"              "4ая бригада"
 "exec:/mnt/data2/dev/news/tgchnl2rss.py strelkovii"         "Стрелков"
-"exec:/mnt/data2/dev/news/tgchnl2rss.py wagnernew"          "WAGNER GROUP"
-"exec:/mnt/data2/dev/news/tgchnl2rss.py orchestra_w"        "Оркестр Вагнера"
-"exec:/mnt/data2/dev/news/tgchnl2rss.py grey_zone"          "GREY ZONE"
+#"exec:/mnt/data2/dev/news/tgchnl2rss.py wagnernew"          "WAGNER GROUP"
+#"exec:/mnt/data2/dev/news/tgchnl2rss.py orchestra_w"        "Оркестр Вагнера"
+#"exec:/mnt/data2/dev/news/tgchnl2rss.py grey_zone"          "GREY ZONE"
 " "
 "---------- NEWS MAIN ----------"
 exec:/home/mikhail/dev/news/2ch-parser.pl
@@ -40,12 +43,18 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCVA5heoUfs5yohiil9PJhRw "yo
 https://www.youtube.com/feeds/videos.xml?channel_id=UCcVPismBTzyg9Rpe3mBd3yQ "youtube" "youtube/finance" # Гусев Владимир Павлович 1
 https://www.youtube.com/feeds/videos.xml?channel_id=UC70HXu5A9s115X7dNQeK7dQ "youtube" "youtube/finance" # "Кречетов - Инвестиции, Экономика, Трейдинг"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCsJn2vDKhf3YrCnSoKRv0lw "youtube" "youtube/finance" # Деньги 24
+https://www.youtube.com/feeds/videos.xml?channel_id=UCdceNzoRURNb2aFxLUIyIIw "youtube" "youtube/finance" # Сложный процент
 https://www.youtube.com/feeds/videos.xml?channel_id=UCFA0jKpj8-_XkEqq6aJBMGg "youtube" "youtube/finance" # Олег Дубинский
+https://www.youtube.com/feeds/videos.xml?channel_id=UCvOrypS56Uqqo8f7zuXIC8w "youtube" "youtube/finance" # Олег Кузьмичев
 https://www.youtube.com/feeds/videos.xml?channel_id=UClZEvF5R_myBUQN03i4UyxA "youtube" "youtube/finance" # Верников 100
 https://www.youtube.com/feeds/videos.xml?channel_id=UCCSXxF7rs8vaOQY2iPCCvZA "youtube" "youtube/finance" # Тимофей Мартынов
 https://www.youtube.com/feeds/videos.xml?channel_id=UCaT0EOA-ye8dGB5Z5WNn5bA "youtube" "youtube/finance" # AE exchange
 https://www.youtube.com/feeds/videos.xml?channel_id=UC1AvigMtjtV-InuGaEZBaHA "youtube" "youtube/finance" # Сергей Дроздов
 https://www.youtube.com/feeds/videos.xml?channel_id=UCk8pXs8s_RFjXATRYh_dkKg "youtube" "youtube/finance" # The Wall Street Pro
 https://www.youtube.com/feeds/videos.xml?channel_id=UCc1_X2DKAkptu75hsUzH81Q "youtube" "youtube/finance" # Alenka Capital
+https://www.youtube.com/feeds/videos.xml?channel_id=UCRcGq7mDsvVRjaxC4f6Zjxw "youtube" "youtube/finance" # Андрей Ванин
 https://www.youtube.com/feeds/videos.xml?channel_id=UC9IsuS9NcVnWEo78M5IfvRA "youtube" "youtube/finance" # Финсоветник
+https://www.youtube.com/feeds/videos.xml?channel_id=UCdUwDSicdhcU9N8iap4c4Ow "youtube" "youtube/finance" # БКС Мир инвестиций
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCsV1qk2BxKBg2jZX5PzJAXw "youtube" "youtube/finance" # РДВ
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCYmqClPZ0uUl4N23ZQqXUPQ "youtube" "youtube/finance" # Financial One
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCo1RPtO57Izwy2wjBmPMjCw "youtube" "youtube/finance" # Деньги не спят
