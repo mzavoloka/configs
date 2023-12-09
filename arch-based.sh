@@ -30,6 +30,7 @@ pacman -S              \
     vim-indent-object  `# select tabulated block of code with ii, ai, aI` \
     vim-molokai        \
     vim-fugitive       \
+    vim-nerdtree       \
     vim-tabular        `# Align declarations with :Tab /=` \
     vim-tagbar         `# view tags of a file` \
     vim-ctrlp          \
@@ -206,6 +207,8 @@ pacman -S                    \
     perl-html-tree           \
     perl-string-util         \
     perl-dbi                 \
+    perl-dbd-pg              \
+    perl-term-table          \
     perl-datetime
 
 # python packages
@@ -213,7 +216,23 @@ pacman -S            \
     python           \
     python-pip       \
     python-pyrss2gen \
-    python-pandas
+    python-psycopg2  \
+    python-sqlalchemy\
+    python-pandas    \
+    python-texttable \
+    python-matplotlib
+
+# Create python virtual environment with packages (arch python-* packages aren't available to venv)
+# NOTE or better just use system's python (`pip --break-dependencies` mode)
+python -m venv $HOME/.venv
+$HOME/.venv/bin/pip pyrss2gen  \
+                    psycopg2   \
+                    pandas     \
+                    matplotlib \
+                    texttable  \
+                    plotly     \
+                    sqlalchemy \
+                    apimoex
 
 # r packages
 pacman -S          \

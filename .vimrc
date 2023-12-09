@@ -30,7 +30,7 @@ Plugin 'junegunn/fzf.vim'                 " Fuzzy finder
 "Plugin 'vim-airline/vim-airline'          " Statusline at the bottom of each vim window               (install it via package vim-airline)
 "Plugin 'vim-airline/vim-airline-themes'   " Contains 'tomorrow' airline theme                         (install it via package vim-airline)
 Plugin 'tpope/vim-vinegar'                " Enhances vim's default file exlorer called netrw,
-Plugin 'scrooloose/nerdtree'              " Project browser (press ,t to open it)
+"Plugin 'scrooloose/nerdtree'              " Project browser (press ,t to open it) (install it via package vim-nerdtree)
 Plugin 'henrik/vim-indexed-search'        " While searching, shows the total number of matches and the number(index) of current match
 "Plugin 'SirVer/ultisnips'                 " (install it via package vim-ultisnips)
 Plugin 'mzavoloka/vim-snippets'           " My Snippets for vim
