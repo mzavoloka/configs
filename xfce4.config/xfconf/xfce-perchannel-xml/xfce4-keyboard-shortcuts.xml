@@ -63,16 +63,16 @@
       <property name="&lt;Super&gt;equal" type="string" value="amixer set Master 3%+"/>
       <property name="&lt;Super&gt;Tab" type="string" value="rofi -modi window -show window -show-icons -sidebar-mode"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="xfce4-terminal --disable-server"/>
-      <property name="AudioLowerVolume" type="string" value="amixer set Master 3%-"/>
-      <property name="AudioRaiseVolume" type="string" value="amixer set Master 3%+"/>
+      <!-- <property name="AudioLowerVolume" type="string" value="amixer set Master 3%-"/>
+      <property name="AudioRaiseVolume" type="string" value="amixer set Master 3%+"/> -->
       <property name="&lt;Super&gt;Escape" type="string" value="/home/mikhail/dev/configs/xfce4.config/scripts/toggle-panels.sh"/>
       <property name="AudioPrev" type="string" value="playerctl previous"/>
       <property name="AudioNext" type="string" value="playerctl next"/>
       <property name="AudioPlay" type="string" value="playerctl play-pause"/>
       <property name="&lt;Super&gt;space" type="string" value="playerctl play-pause"/>
       <property name="&lt;Super&gt;m" type="string" value="/home/mikhail/dev/utilities/move-to-next-monitor/move-to-next-monitor"/>
-      <!-- <property name="AudioRaiseVolume" type="string" value="pactl set-sink-volume 1 +3%"/>
-      <property name="AudioLowerVolume" type="string" value="pactl set-sink-volume 1 -3%"/> -->
+      <property name="AudioRaiseVolume" type="string" value="pactl set-sink-volume @DEFAULT_SINK@ +3%"/>
+      <property name="AudioLowerVolume" type="string" value="pactl set-sink-volume @DEFAULT_SINK@ -3%"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
