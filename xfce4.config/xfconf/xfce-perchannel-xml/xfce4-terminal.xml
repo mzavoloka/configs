@@ -8,12 +8,12 @@
   <property name="misc-always-show-tabs" type="bool" value="false"/>
   <property name="misc-bell" type="bool" value="false"/>
   <property name="misc-bell-urgent" type="bool" value="false"/>
-  <property name="misc-borders-default" type="bool" value="false"/>
+  <property name="misc-borders-default" type="bool" value="false"/> <!-- IMPORTANT: prevents vim lagging on window resize -->
   <property name="misc-cursor-blinks" type="bool" value="true"/>
   <property name="misc-cursor-shape" type="string" value="TERMINAL_CURSOR_SHAPE_BLOCK"/>
   <property name="misc-default-geometry" type="string" value="100x35"/>
   <property name="misc-inherit-geometry" type="bool" value="false"/>
-  <property name="misc-menubar-default" type="bool" value="true"/>
+  <property name="misc-menubar-default" type="bool" value="true"/> <!-- IMPORTANT: w/o borders allows to see focused window -->
   <property name="misc-mouse-autohide" type="bool" value="false"/>
   <property name="misc-mouse-wheel-zoom" type="bool" value="true"/>
   <property name="misc-toolbar-default" type="bool" value="false"/>
