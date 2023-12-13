@@ -111,6 +111,7 @@ let g:mapleader = ","
 
 au BufNewFile,BufRead *html.ep set filetype=html " Embedded perl .html.ep (used by Mojolicious)
 au BufNewFile,BufRead *tmpl set filetype=html " HTML::Template templates
+au BufNewFile,BufRead *sql set filetype=plsql " postgres highlight for .sql files
 autocmd BufNewFile,BufReadPost *.mq[h45] setlocal filetype=mql
 
 let $PAGER='' " View man pages in vim
