@@ -20,6 +20,7 @@ if !has('win32') && !has('win32unix')
 endif
 Plugin 'ConradIrwin/vim-bracketed-paste'  " whenever you are in the insert mode and paste into your terminal emulator using command+v, shift+insert, ctrl+shift+v or middle-click, vim will automatically :set paste for you.
 Plugin 'mzavoloka/vim-mql'
+Plugin 'mzavoloka/vim-perl'
 Plugin 'rkennedy/vim-delphi'
 "Plugin 'easymotion/vim-easymotion'        " Travel letters on the screen (press ,s to initiate it)    (install it via package vim-easymotion)
 Plugin 'mzavoloka/nginx-vim-syntax'
@@ -206,6 +207,7 @@ set t_vb=
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
+let molokai_original = 1
 color molokai
 "color github
 "Change theme depending on the time of day
