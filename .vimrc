@@ -385,3 +385,26 @@ nmap <Leader>f :Files<CR>
 let $BAT_THEME='Solarized (light)'
 
 let $BASH_ENV = "~/.bash_aliases" " Enable some bash aliases inside vim
+
+""""" Insert mode indication
+""" Highlight current line if insert mode is on
+autocmd InsertEnter * set cursorline
+autocmd InsertLeave * set nocursorline
+
+""" Change cursor shape while in insert mode
+let &t_SI = "\e[5 q"
+let &t_EI = "\e[1 q"
+" reset the cursor on start (for older versions of vim, usually not required)
+augroup myCmds
+au!
+autocmd VimEnter * silent !echo -ne "\e[1 q"
+augroup END
+" Other options (replace the number after \e[):
+" Ps = 0  -> blinking block.
+" Ps = 1  -> blinking block (default).
+" Ps = 2  -> steady block.
+" Ps = 3  -> blinking underline.
+" Ps = 4  -> steady underline.
+" Ps = 5  -> blinking bar (xterm).
+" Ps = 6  -> steady bar (xterm).
+"""""
