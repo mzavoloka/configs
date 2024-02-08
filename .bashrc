@@ -72,17 +72,6 @@ export GROFF_NO_SGR=1
 # Disable Ctrl+S hanging terminal
 stty -ixon
 
-# Check if user can run sudo and fill sudo var for aliases
-CAN_RUN_SUDO=$(sudo -n uptime 2>&1|grep "load"|wc -l)
-SUDO='';
-if [ ${CAN_RUN_SUDO} -gt 0 ]
-then
-  SUDO='sudo '
-  echo "Current user is a sudoer. Setting up aliases accordingly."
-else
-  echo "Current user is not a sudoer.  Setting up aliases accordingly."
-fi
-
 #################################################################
 # PROMPT
 #################################################################
@@ -114,23 +103,38 @@ parse_git_branch() {
 PS1='\[\033[01;35m\]\u@\h\[\033[00m\]:\[\033[01;31m\]\w\[\033[00m\]$(parse_git_branch)\$ '
 unset color_prompt force_color_prompt
 
+#+-------------------------------------------------------------------+
+#  Sudo prefix
+#+-------------------------------------------------------------------+
+SUDO='';
+# Check if user can run sudo and fill sudo var for aliases
+CAN_RUN_SUDO=$(sudo -l -U $USER | grep NOPASSWD | wc -l)
+if [ ${CAN_RUN_SUDO} -gt 0 ]
+then
+  SUDO='sudo '
+  echo "Current user is a sudoer. Setting up aliases accordingly."
+else
+  echo "Current user is not a sudoer.  Setting up aliases accordingly."
+fi
 
 #################################################################
 # DIRECTORY LISTING
 #################################################################
+LSUDO=''
+# LSUDO=$SUDO
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-  alias ls="${SUDO}ls -I .. --color=auto"
-  alias lal="${SUDO}ls -I .. -lahF --color=auto"
-  alias la="${SUDO}ls -I .. -ahF --color=auto"
-  #alias ls="${SUDO}ls -I . -I .. --color=auto"
-  #alias ls="${SUDO}ls -I . -I .. --color=auto"
-  #alias lal="${SUDO}ls -I . -I .. -lahF --color=auto"
-  #alias la="${SUDO}ls -I . -I .. -ahF --color=auto"
+  alias ls="${LSUDO}ls -I .. --color=auto"
+  alias lal="${LSUDO}ls -I .. -lahF --color=auto"
+  alias la="${LSUDO}ls -I .. -ahF --color=auto"
+  #alias ls="${LSUDO}ls -I . -I .. --color=auto"
+  #alias ls="${LSUDO}ls -I . -I .. --color=auto"
+  #alias lal="${LSUDO}ls -I . -I .. -lahF --color=auto"
+  #alias la="${LSUDO}ls -I . -I .. -ahF --color=auto"
 
-  alias dir="${SUDO}dir --color=auto"
-  alias vdir="${SUDO}vdir --color=auto"
+  alias dir="${LSUDO}dir --color=auto"
+  alias vdir="${LSUDO}vdir --color=auto"
 else
   # Got from freebsd
   alias ls='ls -G' # TODO this -G hides group name from ls on FreeBSD. Need another switch
@@ -144,59 +148,15 @@ mygrep() {
   ${SUDO} grep -iRnI --color=always --exclude-dir={.git} $@ | nl;
 }
 
-
 #alias myfind="${SUDO}find . -iname '$@'"
 alias myfind="perl ~/dev/utilities/myfind/myfind.pl"
 
 # Faster access to bashrc
 alias brc="vi ~/.bashrc"
 alias brc_apply="source ~/.bashrc"
-alias today="ncal -Mb 2016"
-
-# My servers
-alias sdo="ssh -Y mikhail@188.166.53.139"
-alias sdo_root="ssh -Y root@188.166.53.139"
-alias sis="ssh -Y mikhail@104.160.37.229"
-alias sisroot="ssh -Y root@104.160.37.229"
-alias pingsis="ping -c 4 104.160.37.229"
 
 # Solving networking problems
-alias resnet="${SUDO}service network-manager restart;
-echo 'consider using the following commands:';
-echo '${SUDO}ifdown wlan0 && ifup wlan0'
-echo 'or these commands:'
-echo '${SUDO}ifconfig wlan0 down && ifconfig wlan0 up';"
 alias dnsfix="${SUDO}sed -i 's/nameserver 127.[0-9].[0-9].[0-9]/nameserver 8.8.8.8/' /etc/resolv.conf"
-
-# Apache
-alias apacher="${SUDO}service apache2 restart"
-alias taillog="${SUDO}tail -f /var/log/apache2/error.log"
-
-# Package managing in Ubuntu
-alias autoremove="${SUDO}apt-get autoremove"
-alias update="${SUDO}apt-get update"
-alias upgrade="${SUDO}apt-get dist-upgrade"
-alias autoremove="${SUDO}apt-get autoremove"
-
-remove() {
-  for item in "$@";
-    do echo "${SUDO}apt-get remove --purge $item";
-    ${SUDO} apt-get remove --purge "$item";
-  done;
-}
-
-install() {
-  for item in "$@";
-    do echo "${SUDO}apt-get install $item";
-    ${SUDO} apt-get install "$item";
-  done;
-}
-
-upgrades_available() {
-  echo "UPGRADES AVAILABLE:";
-  ${SUDO} apt-get --just-print upgrade 2>&1 | perl -ne 'if (/Inst\s([\w,\-,\d,\.,~,:,\+]+)\s\[([\w,\-,\d,\.,~,:,\+]+)\]\s\(([\w,\-,\d,\.,~,:,\+]+)\)? /i) {print "PROGRAM: $1 INSTALLED: $2 AVAILABLE: $3\n"}' | column -t;
-}
-
 
 grant_permissions() {
   for file in "$@"; do
@@ -204,8 +164,6 @@ grant_permissions() {
     ${SUDO} chown -R mikhail:mikhail $file;
   done;
 }
-
-alias samba_restart="${SUDO}service smbd restart; service nmbd restart"
 
 alias ports_usage="${SUDO}netstat -tulpn"
 
@@ -220,16 +178,12 @@ alias opengl_version='glxinfo | grep "OpenGL"';
 alias distro="cat /etc/*-release"
 alias list_non_system_users="awk -F: '$3 >= 500' /etc/passwd" # it may be not 500 but 1000. Gets users which GUID is greater than this number
 
-alias sizeof="du -hs"
-
 alias ucfirst="perl -e 'for ( @ARGV ) { rename( $_, ucfirst $_ ) }' $1"
 alias lcfirst="perl -e 'for ( @ARGV ) { rename( $_, lcfirst $_ ) }' $1"
 
 alias formatjson="python -mjson.tool" # and write json filename. It will output formatted json data from the file specified.
 
 alias emacs="emacs -nw" # Open emacs inside terminal (you're calling this alias in terminal, right). Suspend it with C-x C-z
-
-alias playaudio="${SUDO}/home/mikhail/playaudio"
 
 # Display management
 #alias resolution_restore='xrandr --output DVI-I-1 --auto'
@@ -250,21 +204,32 @@ alias brightness_lowmedium="xrandr --output $current_display --brightness 0.75"
 alias brightness_medium="xrandr --output $current_display --brightness 1"
 alias brightness_high="xrandr --output $current_display --brightness 1.5"
 
-
-alias kill="kill -9"
-
-# Vim
+#+-------------------------------------------------------------------+
+#  Vim
+#+-------------------------------------------------------------------+
 set editing-mode vi
 set keymap vi-command
 alias vimdiff="vimdiff -O"
-alias vi="vim -p"
-alias vim="vim -p"
+alias vi="vim -p"   # tabe / tabulated split
+alias vim="vim -p"  # tabe / tabulated split
+alias vimvs="vim -O" # vs / vsplit / vertical split
+alias vimsplit="vim -o" # split / horizontal split
 
 # Set vim as default text editor
 export VISUAL=vim
 export EDITOR=vim
 
 alias vir="LC_ALL=ru_RU.cp1251 vi -p"
+
+# Finds file with fzf and open it in vim
+#fo() { find * -not -iwholename '*.git*' -not -iwholename '*.svn*' | fzf --height=10 --layout=reverse | xargs -ro vim; }
+fo() {
+    thefile=$(find * -not -iwholename '*.git*' -not -iwholename '*.svn*' | fzf --height=10 --layout=reverse);
+    echo $thefile;
+    vim $thefile;
+}
+
+alias todo='cd ~/dev/todo && vim ~/dev/todo/todo'
 
 # True clear screen
 alias cls='echo -en "\ec"'
@@ -355,26 +320,12 @@ alias tree="tree -C -a -I '.git|.svn'"
 
 unset SSH_ASKPASS
 
-alias tmux="tmux -2" # Force tmux assume 256 color support
-
-#cd ~ # default directory
-
 alias passgen='cat /dev/urandom | tr -dc A-Za-z0-9 | head -c16 && echo'
 
-#fo() { find * -not -iwholename '*.git*' -not -iwholename '*.svn*' | fzf --height=10 --layout=reverse | xargs -ro vim; }
-fo() {
-    thefile=$(find * -not -iwholename '*.git*' -not -iwholename '*.svn*' | fzf --height=10 --layout=reverse);
-    echo $thefile;
-    vim $thefile;
-}
-
 NO_AT_BRIDGE=1 # disable at-spi dbus (accessibility feature)
-alias todo='cd ~/dev/todo && vim ~/dev/todo/todo'
 alias sx='startxfce4'
 
 alias calendar='cal -ym'
-
-alias sshfvds='ssh mikhail@82.146.53.243'
 
 # Make specific mouse to be Left/Right handed
 MOUSE_TITLE=sinowealth
@@ -419,6 +370,12 @@ function getsrc()
     pushd src
 }
 
-alias bc="bc -l"
-
 alias pi="$HOME/.venv/bin/pip"
+
+#+-------------------------------------------------------------------+
+#  Unused
+#+-------------------------------------------------------------------+
+# alias bc="bc -l"
+# alias tmux="tmux -2" # Force tmux assume 256 color support
+# alias sizeof="du -hs"
+# alias kill="kill -9"
