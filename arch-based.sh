@@ -208,6 +208,9 @@ pacman -S                    \
     perl-string-util         \
     perl-dbi                 \
     perl-dbd-pg              \
+    perl-dbd-sqlite          \
+    perl-json                \
+    perl-template-toolkit    \
     perl-term-table          \
     perl-datetime
 
