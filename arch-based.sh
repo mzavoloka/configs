@@ -152,6 +152,8 @@ pacman -S             \
     discount          `# provides "markdown" utility to convert .md to .html` \
     ghostwriter       `# markdown editor` \
     chromium          \
+    firefox           \
+    vivaldi           \
     playerctl         `# media playback control from console` \
     pulseaudio        \
     conky             \
