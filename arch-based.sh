@@ -9,6 +9,7 @@ pacman -S              \
     sudo               \
     htop               \
     man-db             \
+    man-pages          \
     dhclient           \
     dhcpcd             \
     wpa_supplicant     \
