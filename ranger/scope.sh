@@ -291,7 +291,7 @@ handle_mime() {
 
         ## Text
         # NOTE: application/javascript: Treat/Preview executable .js as text
-        text/* | */xml | application/javascript)
+        text/* | */xml | application/javascript | application/x-wine-extension-ini)
             ## Syntax highlight
             if [[ "$( stat --printf='%s' -- "${FILE_PATH}" )" -gt "${HIGHLIGHT_SIZE_MAX}" ]]; then
                 exit 2
