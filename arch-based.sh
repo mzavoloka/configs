@@ -9,6 +9,7 @@ pacman -S              \
     sudo               \
     htop               \
     man-db             \
+    man-pages          \
     dhclient           \
     dhcpcd             \
     wpa_supplicant     \
@@ -152,6 +153,8 @@ pacman -S             \
     discount          `# provides "markdown" utility to convert .md to .html` \
     ghostwriter       `# markdown editor` \
     chromium          \
+    firefox           \
+    vivaldi           \
     playerctl         `# media playback control from console` \
     pulseaudio        \
     conky             \
@@ -208,6 +211,9 @@ pacman -S                    \
     perl-string-util         \
     perl-dbi                 \
     perl-dbd-pg              \
+    perl-dbd-sqlite          \
+    perl-json                \
+    perl-template-toolkit    \
     perl-term-table          \
     perl-datetime
 
