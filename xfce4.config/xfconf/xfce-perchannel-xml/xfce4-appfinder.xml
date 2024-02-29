@@ -5,4 +5,5 @@
   <property name="text-beside-icons" type="bool" value="false"/>
   <property name="item-icon-size" type="uint" value="0"/>
   <property name="hide-category-pane" type="bool" value="true"/>
+  <property name="enable-service" type="bool" value="false"/>
 </channel>
