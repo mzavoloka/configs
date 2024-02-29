@@ -215,6 +215,7 @@ pacman -S                    \
 pacman -S            \
     python           \
     python-pip       \
+    python-numpy     \
     python-pyrss2gen \
     python-psycopg2  \
     python-sqlalchemy\
