@@ -370,7 +370,7 @@ function getsrc()
     pushd src
 }
 
-alias pi="$HOME/.venv/bin/pip"
+alias pi="$HOME/.venv/bin/pip" # NOTE pyt alias resides in .bash_aliases (to be loaded via .vimrc)
 
 #+-------------------------------------------------------------------+
 #  Unused
