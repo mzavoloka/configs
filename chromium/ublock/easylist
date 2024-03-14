@@ -24,3 +24,6 @@ matchtv.ru##button.reset-button
 ! smart-lab.ru disable mood check every month
 smart-lab.ru##div.MooDialog
 smart-lab.ru##div#overlay
+
+! google search asking to know location
+google.*##div#lb
