@@ -28,7 +28,7 @@ function replace_watch_to_embed() {
 
 replace_watch_to_embed()
 
-// Must use urlchage bcs pressing on youtube video from main page doesn't trigger userscript reload
+// Must use urlchage bcs clicking video from youtube's main page doesn't trigger userscript reload
 if (window.onurlchange === null) {
     window.addEventListener('urlchange', (info) => replace_watch_to_embed());
 }
