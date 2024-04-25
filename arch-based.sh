@@ -44,9 +44,11 @@ pacman -S              \
     bat                `# syntax hilghlighted cat. Enables syntax highlighting in vim-fzf`\
     tree               \
     git                \
+    github-cli         \
     nfs-utils          \
     cpanminus          \
     gcc                \
+    lazarus-qt6        \
     lua                \
     ntp                \
     docker             \
