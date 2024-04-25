@@ -1,4 +1,4 @@
-" Modelines functionnality is insecure (see CVE-2002-1377, CVE-2016-1248, CVE-2019-12735)
+" Modelines functionality is insecure (see CVE-2002-1377, CVE-2016-1248, CVE-2019-12735)
 set modelines=0
 set nomodeline
 
@@ -40,7 +40,7 @@ Plugin 'glts/vim-radical'                 " gA shows the four representations of
                                           " crd, crx, cro, crb convert the number under the cursor to decimal, hex, octal, binary, respectively.
 Plugin 'tpope/vim-commentary'             " Use gcc to comment out a line (takes a count), gc to comment out the target of a motion (for example, gcap to comment out a paragraph), gc in visual mode to comment out the selection, and gc in operator pending mode to target a comment. You can also use it as a command, either with a range like :7,17Commentary, or as part of a :global invocation like with :g/TODO/Commentary.
 " Colorschemes
-Plugin 'flazz/vim-colorschemes'           " Contains molokai and github colorschemes
+Plugin 'mzavoloka/vim-colorschemes'       " Contains molokai and github colorschemes
 Plugin 'tbastos/vim-lua'
 Plugin 'chrisbra/csv.vim'
 Plugin 'vim-utils/vim-man'
