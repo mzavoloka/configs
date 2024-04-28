@@ -42,6 +42,7 @@ pacman -S              \
     ack                \
     the_silver_searcher`# a faster version of ack. Dependency of vim-fzf`\
     bat                `# syntax hilghlighted cat. Enables syntax highlighting in vim-fzf`\
+    rlwrap             `# command history (used in perl repl bash alias)`\
     tree               \
     git                \
     github-cli         \

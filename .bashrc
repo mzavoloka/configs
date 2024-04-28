@@ -239,6 +239,8 @@ alias perl_check_syntax_in_dir='for code in $(find . -type f -name "*.p[ml]"); d
 # multiple files replace. example:
 # perl -i -pe 's/\!system/0 == system/'  daemon/*/*
 alias perlipe='perl -i -pe'
+# Use perl debugger as repl with command history
+alias repl='rlwrap perl -de1'
 
 # Check cron files syntax
 croncheck() {
