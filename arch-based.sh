@@ -163,6 +163,8 @@ pacman -S             \
     conky             \
     calibre           \
     pdfarranger       \
+    obs-studio        \
+    libva-nvidia-driver `# without it obs doesn't start` \
     shotcut           `# video editor`
 
 cp .conkyrc ~
