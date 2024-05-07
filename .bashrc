@@ -148,9 +148,6 @@ mygrep() {
   ${SUDO} grep -iRnI --color=always --exclude-dir={.git} $@ | nl;
 }
 
-#alias myfind="${SUDO}find . -iname '$@'"
-alias myfind="perl ~/dev/utilities/myfind/myfind.pl"
-
 # Faster access to bashrc
 alias brc="vi ~/.bashrc"
 alias brc_apply="source ~/.bashrc"

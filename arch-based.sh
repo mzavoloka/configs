@@ -58,6 +58,7 @@ pacman -S              \
     trash-cli          \
     pacman-contrib     `# rankmirrors script and others` \
     asp                `# source code downloader` \
+    fd                 \
     fzf
 
 # For booting you might need some of these packages:

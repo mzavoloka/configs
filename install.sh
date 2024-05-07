@@ -75,7 +75,6 @@ echo "Installing utilites..."
 mkdir $HOME/dev/
 mkdir $HOME/dev/utilities/; cd $HOME/dev/utilities
 git clone git@github.com:mzavoloka/gitls
-git clone git@github.com:mzavoloka/myfind
 git clone git@github.com:jc00ke/move-to-next-monitor
 # quick stats
 git clone git@github.com:arzzen/git-quick-stats
