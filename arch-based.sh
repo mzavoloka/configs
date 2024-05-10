@@ -221,6 +221,8 @@ pacman -S                    \
     perl-json                \
     perl-template-toolkit    \
     perl-term-table          \
+    perl-proc-processtable   \
+    perl-module-scandeps     `# provides scandeps.pl to search modules dependencies` \
     perl-datetime
 
 # python packages
