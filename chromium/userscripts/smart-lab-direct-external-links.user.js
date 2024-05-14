@@ -3,9 +3,10 @@
 // @namespace      Mikhail Zavoloka
 // @version        1.0
 // @description    Make smart-lab.ru links to lead directly to external website without warning
-// @match          https://smart-lab.ru/*
+// @match          *://*.smart-lab.ru/*
 // @run-at         document-end
 // @grant          none
+// @noframes
 // ==/UserScript==
 
 var links = document.getElementsByTagName("a");

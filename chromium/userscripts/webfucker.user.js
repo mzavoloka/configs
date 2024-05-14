@@ -1,4 +1,4 @@
- // ==UserScript==
+// ==UserScript==
 // @name         WebFucker
 // @namespace    http://tampermonkey.net/
 // @version      1
@@ -14,6 +14,7 @@
 // @match        *://*.2ch.hk/b/
 // @grant        none
 // @run-at       document-start
+// @noframes
 // ==/UserScript==
 
 document.open('text/html', 'replace');

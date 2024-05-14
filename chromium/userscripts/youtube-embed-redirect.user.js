@@ -6,6 +6,7 @@
 // @match          *://*.youtube.com/*
 // @run-at         document-start
 // @grant          window.onurlchange
+// @noframes
 // ==/UserScript==
 
 function replace_watch_to_embed() {

@@ -5,9 +5,9 @@
 // @description  Disables mousewheel scrolling while fullscreen etc.
 // @description  https://gist.github.com/wizzie2/203176950685fa117c4b2627a60edbb9
 // @author       You
-// @match        https://*.youtube.com/*
-// @match        http://*.youtube.com/*
+// @match        *://*.youtube.com/*
 // @grant        none
+// @noframes
 // ==/UserScript==
 
 (function() {
