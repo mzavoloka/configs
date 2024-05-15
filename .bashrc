@@ -371,6 +371,13 @@ function getsrc()
 
 alias pi="$HOME/.venv/bin/pip" # NOTE pyt alias resides in .bash_aliases (to be loaded via .vimrc)
 
+function nginx_modules()
+{
+    nginx -V 2>&1 | sed -e 's/ /\n/g' | grep module | sed -e 's/--with-//'
+    # same in perl:
+    #perl -e 'for ( split /\s+/, `nginx -V 2>&1` ) { next unless /module/; s/--with-//; print "$_\n" }'
+}
+
 #+-------------------------------------------------------------------+
 #  Unused
 #+-------------------------------------------------------------------+
