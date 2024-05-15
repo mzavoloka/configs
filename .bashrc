@@ -332,6 +332,9 @@ MOUSE_TITLE=lightsync
 alias mousel='xinput set-button-map $(xinput list | grep -i $MOUSE_TITLE | grep -vi keyboard | grep pointer | grep -oP "id=\d+" | grep -oP "\d+") 3 2 1'
 alias mouser='xinput set-button-map $(xinput list | grep -i $MOUSE_TITLE | grep -vi keyboard | grep pointer | grep -oP "id=\d+" | grep -oP "\d+") 1 2 3'
 
+alias fuckon='echo "1" > /mnt/data2/dev/thefucker/isfuckeron.bool && echo "The fucker is on"'
+alias fuckoff='echo "0" > /mnt/data2/dev/thefucker/isfuckeron.bool && echo "The fucker is off"'
+
 #+-------------------------------------------------------------------+
 #  ranger_cd copied from /usr/share/doc/ranger/config/scope.sh
 #+-------------------------------------------------------------------+
