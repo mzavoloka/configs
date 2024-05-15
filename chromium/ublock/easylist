@@ -29,3 +29,6 @@ smart-lab.ru##div#jBox8-overlay
 
 ! google search asking to know location
 google.*##div#lb
+
+! Disable "Sign in as" popup (for example, on stackoverflow.com)
+accounts.google.com/gsi/*
