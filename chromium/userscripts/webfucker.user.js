@@ -12,23 +12,34 @@
 // @match        *://*.kamleague.com
 // @match        *://*.2ch.hk
 // @match        *://*.2ch.hk/b/
-// @grant        none
 // @run-at       document-start
+// @grant        GM_xmlhttpRequest
 // @noframes
 // ==/UserScript==
 
-document.open('text/html', 'replace');
-document.write(`
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>title</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <h1>fuck you!!!</h1>
-  </body>
-</html>
-`);
+GM.xmlHttpRequest({
+    method: "GET",
+    url: "http://localhost/isfuckeron.bool",
+    headers: { "Cache-control": "no-cache" },
+    onload: function(response) {
+        if ( response.responseText == 1 ) { dofuck() }
+    }
+});
+
+function dofuck() {
+    document.open('text/html', 'replace');
+    document.write(`
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <title>title</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+      </head>
+      <body>
+        <h1>fuck you!!!</h1>
+      </body>
+    </html>
+    `);
+}
