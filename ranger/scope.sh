@@ -201,6 +201,11 @@ handle_image() {
             fi
             ;;
 
+        application/json) ## not an image but processed before handle_mime()
+            jq --color-output . "${FILE_PATH}" && exit 5
+            python -m json.tool -- "${FILE_PATH}" && exit 5
+            ;;
+
         ## Preview archives using the first image inside.
         ## (Very useful for comic book collections for example.)
         # application/zip|application/x-rar|application/x-7z-compressed|\
