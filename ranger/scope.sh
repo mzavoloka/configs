@@ -105,8 +105,8 @@ handle_extension() {
 
         ## JSON
         json)
-            jq --color-output . "${FILE_PATH}" && exit 5
-            python -m json.tool -- "${FILE_PATH}" && exit 5
+            timeout 3s jq --color-output . "${FILE_PATH}" && exit 5
+            #timeout 3s python -m json.tool -- "${FILE_PATH}" && exit 5
             ;;
 
         ## Direct Stream Digital/Transfer (DSDIFF) and wavpack aren't detected
@@ -202,8 +202,8 @@ handle_image() {
             ;;
 
         application/json) ## not an image but processed before handle_mime()
-            jq --color-output . "${FILE_PATH}" && exit 5
-            python -m json.tool -- "${FILE_PATH}" && exit 5
+            timeout 3s jq --color-output . "${FILE_PATH}" && exit 5
+            #python -m json.tool -- "${FILE_PATH}" && exit 5
             ;;
 
         ## Preview archives using the first image inside.
