@@ -38,7 +38,6 @@ pacman -S              \
     vim-ultisnips      \
     vim-easymotion     \
     parcellite         `# clipboard manager` \
-    gxkb               `# show current xkb layoout in tray` \
     ack                \
     the_silver_searcher`# a faster version of ack. Dependency of vim-fzf`\
     bat                `# syntax hilghlighted cat. Enables syntax highlighting in vim-fzf`\
@@ -69,6 +68,8 @@ pacman -S        \
 
 pacman -S               \
     xorg                \
+    #gxkb               `# show current xkb layoout in tray` \
+    xcolor `#color picker` \
     xfce4               \
     xcursor-vanilla-dmz `# white cursor theme` \
     gvfs-mtp            `# enable file transfer from mobile devices` \
@@ -218,7 +219,7 @@ pacman -S                    \
     perl-dbi                 \
     perl-dbd-pg              \
     perl-dbd-sqlite          \
-    perl-json                \
+    perl-json-xs             `# faster than perl-json-pp, perl-json-parse and perl-cpanel-json-xs` \
     perl-template-toolkit    \
     perl-term-table          \
     perl-proc-processtable   \
