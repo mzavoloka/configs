@@ -1,6 +1,10 @@
 In insert mode, Ctrl-T indents the current line, and Ctrl-D unindents.
 In normal mode, type == to automatically indent the current line according to your indentation settings.
 To reindent an entire buffer, use gg=G.
+To run vim command from terminal use + prefix like this:
+    vim +PluginInstall +qa  # runs :PluginInstall from the shell
+    vim "+normal gg=G" +wq  # reindents file and saves it. Notice usage of 'normal' to send ordinary keystrokes to target file
+    for file in $(fd .pm\|.pl); do vim "+normal gg=G" +wq $file; done   # sample reindenting .pm .pl files in whole project
 Press C-^ (same as C-S-6) to switch to previously opened files in jumps
 :cw command is a fast way (maybe the fastest?) to open quickfix list
-Travel search history by typing / and then C-f
+Travel search history with q/ or by typing / and then C-f
