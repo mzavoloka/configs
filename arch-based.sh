@@ -71,7 +71,6 @@ pacman -S               \
     #gxkb               `# show current xkb layoout in tray` \
     xcolor `#color picker` \
     xfce4               \
-    xcursor-vanilla-dmz `# white cursor theme` \
     gvfs-mtp            `# enable file transfer from mobile devices` \
     android-utils       `# adb utility (Android Debug Bridge)` \
     file-roller         `# archive manager` \
@@ -90,10 +89,6 @@ pacman -S               \
     ffmpegthumbnailer   `# enables video thumbnails in ranger` \
     catdoc              `# enables .rtf and .doc previews in ranger` \
     thunar-archive-plugin   # thunar's context menu for extracting archives
-
-# Make xfce actually use cursor theme. https://bugs.launchpad.net/ubuntu/+source/xfwm4/+bug/157447
-echo "[Icon Theme]" > /usr/share/icons/default/index.theme
-echo "Inherits=Vanilla-DMZ" >> /usr/share/icons/default/index.theme
 
 # Benchmarking
 pacman -S               \
@@ -169,6 +164,8 @@ pacman -S             \
     libva-nvidia-driver `# without it obs doesn't start` \
     shotcut           `# video editor`
 
+# go ot chrome://flags search for "omnibox" and disable all found flags :-)
+
 cp .conkyrc ~
 cp autostart/conky.desktop ~/.config/autostart/
 cp autostart/stonks-conky.desktop ~/.config/autostart/
@@ -212,6 +209,8 @@ pacman -S            \
 
 # perl packages
 pacman -S                    \
+    perl-file-slurp          \
+    perl-digest-sha1         \
     perl-xml-libxml          \
     perl-lwp-protocol-https  \
     perl-html-tree           \
@@ -225,6 +224,12 @@ pacman -S                    \
     perl-proc-processtable   \
     perl-module-scandeps     `# provides scandeps.pl to search modules dependencies` \
     perl-datetime
+
+# perl modules not available as arch package
+cpanm Spreadsheet::XLSX
+# make path to mylib with my perl modules
+cd /usr/share/perl5/site_perl/
+ln -s ~/dev/lib/perl/ mylib
 
 # python packages
 pacman -S            \
@@ -317,3 +322,18 @@ cp fix-nvidia-colors.desktop ~/.config/autostart/
 
 # Intel graphics;
 sudo pacman -S mesa lib32-mesa # xf86-video-intel vulkan-intel # these two udner question, glamorgl is loaded by Xorg instead, and it works fine
+
+
+sudo systemctl disable upower # power management daemon. Omit if using notebook
+xfce4-power-manager -q # disable unused service
+xset -dpms             # disable unused service
+
+#Compositing with nvida doesn't work well. Go to Window Manager Tweaks got to Compositor->Enable Display Compositing uncheck
+
+# NOTE possibly causes lags
+# Make xfce actually use cursor theme. https://bugs.launchpad.net/ubuntu/+source/xfwm4/+bug/157447
+#pacman -S xcursor-vanilla-dmz `# white cursor theme` \
+#echo "[Icon Theme]" > /usr/share/icons/default/index.theme
+#echo "Inherits=Vanilla-DMZ" >> /usr/share/icons/default/index.theme
+
+# Most probably xfce4-panel is causing lags. Disable it
