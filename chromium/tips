@@ -1,0 +1,1 @@
+chrome://flags "Hardware-accelerated video decode" should be disabled or videos will lag
