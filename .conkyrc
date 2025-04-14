@@ -1,5 +1,4 @@
 conky.config = {
-
 --  Window Settings
     own_window = true,
     own_window_type = 'desktop',
@@ -141,13 +140,11 @@ ${alignc}${font Mono:size=14}${color0}${time %d.%m.%y %H:%M:%S}${color}
 ${alignc}${font Mono:size=14}${color0}${time %b %Y}${color}
 ${font Mono:size=12}${goto 5}${color}Mo Tu We Th Fr Sa Su
 ${goto 5}${color}${execpi 1800 LAR=`date +%-d`; cal -m | sed '2d' | sed -e '1d' -e 's/\<'$LAR'\>/${color0}&${color}/' | sed ':a;N;$!ba;s/\n/\n${goto 5}/g'}${color}${font}
-
-
 #################
 # MISC SYS INFO #
 #################
-${color}S Y S T E M    I N F O
-${hr}
+#${color}S Y S T E M    I N F O
+#${hr}
 Host:${alignr}${nodename}
 Uptime:${alignr}${uptime}
 # localtime ##UTC:${alignr}${utime %H:%M}##
@@ -155,18 +152,16 @@ KST:${alignr}${tztime Asia/Seoul %H:%M}
 
 H D D${goto 80}Free${alignr}Size
 Root${goto 80}${fs_free /}${alignr}${fs_bar 6,75 /}
-DATA${goto 80}${fs_free /media/lovelain/DATA}${alignr}${fs_bar 6,75 /media/lovelain/DATA}
-RAID${goto 80}${fs_free /DATA_RAID}${alignr}${fs_bar 6,75 /DATA_RAID}
+#DATA${goto 80}${fs_free /media/lovelain/DATA}${alignr}${fs_bar 6,75 /media/lovelain/DATA}
+#RAID${goto 80}${fs_free /DATA_RAID}${alignr}${fs_bar 6,75 /DATA_RAID}
 
-${goto 80}MEM${alignr}MAX
+#${goto 80}MEM${alignr}MAX
 RAM${goto 80}${mem}${alignr}${memmax}
 Swap${goto 80}${swap}${alignr}${swapmax}
 
-CPU:${goto 80}Used${alignr}GHz
-Avg${goto 80}${if_match ${cpu cpu0}<10}  ${cpu cpu0}\
+CPU${goto 80}${if_match ${cpu cpu0}<10}  ${cpu cpu0}\
 ${else}${if_match ${cpu cpu0}<100} ${cpu cpu0}\
 ${else}${cpu cpu0}${endif}${endif}%${alignr}${freq_g}
-
 #
 # Weather information from openweathermap.org can be displayed in conky by
 # using the script $HOME/.config/conky/scripts/bunsenweather.sh. The openweathermap
@@ -179,8 +174,7 @@ ${else}${cpu cpu0}${endif}${endif}%${alignr}${freq_g}
 # where <t> is the update interval. If "yourlocation" is not defined, the script
 # sets geolocation based on your IP adress using the website ipinfo.io.
 #
-W E A T H E R
-${hr}
-${execpi 600 $HOME/.config/conky/scripts/bunsenweather.sh}
-
+#W E A T H E R
+#${hr}
+#${execpi 600 $HOME/.config/conky/scripts/bunsenweather.sh}
 ]];
