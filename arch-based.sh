@@ -335,5 +335,3 @@ xset -dpms             # disable unused service
 #pacman -S xcursor-vanilla-dmz `# white cursor theme` \
 #echo "[Icon Theme]" > /usr/share/icons/default/index.theme
 #echo "Inherits=Vanilla-DMZ" >> /usr/share/icons/default/index.theme
-
-# Most probably xfce4-panel is causing lags. Disable it

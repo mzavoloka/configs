@@ -6,6 +6,7 @@
 // @author       You
 // @match        *://*.youtube.com
 // @match        *://*.lichess.org
+// @match        *://*.chess.com
 // @match        *://*.diep.io
 // @match        *://*.surviv.io
 // @match        *://*.vk.com/feed
