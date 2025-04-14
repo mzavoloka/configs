@@ -29,3 +29,13 @@ sudo pacman-key --refresh
 And if it doesn't help, read this https://wiki.archlinux.org/title/Pacman/Package_signing#Troubleshooting
 
 9. In ranger to read full files' contents or archive info and etc., use i (inspect)
+
+
+10. For steam games to prevent stuttering after 30 mins of gameplay, see:
+https://www.reddit.com/r/linux_gaming/comments/1h8qwx0/steam_proton_games_stuttering_after_30_minutes_of/
+https://github.com/doitsujin/dxvk/issues/4436#issuecomment-2466646597
+Put env var LD_PRELOAD="" for each installed game in Properties->Launch Options.
+Sample for dota (with disabling video and "Processing vulkan shaders" upon each launch):
+LD_PRELOAD="" %command% -novid -high -vulkan_disable_steam_shader_cache
+For other games use just:
+LD_PRELOAD="" %command%

@@ -1,6 +1,6 @@
 In insert mode, Ctrl-T indents the current line, and Ctrl-D unindents.
 In normal mode, type == to automatically indent the current line according to your indentation settings.
-To reindent an entire buffer, use gg=G.
+To reindent an entire buffer, use gg=G, or G=gg, or =G to reindent towards eof, or =gg towards sof
 To run vim command from terminal use + prefix like this:
     vim +PluginInstall +qa  # runs :PluginInstall from the shell
     vim "+normal gg=G" +wq  # reindents file and saves it. Notice usage of 'normal' to send ordinary keystrokes to target file
