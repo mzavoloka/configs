@@ -403,7 +403,7 @@ alias quiklogs="tail -f -n50 /var/log/trading/*.log"
 #alias byedpi="ciadpi -p 8080 --disorder 1 --auto=torst --tlsrec 1+s"
 #alias byedpi="ciadpi -p 8080 --fake -1 --ttl 10 --auto=ssl_err --fake -1 --ttl 5"
 #alias byedpi="ciadpi -p 8080 --fake -1 --ttl 5 --auto=ssl_err --fake -1 --ttl 5"
-alias byedpi="ciadpi -p 8080 -s0 -o1 -Ar -o1 -At -f-1 -r1+s -As"
+alias byedpi="ciadpi -p 8080 -s0 -o1 -Ar -o1 -At -f-1 -r1+s -As --ttl 5"
 
 alias discord="nohup ssh -D8080 proxy_server & http_proxy=socks5://127.0.0.1:8080 https_proxy=socks5://127.0.0.1:8080 discord --proxy-server='socks5://127.0.0.1:8080'"
 alias perlgame="perl $HOME/dev/perl-game/run.pl"
