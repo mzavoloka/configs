@@ -388,3 +388,22 @@ function nginx_modules()
 # alias tmux="tmux -2" # Force tmux assume 256 color support
 # alias sizeof="du -hs"
 # alias kill="kill -9"
+
+alias yt-dlp='yt-dlp --proxy="socks5://127.0.0.1:8080"'
+#alias curl='curl --proxy socks://127.0.0.1:8080'
+#alias curl='curl -x socks4://127.0.0.1:8080'
+
+function epochconv()
+{
+    # date -Iseconds -d @$1
+    date -d @$1 +%Y-%m-%d\ %H:%M:%S\ %Z
+}
+
+alias quiklogs="tail -f -n50 /var/log/trading/*.log"
+#alias byedpi="ciadpi -p 8080 --disorder 1 --auto=torst --tlsrec 1+s"
+#alias byedpi="ciadpi -p 8080 --fake -1 --ttl 10 --auto=ssl_err --fake -1 --ttl 5"
+#alias byedpi="ciadpi -p 8080 --fake -1 --ttl 5 --auto=ssl_err --fake -1 --ttl 5"
+alias byedpi="ciadpi -p 8080 -s0 -o1 -Ar -o1 -At -f-1 -r1+s -As"
+
+alias discord="nohup ssh -D8080 proxy_server & http_proxy=socks5://127.0.0.1:8080 https_proxy=socks5://127.0.0.1:8080 discord --proxy-server='socks5://127.0.0.1:8080'"
+alias perlgame="perl $HOME/dev/perl-game/run.pl"
